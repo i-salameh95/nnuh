@@ -1,0 +1,17 @@
+{% load i18n apphooks_config_tags %}
+
+<div class="section mb-0">
+    <div class="section-title d-flex justify-content-between align-items-center">
+        <h3 class="mb-0">{% block title %}{% endblock %}</h3>
+        <a href="{% namespace_url 'article-list' namespace=instance.app_config.namespace default='' %}">{% trans 'More' %}</a>
+    </div>
+    <div class="section-body">
+        <ul class="list-group list-group-flush">
+            {% for article in article_list %}
+                {% include "aldryn_newsblog/includes/article.html" with namespace=instance.app_config.namespace %}
+                {% empty %}
+                <li class="list-group-item list-group-item-info">{% trans "No items available" %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

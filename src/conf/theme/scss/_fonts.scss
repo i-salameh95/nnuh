@@ -1,0 +1,85 @@
+//@import url('https://fonts.googleapis.com/css?family=Tajawal:400,700&subset=arabic');
+//@import url('https://fonts.googleapis.com/css?family=Tajawal:300,400,500,700&subset=arabic');
+
+//@import url('https://fonts.googleapis.com/css?family=Amiri');
+
+
+@font-face {
+    font-family: 'GE Flow';
+    src: url('../fonts/subset-GEFlow.eot');
+    src: url('../fonts/subset-GEFlow.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-GEFlow.woff2') format('woff2'),
+        url('../fonts/subset-GEFlow.woff') format('woff'),
+        url('../fonts/subset-GEFlow.svg#GEFlow') format('svg');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GE Flow';
+    src: url('../fonts/subset-GEFlow-Bold.eot');
+    src: url('../fonts/subset-GEFlow-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-GEFlow-Bold.woff2') format('woff2'),
+        url('../fonts/subset-GEFlow-Bold.woff') format('woff'),
+        url('../fonts/subset-GEFlow-Bold.svg#GEFlow-Bold') format('svg');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+//@font-face {
+//    font-family: 'Hacen Samra Lt';
+//    src: url('../fonts/subset-HacenSamraLt.eot');
+//    src: url('../fonts/subset-HacenSamraLt.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/subset-HacenSamraLt.woff2') format('woff2'),
+//         url('../fonts/subset-HacenSamraLt.woff') format('woff'),
+//         url('../fonts/subset-HacenSamraLt.ttf') format('truetype'),
+//         url('../fonts/subset-HacenSamraLt.svg#HacenSamraLt') format('svg');
+//    font-weight: normal;
+//    font-style: normal;
+//    font-display: swap;
+//}
+
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/Trebuchet-BoldItalic.eot');
+    src: url('../fonts/Trebuchet-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Trebuchet-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Trebuchet-BoldItalic.woff') format('woff'),
+        url('../fonts/Trebuchet-BoldItalic.ttf') format('truetype'),
+        url('../fonts/Trebuchet-BoldItalic.svg#Trebuchet-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/TrebuchetMS.eot');
+    src: url('../fonts/TrebuchetMS.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TrebuchetMS.woff2') format('woff2'),
+        url('../fonts/TrebuchetMS.woff') format('woff'),
+        url('../fonts/TrebuchetMS.ttf') format('truetype'),
+        url('../fonts/TrebuchetMS.svg#TrebuchetMS') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/TrebuchetMS-Bold.eot');
+    src: url('../fonts/TrebuchetMS-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TrebuchetMS-Bold.woff2') format('woff2'),
+        url('../fonts/TrebuchetMS-Bold.woff') format('woff'),
+        url('../fonts/TrebuchetMS-Bold.ttf') format('truetype'),
+        url('../fonts/TrebuchetMS-Bold.svg#TrebuchetMS-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+

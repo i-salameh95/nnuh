@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block featured %}
+    {% placeholder "featured" %}
+    <div class="container">
+        {% placeholder "featured_cards" %}
+    </div>
+{% endblock featured %}
+{% block content %}
+	{% placeholder "content" %}
+{% endblock content %}

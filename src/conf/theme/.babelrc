@@ -1,0 +1,21 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false,
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "safari >= 7"
+            ]
+          }
+        }
+      ]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        ["@babel/plugin-proposal-object-rest-spread", { "loose": false, "useBuiltIns": true }],
+        "@babel/plugin-syntax-dynamic-import"
+    ]
+}

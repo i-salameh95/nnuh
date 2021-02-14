@@ -1,0 +1,20 @@
+@import "fonts";
+//@import "overrides";
+@import "~bootstrap/scss/functions";
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "select2-bootstrap4";
+
+/*!rtl:begin:ignore*/
+$owl-image-path: "~owl.carousel/src/img/";
+@import "~owl.carousel/src/scss/owl.carousel";
+@import "~owl.carousel/src/scss/owl.theme.default";
+/*!rtl:end:ignore*/
+
+@import "~animate.css";
+
+@import "offcanvas";
+@import "cards";
+@import "bootstrap_fixes";
+@import "custom";
+@import "doctors";

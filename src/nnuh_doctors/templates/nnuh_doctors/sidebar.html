@@ -1,0 +1,10 @@
+{% extends "nnuh_doctors/base.html" %}
+
+{% block content %}
+    <div class="nnuh nnuh-doctors">
+        <div class="row">
+            <div class="col-lg-9">{% block doctors_content %}{% endblock %}</div>
+            <div class="col-lg-3">{% block doctors_sidebar %}{% endblock %}</div>
+        </div>
+    </div>
+{% endblock content %}

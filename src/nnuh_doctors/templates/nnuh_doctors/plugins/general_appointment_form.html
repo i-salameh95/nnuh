@@ -1,0 +1,16 @@
+{% load i18n crispy_forms_tags %}
+<div id="general_appointment_form" class="card mb-3">
+    <div class="card-header">
+        <h3>{% trans 'Make an Appointment' %}</h3>
+    </div>
+    <div class="card-body">
+        {% if message %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endif %}
+        <form method="post" action=".">
+            {% csrf_token %}
+            {% crispy form %}
+            <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block mx-auto">{% trans 'Send' %}</button>
+        </form>
+    </div>
+</div>

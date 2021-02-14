@@ -1,0 +1,127 @@
+@mixin delay-animation {
+  @for $i from 2 through 5 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * .05}s;
+    }
+  }
+}
+
+.section-doctors-carousel {
+  .section-title {
+    border-left-color: $violet;
+  }
+  .owl-carousel-doctors .owl-stage {
+    @extend .d-flex;
+    @extend .align-items-stretch;
+  }
+  .card.card-doctor {
+    border: 0;
+    border-bottom: 6px solid $violet;
+    h3.card-title {
+      font-size: 1rem;
+      small {
+        color: $gray-500;
+      }
+    }
+    .card-doctor-pic {
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        transition: background-color 100ms linear;
+        z-index: 101;
+        pointer-events: none;
+      }
+      .card-doctor-meta {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        text-align: center;
+        pointer-events: none;
+        z-index: 102;
+        a {
+          display: none;
+          pointer-events: auto;
+          background-color: rgba(255, 255, 255, 0.5); //  #ffffff99;
+          color: #fff;
+          line-height: 1;
+          //position: relative;
+          margin-right: 0.35rem;
+          padding: 4px;
+          > span {
+            display: inline-block;
+            background-color: $violet;
+            padding: 0.85rem;
+          }
+          &:hover, &:active, &:focus {
+            > span {
+              background-color: $violet-light;
+            }
+          }
+          @include delay-animation;
+        }
+      }
+    }
+    .card-body a {
+      color: $violet;
+    }
+
+    &:hover {
+      .card-doctor-pic {
+        .card-doctor-meta {
+          a {
+            display: inline-block;
+          }
+        }
+        &:after {
+          background: rgba(255, 255, 255, 0.5); //  #ffffff77;
+        }
+      }
+      .card-body {
+        &, a, a:hover, a:focus, small {
+          color: #fff !important;
+          text-decoration: none;
+        }
+        background: $violet;
+      }
+    }
+  }
+}
+
+//.owl-item:nth-child(even) {
+//  .card.card-doctor {
+//    border-bottom-color: $violet;
+//  }
+//  .card-doctor-pic {
+//    .card-doctor-meta {
+//      a {
+//        > span {
+//          background-color: $violet;
+//        }
+//        &:hover, &:active, &:focus {
+//          > span {
+//            background-color: lighten($violet, 7%);
+//          }
+//        }
+//      }
+//    }
+//  }
+//  .card-body {
+//    .card-title a {
+//      color: $violet;
+//    }
+//  }
+//  &:hover {
+//    .card-body {
+//      background: $violet;
+//    }
+//  }
+//}

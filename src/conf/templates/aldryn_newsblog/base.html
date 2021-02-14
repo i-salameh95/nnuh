@@ -1,0 +1,8 @@
+{% extends CMS_TEMPLATE %}
+{% load cms_tags %}
+{% block content %}
+    {% static_placeholder "newsblog_top" %}
+    {% block newsblog_content %}
+    {% endblock %}
+    {% static_placeholder "newsblog_bottom" %}
+{% endblock content %}

@@ -1,0 +1,28 @@
+.owl-blog {
+  .owl-stage-outer {
+    &:before,
+    &:after {
+      content: "";
+      z-index: 102;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      @include media-breakpoint-up(md) {
+        width: 80px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 150px;
+      }
+    }
+    &:before {
+      left: 0;
+      background-image: linear-gradient(to right, #fff, transparent);
+    }
+    &:after {
+      right: 0;
+      background-image: linear-gradient(to left, #fff, transparent);
+    }
+  }
+
+}

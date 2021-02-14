@@ -1,0 +1,156 @@
+{% load static i18n cms_tags menu_tags sekizai_tags crispy_forms_tags %}
+{% load render_bundle from webpack_loader %}
+<!doctype html>
+<html lang="{% if LANGUAGE_BIDI %}ar{% else %}en{% endif %}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        {% if LANGUAGE_BIDI %}
+            {% render_bundle 'bundle' 'rtl.css' %}
+{#            <link rel="stylesheet" href="{% static 'css/bundle.rtl.css' %}?v=1" />#}
+        {% else %}
+            {% render_bundle 'bundle' 'ltr.css' %}
+{#            <link rel="stylesheet" href="{% static 'css/bundle.css' %}?v=1" />#}
+        {% endif %}
+{#        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">#}
+          {% render_block "css" %}
+
+          <title>{% block title %}{%  trans 'An-Najah National Hospital' %}{% endblock title %}</title>
+<!--		<style>
+
+.header .logo {
+
+    width: 112px;
+    height: 41px;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 1200px){
+    .header .logo {
+        width: 210px;
+        height: 80px;
+        background-repeat: no-repeat;
+    }
+}-->
+
+		</style>
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <div class="header">
+            {% comment %}
+            <div class="topbar">
+                <div class="container">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="//www-cdn.najah.edu/static/img/logo.svg" width="40" height="40" class="mr-1" /> <a href="https://www.najah.edu/" target="_blank">{% trans 'An-Najah National University' %}</a>
+                    </div>
+                </div>
+            </div>
+            {% endcomment %}
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+			<a href="{% page_url 'homepage' %}" class="logo d-block"></a>
+			<a href="/ar/jci/" class="accr d-block"></a>
+                    {#<a href="{% page_url 'homepage' %}"><div class="logo"></div></a>#}
+                    {#<a href="https://www.najah.edu/" target="_blank" class="ml-3"><div class="nnu"></div></a>#}
+                    <div class="menu-wrapper ml-auto">
+                        <button class="btn btn-dark btn-sm navbar-offcanvas-toggler d-lg-none" type="button" data-toggle="offcanvas"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-fw fa-bars"></i>
+                        </button>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-transparent pr-lg-0">
+                            <div class="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    {% show_menu 0 100 100 100 'menu/bootstrap4_navbar.html' %}
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="search-wrapper">
+                <div class="container">
+                    <div class="search-switcher"></div>
+                    <div class="collapse{% block search_form_classes %}{% endblock %}" id="collapseSearch">
+                        <div class="py-3">
+                            <form method="GET" action="{% url 'nnuh_search:nnuh-search' %}">
+                                {% crispy SEARCH_FORM %}
+                            </form>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center tools-btn-wrapper">
+                        <a class="{#mr-3#}" data-toggle="collapse" href="#collapseSearch" role="button" aria-expanded="false" aria-controls="collapseSearch"><i class="fas fa-search"></i></a>
+                        {#{% language_chooser %}#}
+                    </div>
+{#                    <a class="search-btn" data-toggle="collapse" href="#collapseSearch" role="button" aria-expanded="false" aria-controls="collapseSearch">{% trans 'Search' %}</a>#}
+                </div>
+            </div>
+        </div>
+        {% if not request.current_page.is_home %}
+            <div class="page-title-wrapper d-flex justify-content-between">
+                <div class="container">
+                    <div class="d-md-flex justify-content-md-between align-items-md-center">
+                        <h2 class="page-title mb-0">{% block page_title %}{% endblock %}</h2>
+                        <h3 class="sr-only">{% trans "You are here" %}</h3>
+                        <nav aria-label="breadcrumb d-block ml-auto">
+                            <ol class="breadcrumb mb-0">
+                                {% block extend_breadcrumb %}
+                                    {% show_breadcrumb 0 "menu/bootstrap4_breadcrumb.html" 0 %}
+                                {% endblock extend_breadcrumb %}
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="featured">
+            {% block featured %}{% endblock featured %}
+        </div>
+        <div class="container content py-3">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% block content %}{% endblock content %}
+        </div>
+        <div class="footer">
+            <div class="container">
+                {% static_placeholder "footer" %}
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+{#        <script src="{% static 'js/bundle.js' %}"></script>#}
+        {% render_bundle 'bundle' 'js' %}
+        {% render_block "js" %}
+    {% if request.toolbar and request.toolbar.edit_mode_active %}
+        <script>
+        CMS.$(window).on('cms-content-refresh', function () {
+            library.add(far, fas, fab);
+            var css = dom.css();
+            {#console.log(css);#}
+            {#var insertCSS = dom.insertCss(css);#}
+            {#console.log(insertCSS);#}
+            $('head').append('<style>' + css + '</style>');
+            dom.i2svg();
+            {#$(document).insertCss(css);#}
+            {#dom.watch();#}
+
+        });
+        </script>
+    {% endif %}
+	{% comment %}
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=razi"></script>
+	{% endcomment %}
+    </body>
+</html>

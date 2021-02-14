@@ -1,0 +1,18 @@
+{% load i18n highlight cms_tags menu_tags nnuh_search_tags %}
+
+<h3><a href="{{ result.url }}">{{ result.title }}</a></h3>
+{#{% show_placeholder "content" result.object.page %}#}
+{% if result.text %}
+    <p class="mb-1">{% highlight result.text with request.GET.q %}</p>
+{% endif %}
+<small class="d-block" style="direction:ltr"><a href="{{ result.url }}">https://nnuh.najah.edu{{ result.url }}</a></small>
+{% if result.object.page.reverse_id %}
+    {% show_menu_below_id result.object.page.reverse_id 0 100 0 0 "menu/tags.html" %}
+{% else %}
+    {% get_autogen_reverse_id result.object.page_id as reverse_id %}
+    {% show_menu_below_id reverse_id 0 100 0 0 "menu/tags.html" %}
+{% endif %}
+<div class="pb-3 mb-3 border-bottom"></div>
+{#{% for page in result.object.page.children.all %}#}
+{#    {{ page }}#}
+{#{% endfor %}#}

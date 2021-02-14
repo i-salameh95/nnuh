@@ -1,0 +1,24 @@
+{% load i18n staticfiles thumbnail cms_tags apphooks_config_tags %}
+
+<li class="list-group-item d-flex justify-content-start align-items-start px-0{% if forloop.first %} pt-0{% endif %}{% if article.is_featured %} featured{% endif %}{% if not article.published %} unpublished{% endif %}">
+
+    {% if article.featured_image_id %}
+        <img src="{% thumbnail article.featured_image 75x75 crop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}">
+    {% else %}
+        <div class="media-icon media-icon-75x75 d-flex flex-column justify-content-center align-items-center">
+            <i class="fas fa-calendar"></i>
+            <small>{{ article.publishing_date|date }}</small>
+        </div>
+    {% endif %}
+    <div class="ml-3">
+        {% if article.featured_image_id %}
+        <small class="text-muted"><i class="fas fa-calendar"></i> {{ article.publishing_date|date }}</small><br />
+        {% endif %}
+        <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">{% render_model article "title" %}</a>
+    </div>
+
+
+    {% if detail_view %}
+        {% render_placeholder article.content language placeholder_language %}
+    {% endif %}
+</li>

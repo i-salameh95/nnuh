@@ -1,0 +1,64 @@
+{% load cms_tags i18n thumbnail aldryn_people_tags %}
+
+<div class="card card-doctor h-100">
+    {% if doctor.visual %}
+        <div class="card-doctor-pic">
+            {% if not instance and not detail_view or instance.show_links %}
+                <a href="{{ doctor.get_absolute_url }}">
+            {% endif %}
+            <img class="img-fluid" src="{% thumbnail doctor.visual 400x400 crop upscale subject_location=doctor.visual.subject_location %}" alt="{{ doctor.name }}">
+            {% if instance.show_links %}
+                </a>
+            {% endif %}
+            {% if doctor.facebook or doctor.twitter or doctor.linkedin %}
+                <div class="card-doctor-meta">
+                    {% if doctor.facebook %}
+                        <a class="card-doctor-meta-link animated bounceIn" href="{{ doctor.facebook }}"><span><i class="fab fa-facebook-f fa-fw"></i></span></a>
+                    {% endif %}
+                    {% if doctor.twitter %}
+                        <a class="card-doctor-meta-link animated bounceIn" href="{{ doctor.twitter }}"><span><i class="fab fa-twitter fa-fw"></i></span></a>
+                    {% endif %}
+                    {% if doctor.facebook %}
+                        <a class="card-doctor-meta-link animated bounceIn" href="{{ doctor.linkedin }}"><span><i class="fab fa-linkedin fa-fw"></i></span></a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    <div class="card-body">
+        <h3 class="card-title text-center mb-0">
+            {% if not instance and not detail_view or instance.show_links %}
+                <a href="{{ doctor.get_absolute_url }}">{{ doctor.name }}</a>
+            {% else %}
+                {% render_model doctor 'name' %}
+            {% endif %}
+            {% if doctor.function %}
+                <br /><small>{{ doctor.function }}</small>
+            {% else %}
+                {% if doctor.speciality %}
+                    <br /><small>{{ doctor.speciality }}{% if doctor.sub_speciality %} - {{ doctor.sub_speciality }}{% endif %}</small>
+                {% endif %}
+            {% endif %}
+        </h3>
+    </div>
+{#    <p class="meta">#}
+{#        {% if doctor.phone %}#}
+{#            <strong>{% trans "Phone:" %}</strong>#}
+{#            {{ doctor.phone|phoneformat }}<br>#}
+{#        {% endif %}#}
+{#        {% if doctor.mobile %}#}
+{#            <strong>{% trans "Mobile:" %}</strong>#}
+{#            {{ doctor.mobile|phoneformat }}<br>#}
+{#        {% endif %}#}
+{#        {% if doctor.email %}#}
+{#            <strong>{% trans "Email:" %}</strong>#}
+{#            <span class="fa fa-fw fa-envelope" aria-hidden="true"></span>#}
+{#            <a href="mailto:{{ doctor.email }}">{{ doctor.email }}</a><br>#}
+{#        {% endif %}#}
+{#        {% if doctor.website %}#}
+{#            <strong>{% trans "Website:" %}</strong>#}
+{#            <span class="fa fa-fw fa-globe" aria-hidden="true"></span>#}
+{#            <a href="{{ doctor.website }}" target="_blank">{{ doctor.website }}</a><br>#}
+{#        {% endif %}#}
+{#    </p>#}
+</div>

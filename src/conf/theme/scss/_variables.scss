@@ -1,0 +1,148 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$nnuh1:     #44B7B9;
+$nnuh2:     #008996;
+$nnuh3:     #980065;
+
+$primary:   $nnuh2;
+$secondary: $nnuh1;
+$violet:    $nnuh3;
+$violet-light:    lighten($violet, 8%);
+
+$theme-colors: (
+        "nnuh1":        $nnuh1,
+        "nnuh2":        $nnuh2,
+        "nnuh3":        $nnuh3,
+        "violet":       $violet,
+        "violet-light": $violet-light
+);
+
+$enable-rounded:                              false;
+$enable-shadows:                              true;
+$enable-gradients:                            true;
+$enable-responsive-font-sizes:                true;
+
+$spacer: 1rem; // used in calculations
+
+//$body-bg:                   $gray-100;
+$body-color:                 $gray-700;
+
+$paragraph-margin-bottom:   1.5rem;
+
+$link-color:                              $nnuh1;
+$link-decoration:                         none !default;
+$link-hover-color:                        $nnuh2;
+$link-hover-decoration:                   underline !default;
+
+
+//$border-color:                $gray-200;
+
+
+$font-family-sans-serif:      "Trebuchet MS", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" #{'/*rtl:prepend:"GE Flow",*/'};
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+//$font-size-base:              0.85rem; // Assumes the browser default, typically `16px`
+//$headings-font-weight:        700;
+//$headings-color:              $gray-800;
+
+
+//$table-bg:                    white;
+//$table-dark-bg:               $gray-700;
+//$nav-link-padding-y:                1.5rem;
+
+$navbar-padding-y:                  0;
+
+//$navbar-nav-link-padding-x:         1rem !default;
+//$navbar-light-color:                #333;
+//$navbar-light-hover-color:          #fff;
+//$navbar-light-active-color:         #fff;
+
+$dropdown-min-width:                12rem !default;
+$dropdown-padding-y:                0; // .5rem !default;
+$dropdown-spacer:                   0; // .125rem !default;
+//$dropdown-font-size:                $font-size-base !default;
+//$dropdown-color:                    $body-color !default;
+$dropdown-bg:                       $nnuh2; // $white !default;
+$dropdown-border-color:             $nnuh2; // rgba($black, .15) !default;
+$dropdown-border-radius:            0; // $border-radius !default;
+$dropdown-border-width:             0; // $border-width !default;
+//$dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) !default;
+//$dropdown-divider-bg:               $gray-200 !default;
+//$dropdown-divider-margin-y:         $nav-divider-margin-y !default;
+//$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
+
+$dropdown-link-color:               #ffffff; // $gray-900 !default;
+$dropdown-link-hover-color:         #ffffff; // darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg:            $nnuh1; // $gray-100 !default;
+//
+$dropdown-link-active-color:        #ffffff; // $component-active-color !default;
+$dropdown-link-active-bg:           $nnuh1; // $component-active-bg !default;
+
+//$dropdown-link-disabled-color:      $gray-600 !default;
+
+$dropdown-item-padding-y:           .6rem; // .25rem !default;
+//$dropdown-item-padding-x:           1.5rem !default;
+
+//$dropdown-header-color:             $gray-600 !default;
+
+
+$jumbotron-padding:                 1rem;
+
+$tooltip-max-width:                 500px;
+$tooltip-bg:                        $nnuh3;
+
+$breadcrumb-padding-y:              .1rem;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           .3rem;
+
+$breadcrumb-margin-bottom:          0;
+
+$breadcrumb-bg:                     transparent;
+$breadcrumb-divider-color:          #fff;
+$breadcrumb-active-color:           #fff;
+$breadcrumb-divider:                quote("»") !default;
+$breadcrumb-border-radius:          0;
+
+$grid-breakpoints: (
+        xs: 0,
+        //sm: 576px,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px,
+        xl: 1400px
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+        //sm: 540px,
+        sm: 720px,
+        md: 960px,
+        lg: 1140px,
+        xl: 1340px
+);
+
+//$sizes: (
+//  66: 66%,
+//);
+
+
+

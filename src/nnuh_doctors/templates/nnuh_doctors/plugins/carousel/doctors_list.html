@@ -1,0 +1,58 @@
+{% load i18n sekizai_tags %}<div class="section section-doctors-carousel">
+    <div class="section-title d-flex justify-content-between align-items-center">
+        <h2>{% trans 'Our Doctors' %}</h2>
+        <div class="customNavigation">
+          <a class="btn btn-violet btn-sm" href="{% url 'nnuh_doctors:doctor-list' %}">
+              {% trans 'More' %}
+          </a>
+          <a class="btn btn-violet btn-sm btn-doctors-prev" href="#">
+              <i class="fas fa-angle-{% if LANGUAGE_BIDI %}right{% else %}left{% endif %} fa-fw"></i>
+          </a>
+          <a class="btn btn-violet btn-sm btn-doctors-next" href="#">
+              <i class="fas fa-angle-{% if LANGUAGE_BIDI %}left{% else %}right{% endif %} fa-fw"></i>
+          </a>
+        </div>
+    </div>
+    <div class="owl-carousel owl-carousel-doctors">
+        {% for doctor in doctors %}
+            {% include "nnuh_doctors/includes/doctor.html" with doctor=doctor %}
+        {% endfor %}
+    </div>
+</div>
+{% addtoblock "js" %}
+    <script>
+        $(function () {
+            var owl = $('.owl-carousel-doctors').owlCarousel({
+                loop: true,
+                margin: 30,
+                responsiveClass: true,
+                {#nav: false,#}
+                controls: false,
+                {% if LANGUAGE_BIDI %}rtl: true, {% endif %}
+                responsive: {
+                    0: {
+                        items: 1,
+                        {#nav: true#}
+                    },
+                    600: {
+                        items: 2,
+                        {#nav: false#}
+                    },
+                    1000: {
+                        items: 4,
+                        {#nav: true,#}
+                        loop: false
+                    }
+                }
+            });
+            $(".btn-doctors-next").click(function (e) {
+                e.preventDefault();
+                owl.trigger('next.owl.carousel');
+            });
+            $(".btn-doctors-prev").click(function (e) {
+                e.preventDefault();
+                owl.trigger('prev.owl.carousel');
+            });
+        });
+    </script>
+{% endaddtoblock %}

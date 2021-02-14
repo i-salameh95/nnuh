@@ -1,0 +1,25 @@
+{% if children|length %}
+<nav class="nav nav-pills nav-fill mb-3">
+    {% for child in children %}
+        <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="nav-item nav-link{% if child.selected or child.ancestor %} active{% endif %}">
+            {{ child.get_menu_title }}
+        </a>
+{#        <li class="nav-item{% if child.selected %} active{% endif %}{% if child.ancestor %} active{% endif %}{% if child.sibling %} sibling{% endif %}{% if child.descendant %} descendant{% endif %}{% if child.children %} dropdown{% endif %}">#}
+{#            {% if child.children %}#}
+{#                <a class="nav-link" href="#" id="navbarDropdown{{ child.id }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                    <span class="d-none d-lg-block text-center"><i class="fas fa-plus"></i></span>#}
+{#                    {{ child.get_menu_title }}#}
+{#                </a>#}
+{#                <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ child.id }}">#}
+{#                    {% show_menu from_level to_level extra_inactive extra_active 'menu/bootstrap4_navbar_submenu.html' "" "" child %}#}
+{#                </div>#}
+{#            {% else %}#}
+{#                <a class="nav-link" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">#}
+{#                    <span class="d-none d-lg-block text-center"><i class="fas fa-plus"></i></span>#}
+{#                    {{ child.get_menu_title }}#}
+{#                </a>#}
+{#            {% endif %}#}
+{#        </li>#}
+    {% endfor %}
+</nav>
+{% endif %}

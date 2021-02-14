@@ -1,0 +1,9 @@
+{% load menu_tags %}
+{% for child in children %}
+    <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="list-group-item list-group-item-action{% if child.selected or child.ancestor %} active{% endif %} list-group-level-{{ child.level|add:"-1" }}">
+        {{ child.get_menu_title }}
+    </a>
+    {% if child.children %}
+        {% show_menu from_level to_level extra_inactive extra_active 'menu/bootstrap4_listgroup.html' "" "" child %}
+    {% endif %}
+{% endfor %}

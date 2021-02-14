@@ -1,0 +1,7 @@
+{% if children|length %}
+    {% for child in children %}
+        <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="badge badge-primary">
+            {{ child.get_menu_title }}
+        </a>
+    {% endfor %}
+{% endif %}

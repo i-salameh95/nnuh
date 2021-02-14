@@ -1,0 +1,35 @@
+//$font-family-sans-serif:      "Noto Sans Kufi Arabic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+//$font-family-content:         'Greta', 'Noto Naskh Arabic', serif;
+$enable-rounded: false;
+$enable-gradients: true;
+
+// $blue:    #003d80;
+//$indigo:  #33077c;
+//$purple:  #382063;
+//$pink:    #95124e;
+//$red:     #7c161f;
+//$orange:  #904201;
+//$yellow:  #876500;
+//$green:   #0f401b;
+//$teal:    #0e5b44;
+//$cyan:    #093e47;
+
+$blue:    #2869A3;
+$indigo:  #33077c;
+$purple:  #382063;
+$pink:    #95124e;
+$red:     #FC3E2F;
+$orange:  #FC6F2F;
+$yellow:  #FCA72F;
+$green:   #20AA76;
+$teal:    #0e5b44;
+$cyan:    #22819D;
+
+// $gray-100: #f8f8f8;
+
+$font-size-base:              1.1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+$font-family-serif: "Amiri", serif;
+$font-family-sans-serif:    "SF Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-base:            $font-family-serif !default;

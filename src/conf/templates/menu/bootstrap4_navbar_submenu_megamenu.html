@@ -1,0 +1,9 @@
+{% load menu_tags %}
+
+<div class="row no-gutters">
+    {% for child in children %}
+        <div class="col-6 col-sm-4">
+            <a class="dropdown-item" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+        </div>
+    {% endfor %}
+</div>

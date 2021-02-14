@@ -1,0 +1,24 @@
+{% extends "nnuh_doctors/fullwidth.html" %}
+{% load cms_tags i18n bootstrap_pagination %}
+
+{% block people_content %}
+    <div class="nnuh nnuh-doctor">
+        <h1 class="page-title">
+            {% trans 'Our Doctors' %}
+        </h1>
+        <div class="row">
+            {% for doctor in doctor_list %}
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    {% include "nnuh_doctors/includes/doctor.html" with doctor=doctor %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="mt-4 d-flex justify-content-end">
+            {% if LANGUAGE_BIDI %}
+                {% bootstrap_paginate page_obj range=3 previous_label="&rarr;" next_label="&larr;" show_first_last=True %}
+            {% else %}
+                {% bootstrap_paginate page_obj range=3 previous_label="&larr;" next_label="&rarr;" show_first_last=True %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock people_content %}

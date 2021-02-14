@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n cms_tags bootstrap_pagination %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+{#{% block page_title %}{% page_attribute "page_title" %}{% endblock page_title %}#}
+
+{% block search_form_classes %} show{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="section-title">
+                <h3>{% trans 'Results' %}</h3>
+            </div>
+            {% for result in page_obj.object_list %}
+                {% include "nnuh_search/includes/"|add:result.model_name|add:".html" with result=result obj=result.object %}
+            {% empty %}
+                <div class="alert alert-info">{% trans 'No results found.' %}</div>
+            {% endfor %}
+            {% if LANGUAGE_BIDI %}
+                {% bootstrap_paginate page_obj range=3 previous_label="&rarr;" next_label="&larr;" show_first_last=True %}
+            {% else %}
+                {% bootstrap_paginate page_obj range=3 previous_label="&larr;" next_label="&rarr;" show_first_last=True %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

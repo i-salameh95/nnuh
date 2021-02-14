@@ -1,0 +1,26 @@
+$facebook: #3B5998;
+$twitter:  #55ACEE;
+$google:   #DD4B39;
+$linkedin: #007BB6;
+$windowslive:     #2672EC;
+
+$social-buttons: (
+        "facebook":        $facebook,
+        "twitter":         $twitter,
+        "google":          $google,
+        "linkedin":        $linkedin,
+        "windowslive":     $windowslive,
+);
+
+@each $color, $value in $social-buttons {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $social-buttons {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+

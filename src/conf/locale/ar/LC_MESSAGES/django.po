@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-13 10:54+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: settings/base.py:221 settings/base.py:230
+msgid "en"
+msgstr ""
+
+#: settings/base.py:222 settings/base.py:237
+msgid "ar"
+msgstr ""
+
+#: settings/base.py:322
+msgid "Primary - Terequaz"
+msgstr ""
+
+#: settings/base.py:323
+msgid "Secondary - Light Terequaz"
+msgstr ""
+
+#: settings/base.py:324
+msgid "Violet"
+msgstr ""
+
+#: settings/base.py:325
+msgid "Success"
+msgstr ""
+
+#: settings/base.py:326
+msgid "Danger"
+msgstr ""
+
+#: settings/base.py:327
+msgid "Warning"
+msgstr ""
+
+#: settings/base.py:328
+msgid "Info"
+msgstr ""
+
+#: settings/base.py:329
+msgid "Light"
+msgstr ""
+
+#: settings/base.py:330
+msgid "Dark"
+msgstr ""
+
+#: settings/base.py:334
+msgid "Default"
+msgstr "الإفتراضي"
+
+#: settings/base.py:335
+msgid "Featured"
+msgstr ""
+
+#: templates/aldryn_newsblog/announcements/includes/pagination.html:8
+#: templates/aldryn_newsblog/tenders/includes/pagination.html:8
+#: templates/djangocms_bootstrap4/carousel/featured/carousel.html:33
+msgid "Previous"
+msgstr "السابق"
+
+#: templates/aldryn_newsblog/announcements/includes/pagination.html:42
+#: templates/aldryn_newsblog/tenders/includes/pagination.html:42
+#: templates/djangocms_bootstrap4/carousel/featured/carousel.html:37
+msgid "Next"
+msgstr "التالي"
+
+#: templates/aldryn_newsblog/announcements/includes/search_results.html:6
+#: templates/aldryn_newsblog/includes/search_results.html:6
+#: templates/aldryn_newsblog/news/includes/search_results.html:6
+#: templates/aldryn_newsblog/tenders/includes/search_results.html:6
+#, python-format
+msgid "Most recent articles containing \"<strong>%(query)s</strong>\""
+msgstr ""
+
+#: templates/aldryn_newsblog/announcements/includes/search_results.html:21
+#: templates/aldryn_newsblog/includes/search_results.html:21
+#: templates/aldryn_newsblog/news/includes/search_results.html:21
+#: templates/aldryn_newsblog/tenders/includes/search_results.html:21
+msgid "No articles found"
+msgstr "لم يتم العثور على مقالات"
+
+#: templates/aldryn_newsblog/announcements/includes/search_results.html:23
+#: templates/aldryn_newsblog/includes/search_results.html:23
+#: templates/aldryn_newsblog/news/includes/search_results.html:23
+#: templates/aldryn_newsblog/tenders/includes/search_results.html:23
+msgid "Enter a query above"
+msgstr ""
+
+#: templates/aldryn_newsblog/announcements/plugins/archive.html:22
+#: templates/aldryn_newsblog/announcements/plugins/authors.html:9
+#: templates/aldryn_newsblog/announcements/plugins/featured_articles.html:6
+#: templates/aldryn_newsblog/announcements/plugins/related_articles.html:11
+#: templates/aldryn_newsblog/article_list.html:9
+#: templates/aldryn_newsblog/news/plugins/archive.html:22
+#: templates/aldryn_newsblog/news/plugins/authors.html:9
+#: templates/aldryn_newsblog/news/plugins/featured_articles.html:6
+#: templates/aldryn_newsblog/news/plugins/related_articles.html:11
+#: templates/aldryn_newsblog/plugins/archive.html:22
+#: templates/aldryn_newsblog/plugins/authors.html:9
+#: templates/aldryn_newsblog/plugins/featured_articles.html:6
+#: templates/aldryn_newsblog/plugins/latest_articles.html:13
+#: templates/aldryn_newsblog/plugins/related_articles.html:11
+#: templates/aldryn_newsblog/tenders/plugins/archive.html:22
+#: templates/aldryn_newsblog/tenders/plugins/authors.html:9
+#: templates/aldryn_newsblog/tenders/plugins/featured_articles.html:6
+#: templates/aldryn_newsblog/tenders/plugins/related_articles.html:11
+msgid "No items available"
+msgstr "لم يتم العثور على أي عنصر"
+
+#: templates/aldryn_newsblog/announcements/plugins/article_search.html:6
+#: templates/aldryn_newsblog/news/plugins/article_search.html:6
+#: templates/aldryn_newsblog/plugins/article_search.html:6
+#: templates/aldryn_newsblog/tenders/plugins/article_search.html:6
+msgid "Keyword search"
+msgstr ""
+
+#: templates/aldryn_newsblog/announcements/plugins/article_search.html:7
+#: templates/aldryn_newsblog/news/plugins/article_search.html:7
+#: templates/aldryn_newsblog/plugins/article_search.html:7
+#: templates/aldryn_newsblog/tenders/plugins/article_search.html:7
+msgid "Keyword"
+msgstr ""
+
+#: templates/aldryn_newsblog/announcements/plugins/article_search.html:10
+#: templates/aldryn_newsblog/news/plugins/article_search.html:10
+#: templates/aldryn_newsblog/plugins/article_search.html:10
+#: templates/aldryn_newsblog/tenders/plugins/article_search.html:10
+msgid "Go"
+msgstr "إذهب"
+
+#: templates/aldryn_newsblog/announcements/plugins/categories.html:5
+#: templates/aldryn_newsblog/announcements/plugins/tags.html:5
+#: templates/aldryn_newsblog/news/plugins/categories.html:5
+#: templates/aldryn_newsblog/news/plugins/tags.html:5
+#: templates/aldryn_newsblog/plugins/categories.html:5
+#: templates/aldryn_newsblog/plugins/tags.html:5
+#: templates/aldryn_newsblog/tenders/plugins/categories.html:5
+#: templates/aldryn_newsblog/tenders/plugins/tags.html:5
+msgid "All"
+msgstr ""
+
+#: templates/aldryn_newsblog/announcements/plugins/latest_articles.html:4
+msgid "Latest Announcements"
+msgstr "اخر الإعلانات"
+
+#: templates/aldryn_newsblog/announcements/plugins/related_articles.html:8
+#: templates/aldryn_newsblog/news/plugins/related_articles.html:8
+#: templates/aldryn_newsblog/plugins/related_articles.html:8
+#: templates/aldryn_newsblog/tenders/plugins/related_articles.html:8
+msgid "by"
+msgstr ""
+
+#: templates/aldryn_newsblog/article_detail.html:28
+msgid "Previous Article"
+msgstr "المقال السابق"
+
+#: templates/aldryn_newsblog/article_detail.html:30
+msgid "Back to Overview"
+msgstr "الرجوع الى قائمة المقالات"
+
+#: templates/aldryn_newsblog/article_detail.html:32
+msgid "Next Article"
+msgstr "المقال التالي"
+
+#: templates/aldryn_newsblog/news/plugins/latest_articles.html:4
+msgid "Latest News"
+msgstr "اخر الأخبار"
+
+#: templates/aldryn_newsblog/plugins/latest_articles.html:6
+msgid "More"
+msgstr "المزيد"
+
+#: templates/aldryn_newsblog/tenders/plugins/latest_articles.html:4
+msgid "Tenders"
+msgstr "العطاءات"
+
+#: templates/base.html:21
+msgid "An-Najah National Hospital"
+msgstr "مستشفى النجاح الوطني الجامعي"
+
+#: templates/base.html:97
+msgid "You are here"
+msgstr "أنت هنا"
+
+#: templates/djangocms_video/default/video_player.html:18
+msgid "Your browser doesn't support this video format."
+msgstr ""
+
+#: templates/menu/language_chooser.html:5
+msgid "Change to language:"
+msgstr ""
+
+#~ msgid "An-Najah National University"
+#~ msgstr "جامعة النجاح الوطنية"

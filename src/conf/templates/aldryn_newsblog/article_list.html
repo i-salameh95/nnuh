@@ -1,0 +1,14 @@
+{% extends "aldryn_newsblog/base.html" %}
+{% load i18n %}
+
+{% block newsblog_content %}
+    <ul class="list-group list-group-flush">
+        {% for article in article_list %}
+            {% include "aldryn_newsblog/includes/article.html" %}
+            {% empty %}
+            <li class="list-group-item list-group-item-info">{% trans "No items available" %}</li>
+        {% endfor %}
+
+        {% include "aldryn_newsblog/includes/pagination.html" %}
+    </ul>
+{% endblock %}
