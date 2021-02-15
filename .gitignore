@@ -111,3 +111,7 @@ private/
 .idea/
 .vscode/
 maqam.sql
+**/.DS_Store
+provision/webpack/Dockerfile
+provision/db/Dockerfile
+.gitignore
