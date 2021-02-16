@@ -4,10 +4,42 @@
     height: 55px;
     background-color: #213540;
     @extend .py-1;
+    @include media-breakpoint-between(xs,md){
+      height: auto;
+      padding: 10px 0;
+    }
     .social-info {
+      @include media-breakpoint-between(xs,md){
+        margin-bottom: 10px;
+        margin-left: 5px;
+      }
       .a {
         margin-right: 20px;
         display: inline-block;
+      }
+    }
+    
+    .top-header-menu {
+      .top-menu {
+        ul {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 0;
+          padding: 0;
+          li  {
+            list-style: none;
+            a {
+              display: block;
+              padding: 5px 10px;
+              font-weight: 600;
+              @include media-breakpoint-between(xs,md){
+                padding: 0 5px;
+                font-size: 12px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -209,22 +241,6 @@
       input[type=search] {
         @include media-breakpoint-down(sm) {
           margin-bottom: 1.5rem;
-        }
-      }
-    }
-  }
-
-  .top-menu {
-    ul {
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      flex-wrap: wrap;
-      li  {
-        list-style: none;
-        a {
-          display: block;
-          padding: 5px 10px;
         }
       }
     }

@@ -211,3 +211,7 @@ msgstr ""
 
 #~ msgid "An-Najah National University"
 #~ msgstr "جامعة النجاح الوطنية"
+
+#: templates/base.html:97
+msgid "Jobs"
+msgstr "وظائف شاغرة"
