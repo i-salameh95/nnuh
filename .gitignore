@@ -111,3 +111,4 @@ private/
 .idea/
 .vscode/
 maqam.sql
+package-lock.json
