@@ -111,6 +111,3 @@ private/
 .idea/
 .vscode/
 maqam.sql
-**/.DS_Store
-provision/db/Dockerfile
-provision/webpack/Dockerfile
