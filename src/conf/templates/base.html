@@ -40,23 +40,27 @@
     </head>
     <body>
         <div class="header">
-          <div class="topbar">
+            <div class="alert-bar">
+                <a class="alert-text" href="/coronavirus/">{% trans "Coronavirus (COVID-19) Safety Measures" %}</a> 
+                <a class="alert-text close-btn"><i class="fas fa-times"></i></a>
+            </div>
+            <div class="topbar">
                 <div class="container h-100">
                     <div class="row h-100">
                         <div class="col-12 h-100">
                             <div class="h-100 d-md-flex justify-content-between align-items-center">
                                 <div class="social-info">
-                                    <a href="#"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCS-R6z-qCIfIx_6onvnqF_A"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/najahnnuh/" target="_blank"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a>
+                                    <a href="https://twitter.com/an_hospital"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/nnuh_najah/"><i class="fab fa-instagram fa-lg" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="top-header-menu">
                                     <nav class="top-menu">
                                         <ul>
-                                            <li><a href="#">{%  trans "Doctors" %}</a></li>
-                                            <li><a href="#">{%  trans "Jobs" %}</a></li>
-                                            <li><a href="#">{%  trans "Contact Us" %}</a></li>
+                                            <li><a href="{% page_url 'homepage' %}">{%  trans "Doctors" %}</a></li>
+                                            <li><a href="http://hospital-job.najah.edu/">{%  trans "Jobs" %}</a></li>
+                                            <li><a href="/ar/tsl-bn2">{%  trans "Contact Us" %}</a></li>
                                             <li>{% language_chooser %}</li>
                                         </ul>
                                     </nav>
@@ -77,8 +81,8 @@
             {% endcomment %}
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-			<a href="{% page_url 'homepage' %}" class="logo d-block"></a>
-			<a href="/ar/jci/" class="accr d-block"></a>
+                    <a href="{% page_url 'homepage' %}" class="logo d-block"></a>
+                    <a href="/ar/jci/" class="accr d-block"></a>
                     {#<a href="{% page_url 'homepage' %}"><div class="logo"></div></a>#}
                     {#<a href="https://www.najah.edu/" target="_blank" class="ml-3"><div class="nnu"></div></a>#}
                     <div class="menu-wrapper ml-auto">

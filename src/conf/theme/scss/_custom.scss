@@ -1,8 +1,35 @@
 .header {
-  .topbar {
+  .alert-bar {
+    align-items: center;
+    background-image: url("../img/emergency.jpg");
+    flex-wrap: wrap;
+    height: 30px;
+    justify-content: center;
+    line-height: 1;
     position: relative;
-    height: 55px;
+    padding: .33em .5em;
+      .alert-text {
+        color: #213540;
+        display: block;
+        font-weight: 800;
+        font-size: .889em;
+        line-height: 1.35;
+        min-height: 1em;
+        text-align: center;
+      &.close-btn {
+        color: #213540;
+        cursor: pointer;
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        transform: translateY(-50%);
+        }
+      }
+  }
+  .topbar {
     background-color: #213540;
+    height: 55px;
+    position: relative;
     @extend .py-1;
     @include media-breakpoint-between(xs,md){
       height: auto;
@@ -14,16 +41,15 @@
         margin-left: 5px;
       }
       .a {
-        margin-right: 20px;
         display: inline-block;
+        margin-right: 20px;
       }
     }
-    
     .top-header-menu {
       .top-menu {
         ul {
-          display: flex;
           align-items: center;
+          display: flex;
           flex-wrap: wrap;
           margin: 0;
           padding: 0;
@@ -31,8 +57,8 @@
             list-style: none;
             a {
               display: block;
-              padding: 5px 10px;
               font-weight: 600;
+              padding: 5px 10px;
               @include media-breakpoint-between(xs,md){
                 padding: 0 5px;
                 font-size: 12px;

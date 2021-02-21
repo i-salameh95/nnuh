@@ -215,3 +215,7 @@ msgstr ""
 #: templates/base.html:97
 msgid "Jobs"
 msgstr "وظائف شاغرة"
+
+#: templates/base.html:97
+msgid "Coronavirus (COVID-19) Safety Measures"
+msgstr "كوفيد-19 اجراءات السلامة"

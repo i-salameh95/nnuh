@@ -33,3 +33,6 @@ $(function () {
     });
 });
 
+$('.close-btn').click(function() {
+    $('.alert-bar').fadeOut();
+});
