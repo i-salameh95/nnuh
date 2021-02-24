@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-30 11:14+0000\n"
+"POT-Creation-Date: 2021-02-24 12:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,46 +19,47 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: cms_plugins.py:24 templates/nnuh_contact/plugins/contact_form.html:4
+#: nnuh_contact/cms_plugins.py:24
+#: nnuh_contact/templates/nnuh_contact/plugins/contact_form.html:4
 msgid "Contact Us"
 msgstr "إتصل بنا"
 
-#: cms_plugins.py:41
+#: nnuh_contact/cms_plugins.py:41
 msgid "Message has been received successfully."
 msgstr "تم إستلام الرسالة بنجاح."
 
-#: forms.py:24 models.py:8
+#: nnuh_contact/forms.py:25 nnuh_contact/models.py:8
 msgid "Full Name"
 msgstr ""
 
-#: forms.py:25 models.py:10
+#: nnuh_contact/forms.py:26 nnuh_contact/models.py:10
 msgid "Phone/Mobile"
 msgstr ""
 
-#: forms.py:26 models.py:12
+#: nnuh_contact/forms.py:27 nnuh_contact/models.py:12
 msgid "Email Address"
 msgstr ""
 
-#: forms.py:28 models.py:16
+#: nnuh_contact/forms.py:29 nnuh_contact/models.py:16
 msgid "Message"
 msgstr ""
 
-#: models.py:21
+#: nnuh_contact/models.py:21
 msgid "Contact Message"
 msgstr ""
 
-#: models.py:22
+#: nnuh_contact/models.py:22
 msgid "Contact Messages"
 msgstr ""
 
-#: models.py:46
+#: nnuh_contact/models.py:46
 msgid "Plugin"
 msgstr ""
 
-#: models.py:47
+#: nnuh_contact/models.py:47
 msgid "Recipient Email"
 msgstr ""
 
-#: templates/nnuh_contact/plugins/contact_form.html:10
+#: nnuh_contact/templates/nnuh_contact/plugins/contact_form.html:13
 msgid "Send"
 msgstr ""

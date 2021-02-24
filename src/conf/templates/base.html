@@ -42,7 +42,7 @@
         {% cms_toolbar %}
         <div class="header">
             <div class="alert-bar">
-                <a class="alert-text" href="{% page_url 'homepage' %}">{% trans "Coronavirus (COVID-19) Safety Measures" %}</a> 
+                <a class="alert-text" href="{% page_url 'corona-virus' %}">{% trans "Coronavirus (COVID-19) Safety Measures" %}</a> 
                 <a class="alert-text close-btn"><i class="fas fa-times"></i></a>
             </div>
             <div class="topbar">
@@ -61,6 +61,7 @@
                                         <ul>
                                             <li><a href="{% page_url 'homepage' %}">{%  trans "Doctors" %}</a></li>
                                             <li><a href="http://hospital-job.najah.edu/">{%  trans "Jobs" %}</a></li>
+                                            <li><a href="{% page_url 'sitemap' %}">{%  trans "Sitemap" %}</a></li>
                                             <li><a href="/ar/tsl-bn2">{%  trans "Contact Us" %}</a></li>
                                             <li>{% language_chooser %}</li>
                                         </ul>

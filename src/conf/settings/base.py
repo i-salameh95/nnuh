@@ -209,11 +209,11 @@ INSTALLED_APPS = [
     'webpack_loader',
     'crispy_forms',
     'fullurl',
-
     'conf',
     'nnuh_search',
     'nnuh_contact',
     'nnuh_doctors',
+    'djangocms_htmlsitemap',
 ]
 
 LANGUAGES = (

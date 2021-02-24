@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-16 13:41+0200\n"
+"POT-Creation-Date: 2021-02-24 12:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,23 +195,27 @@ msgstr ""
 msgid "An-Najah National Hospital"
 msgstr ""
 
-#: conf/templates/base.html:57 nnuh_search/forms.py:17
+#: conf/templates/base.html:45
+msgid "Coronavirus (COVID-19) Safety Measures"
+msgstr ""
+
+#: conf/templates/base.html:62 nnuh_search/forms.py:17
 msgid "Doctors"
 msgstr ""
 
-#: conf/templates/base.html:58
+#: conf/templates/base.html:63
 msgid "Jobs"
 msgstr ""
 
-#: conf/templates/base.html:59
+#: conf/templates/base.html:64
+msgid "Sitemap"
+msgstr ""
+
+#: conf/templates/base.html:65
 msgid "Contact Us"
 msgstr ""
 
-#: conf/templates/base.html:60
-msgid "EN"
-msgstr ""
-
-#: conf/templates/base.html:124
+#: conf/templates/base.html:130
 msgid "You are here"
 msgstr ""
 
@@ -219,7 +223,12 @@ msgstr ""
 msgid "Your browser doesn't support this video format."
 msgstr ""
 
-#: conf/templates/menu/language_chooser.html:5
+#: conf/templates/menu/language_chooser.html:4
+msgid "Change to language: English"
+msgstr ""
+
+#: conf/templates/menu/language_chooser.html:8
+#: conf/templates/menu/language_chooser.html:18
 msgid "Change to language:"
 msgstr ""
 
