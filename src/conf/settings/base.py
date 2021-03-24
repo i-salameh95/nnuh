@@ -163,7 +163,7 @@ INSTALLED_APPS = [
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-
+    
     'djangocms_icon',
     'djangocms_link',
     'djangocms_picture',
