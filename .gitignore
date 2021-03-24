@@ -112,4 +112,3 @@ private/
 .vscode/
 maqam.sql
 package-lock.json
-src/conf/settings/base.py
