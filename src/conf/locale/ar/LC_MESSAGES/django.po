@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-24 12:29+0200\n"
+"POT-Creation-Date: 2021-04-04 09:15+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -214,10 +214,14 @@ msgid "Sitemap"
 msgstr "خريطة الموقع"
 
 #: conf/templates/base.html:65
+msgid "Patient Feedback"
+msgstr "آراء وملاحظات المرضى"
+
+#: conf/templates/base.html:67
 msgid "Contact Us"
 msgstr ""
 
-#: conf/templates/base.html:130
+#: conf/templates/base.html:134
 msgid "You are here"
 msgstr "أنت هنا"
 
@@ -269,6 +273,9 @@ msgstr ""
 #| msgid "No articles found"
 msgid "No results found."
 msgstr "لم يتم العثور على مقالات"
+
+#~ msgid "Medical Records"
+#~ msgstr "السجلات الطبية"
 
 #~ msgid "An-Najah National University"
 #~ msgstr "جامعة النجاح الوطنية"
