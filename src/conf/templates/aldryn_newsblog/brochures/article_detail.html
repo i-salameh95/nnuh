@@ -1,0 +1,34 @@
+{% extends "aldryn_newsblog/article_detail.html" %}
+
+{% load cms_tags i18n thumbnail apphooks_config_tags %}
+
+{% block newsblog_content %}
+{#    {% include "aldryn_newsblog/includes/article.html" with detail_view="true" %}#}
+    <div class="row">
+        <div class="col-lg-12">
+            <img class="img-fluid mb-3" src="{% thumbnail article.featured_image 1340x840 crop upscale subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}">
+            {% with categories=aritcle.categoreis.all %}
+                {% if categories|length %}
+                    <div class="d-flex justify-content-start mb-3">
+                        {% for category in article.categories.all %}
+                            <a class="badge badge-primary" href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <h3>{% render_model article "title" %}</h3>
+            <small class="d-block text-muted mb-3"><i class="fas fa-calendar"></i> {{ article.publishing_date|date }}</small>
+            {% render_placeholder article.content language placeholder_language %}
+
+            <ul class="list-unstyled d-flex justify-content-center mt-5">
+                {% if prev_article %}
+                    <li><a href="{{ prev_article.get_absolute_url }}" class="btn btn-outline-primary rounded mx-3">{% trans "Previous Article" %}</a></li>
+                {% endif %}
+                <li><a href="{% namespace_url "article-list" %}" class="btn btn-outline-primary rounded mx-3">{% trans "Back to Overview" %}</a></li>
+                {% if next_article %}
+                    <li><a href="{{ next_article.get_absolute_url }}" class="btn btn-outline-primary rounded mx-3">{% trans "Next Article" %}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

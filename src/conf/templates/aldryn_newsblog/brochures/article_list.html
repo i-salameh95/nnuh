@@ -1,0 +1,22 @@
+{% extends "aldryn_newsblog/article_list.html" %}
+
+{% load cms_tags i18n %}
+
+{% block newsblog_content %}
+<div class="row">
+    <div class="col-lg-9">
+        <ul class="list-group list-group-flush">
+            {% for article in article_list %}
+                {% include "aldryn_newsblog/includes/article.html" %}
+                {% empty %}
+                <li class="list-group-item list-group-item-info">{% trans "No items available" %}</li>
+            {% endfor %}
+            {% include "aldryn_newsblog/includes/pagination.html" %}
+        </ul>
+    </div>
+    <div class="col-lg-3">
+        {% static_placeholder "newsblog_sidebar" %}
+    </div>
+</div>
+
+{% endblock %}
