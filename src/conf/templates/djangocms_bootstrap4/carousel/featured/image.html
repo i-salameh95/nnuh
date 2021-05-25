@@ -1,5 +1,3 @@
-{% load cms_tags thumbnail %}
+{% load cms_tags %}
 
-{% thumbnail instance.carousel_image options.size crop=options.crop upscale=options.upscale subject_location=instance.carousel_image.subject_location as thumbnail %}
-
-<img class="d-block w-100" src="{{ thumbnail.url }}" alt="{{ instance.carousel_image.default_alt_text|default:'' }}" >
+<img class="d-block w-100" src="{{ instance.carousel_image.url }}" alt="{{ instance.carousel_image.default_alt_text|default:'' }}" >
