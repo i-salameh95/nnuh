@@ -42,8 +42,7 @@
       }
       a {
         &:last-child {
-          /*rtl:ignore*/
-          direction: ltr;
+          direction: rtl;
           font-size: 1.1875rem;
           unicode-bidi: isolate;
         }
