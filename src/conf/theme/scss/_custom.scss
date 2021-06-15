@@ -42,9 +42,10 @@
       }
       a {
         &:last-child {
-          direction: rtl;
+          /*rtl:ignore*/
+          direction: ltr;
           font-size: 1.1875rem;
-          unicode-bidi: embed;
+          unicode-bidi: isolate;
         }
       }
     }

@@ -155,8 +155,9 @@ msgstr "إذهب"
 #: conf/templates/aldryn_newsblog/plugins/tags.html:5
 #: conf/templates/aldryn_newsblog/tenders/plugins/categories.html:5
 #: conf/templates/aldryn_newsblog/tenders/plugins/tags.html:5
+#: conf/templates/aldryn_newsblog/brochures/plugins/categories.html:5
 msgid "All"
-msgstr ""
+msgstr "الفئات"
 
 #: conf/templates/aldryn_newsblog/announcements/plugins/latest_articles.html:4
 msgid "Latest Announcements"

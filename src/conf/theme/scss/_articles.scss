@@ -1,0 +1,100 @@
+.card.card-article {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    .card-header {
+      border-style: none;
+      background-color: transparent;
+      border-left: 3px solid $primary;
+      padding: 0 0 0 0.5rem;
+      > p, > h1, > h2, > h3, > h4, > h5, > h6 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0 !important;
+      }
+    }
+    .card-notify-badge {
+      position: absolute;
+      right: -10px; /*rtl: -10px*/
+      top: -10px;
+      background: $nnuh1;
+      text-align: center;
+      border-radius: 30px 30px 30px 30px; 
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    .card-body {
+      padding-left: 0;
+      padding-right: 0;
+      ul {
+        padding-left: 0;
+        li {
+          //position: relative;
+          list-style: none;
+          @extend .d-flex;
+          @extend .justify-content-start;
+          @extend .align-items-center;
+          margin-bottom: 0.5rem;
+          &::before {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            display: none;
+          }
+          &::before {
+            font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f14a";
+          }
+  
+          svg {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: $primary;
+          }
+  
+          //.tps::before {
+          //  font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f1ea";
+          //}
+          //
+          //.twitter::before {
+          //  font-family: "Font Awesome 5 Brands"; content: "\f099";
+          //}
+        }
+      }
+    }
+}
+
+//card detail page
+
+.article-detail-top {
+  padding: 0 1em 1em;
+  margin-top: 20px;
+  overflow: hidden;
+
+  .date-block {
+    float: left; /*rtl: right*/
+  
+    .date {
+      font-size: 3.2em;
+      color: $nnuh2;
+      display: block;
+      text-align: center;
+      line-height: 1;
+    }
+  
+    .month {
+      font-weight: bold;
+      display: block;
+      text-align: center;
+      line-height: 1;
+      font-size: .95em;
+    }
+  }
+  
+  .title-block {
+    overflow: hidden;
+    h2 {
+      margin: .25em .25em 0;
+      font-weight: normal;
+    }
+  }
+}

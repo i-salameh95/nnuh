@@ -19,26 +19,8 @@
           {% render_block "css" %}
 
           <title>{% block title %}{%  trans 'An-Najah National Hospital' %}{% endblock title %}</title>
-<!--		<style>
-
-.header .logo {
-
-    width: 112px;
-    height: 41px;
-    background-repeat: no-repeat;
-}
-
-@media (min-width: 1200px){
-    .header .logo {
-        width: 210px;
-        height: 80px;
-        background-repeat: no-repeat;
-    }
-}-->
-
-		</style>
     </head>
-    <body>
+    <body>  
         {% cms_toolbar %}
         <div class="header">
             <div class="alert-bar">
@@ -56,7 +38,7 @@
                                             <li><a href="/ar/doctors">{%  trans "Doctors" %}</a></li>
                                             <li><a href="http://hospital-job.najah.edu/">{%  trans "Jobs" %}</a></li>
                                             <li><a href="/ar/sitemap">{%  trans "Sitemap" %}</a></li>
-                                            <li><a href="/ar/feedback">{%  trans "Patient Feedback" %}</a></li>
+                                            {#<li><a href="/ar/feedback">{%  trans "Patient Feedback" %}</a></li>#}
                                             {#<li>{% language_chooser %}</li>#}
                                             <li><a href="/ar/tsl-bn2">{%  trans "Contact Us" %}</a></li>
                                         </ul>
@@ -159,6 +141,7 @@
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 {#        <script src="{% static 'js/bundle.js' %}"></script>#}
         {% render_bundle 'bundle' 'js' %}
+        {% block js %}{% endblock %}
         {% render_block "js" %}
     {% if request.toolbar and request.toolbar.edit_mode_active %}
         <script>
@@ -176,7 +159,7 @@
         });
         </script>
     {% endif %}
-	{% comment %}
+    {% comment %}
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=razi"></script>
 	{% endcomment %}
