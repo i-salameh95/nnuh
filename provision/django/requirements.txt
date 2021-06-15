@@ -69,4 +69,3 @@ tablib==0.13.0
 urllib3==1.25.3
 URLObject==2.4.3
 djangocms-htmlsitemap==0.6.0
-django-debug-toolbar==2.2
