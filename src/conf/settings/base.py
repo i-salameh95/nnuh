@@ -28,7 +28,7 @@ SECRET_KEY = '&pz@gtby!65=j(&kvf74xi^355u1xu=d*_k#dud^dxzi4^k2lw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dev.nnuh.org','www.nnuh.org','nnuh.org','212.14.237.226', '127.0.0.1','localhost']
+ALLOWED_HOSTS = ['dev.nnuh.org','www.nnuh.org','nnuh.org','212.14.237.226']
 
 
 # Application definition
