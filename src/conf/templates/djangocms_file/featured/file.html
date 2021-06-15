@@ -1,18 +1,16 @@
-{% load i18n cms_tags %}
-<div class="embed-responsive embed-responsive-16by9">
- 
-    <iframe src="{{ instance.file_src.url }}"
-    {% if instance.link_target %} target="{{ instance.link_target }}"{% endif %}
-    {% if instance.link_title %} title="{{ instance.link_title }}"{% endif %}
-    {{ instance.attributes_str }}>
-    {% if instance.file_name %}
-        {{ instance.file_name }}
-    {% else %}
-        {{ instance.file_src.label }}
-    {% endif %}
-    {% if instance.show_file_size %}
-        <span>{{ instance.file_src.size|filesizeformat }}</span>
-    {% endif %}
+{% load i18n cms_tags static %}
 
-    </iframe>
-</div>
+<div id="adobe-dc-view" style="width: 100%; border: 3px solid #f0f0f0;"></div>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script type="text/javascript">
+	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+		var adobeDCView = new AdobeDC.View({clientId: "7be42daded0e40519b171f8ede3c949e", divId: "adobe-dc-view"});
+		adobeDCView.previewFile({
+			content:{location: {url: "{{ instance.file_src.url }}"}},
+			metaData:{fileName: "{{  instance.file_src.label }}" }
+		}, {embedMode: "IN_LINE", showDownloadPDF: true, showPrintPDF: true});
+	});
+</script>
+
+
+

@@ -1,25 +1,54 @@
-{% extends "aldryn_newsblog/article_detail.html" %}
+{% extends "aldryn_newsblog/base.html" %}
+{% load i18n sekizai_tags cms_tags thumbnail apphooks_config_tags %}
 
-{% load cms_tags i18n thumbnail apphooks_config_tags %}
+{% block js %}
+{% addtoblock "js" %}
+<script>
+    window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    t._e = [];
+    t.ready = function(f) {
+    t._e.push(f);
+    };
+    return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+{% endaddtoblock %}
+{% endblock %}
+
 
 {% block newsblog_content %}
-{#    {% include "aldryn_newsblog/includes/article.html" with detail_view="true" %}#}
     <div class="row">
-        <div class="col-lg-12">
-            <img class="img-fluid mb-3" src="{% thumbnail article.featured_image 1340x840 crop upscale subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}">
-            {% with categories=aritcle.categoreis.all %}
-                {% if categories|length %}
-                    <div class="d-flex justify-content-start mb-3">
-                        {% for category in article.categories.all %}
-                            <a class="badge badge-primary" href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            {% endwith %}
-            <h3>{% render_model article "title" %}</h3>
-            <small class="d-block text-muted mb-3"><i class="fas fa-calendar"></i> {{ article.publishing_date|date }}</small>
+        <div class="col-lg-9">
+            <div class="article-detail-top">
+                <div class="date-block">
+                    <span class="date">{{ article.publishing_date|date:"j" }}</span>
+                    <span class="month">{{ article.publishing_date|date:"M Y" }}</span>
+                </div>
+                <div class="title-block">
+                    <h2>{% render_model article "title" %}</h2>
+                </div>    
+            </div>
+            
             {% render_placeholder article.content language placeholder_language %}
-
+            {% static_placeholder "social" %}
             <ul class="list-unstyled d-flex justify-content-center mt-5">
                 {% if prev_article %}
                     <li><a href="{{ prev_article.get_absolute_url }}" class="btn btn-outline-primary rounded mx-3">{% trans "Previous Article" %}</a></li>
@@ -29,6 +58,12 @@
                     <li><a href="{{ next_article.get_absolute_url }}" class="btn btn-outline-primary rounded mx-3">{% trans "Next Article" %}</a></li>
                 {% endif %}
             </ul>
+        </div>
+        <div class="col-lg-3">
+            {% static_placeholder "newsblog_sidebar" %}
+            {% with holder="newsblog_sidebar_"|add:article.app_config.namespace %}
+                {% static_placeholder holder %}
+            {% endwith %}
         </div>
     </div>
 {% endblock %}

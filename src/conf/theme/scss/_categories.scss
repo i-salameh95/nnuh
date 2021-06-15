@@ -1,0 +1,47 @@
+.single {
+	padding: 30px 15px;
+	margin-top: 40px;
+	background: #fcfcfc;
+	border: 1px solid #f0f0f0;
+	h3.side-title {
+		margin: 0;
+		margin-bottom: 10px;
+		padding: 0;
+		font-size: 20px;
+		color: #333;
+		&:after {
+			content: '';
+			width: 60px;
+			height: 1px;
+			background: $nnuh2;
+			display: block;
+			margin-top: 6px;
+		}
+	}
+	ul {
+		margin-bottom: 0;
+	}
+	li {
+		a {
+			color: #666;
+			font-size: 14px;
+			border-bottom: 1px solid #f0f0f0;
+			line-height: 40px;
+			display: block;
+			text-decoration: none;
+			&:hover {
+				color: $nnuh2;
+            }
+			span {
+				float: right; /*rtl: left*/
+			}
+		}
+		&:last-child {
+			a {
+				border-bottom: 0;
+			}
+
+		}
+        
+	}
+}
