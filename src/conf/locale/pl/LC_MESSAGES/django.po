@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-04 09:15+0300\n"
+"POT-Creation-Date: 2021-06-29 09:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,71 +17,92 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: conf/settings/base.py:221 conf/settings/base.py:230
+#: conf/settings/base.py:223 conf/settings/base.py:232
 msgid "en"
 msgstr ""
 
-#: conf/settings/base.py:222 conf/settings/base.py:237
+#: conf/settings/base.py:224 conf/settings/base.py:239
 msgid "ar"
 msgstr ""
 
-#: conf/settings/base.py:322
+#: conf/settings/base.py:324
 msgid "Primary - Terequaz"
 msgstr ""
 
-#: conf/settings/base.py:323
+#: conf/settings/base.py:325
 msgid "Secondary - Light Terequaz"
 msgstr ""
 
-#: conf/settings/base.py:324
+#: conf/settings/base.py:326
 msgid "Violet"
 msgstr ""
 
-#: conf/settings/base.py:325
+#: conf/settings/base.py:327
 msgid "Success"
 msgstr ""
 
-#: conf/settings/base.py:326
+#: conf/settings/base.py:328
 msgid "Danger"
 msgstr ""
 
-#: conf/settings/base.py:327
+#: conf/settings/base.py:329
 msgid "Warning"
 msgstr ""
 
-#: conf/settings/base.py:328
+#: conf/settings/base.py:330
 msgid "Info"
 msgstr ""
 
-#: conf/settings/base.py:329
+#: conf/settings/base.py:331
 msgid "Light"
 msgstr ""
 
-#: conf/settings/base.py:330
+#: conf/settings/base.py:332
 msgid "Dark"
 msgstr ""
 
-#: conf/settings/base.py:334
+#: conf/settings/base.py:336
 msgid "Default"
 msgstr ""
 
-#: conf/settings/base.py:335
+#: conf/settings/base.py:337
 msgid "Featured"
 msgstr ""
 
+#: conf/templates/404.html:12
+msgid "404 - Page Not Found"
+msgstr ""
+
+#: conf/templates/404.html:13
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: conf/templates/500.html:13
+msgid "500 - Internal Server Error"
+msgstr ""
+
+#: conf/templates/500.html:14
+msgid ""
+"An error occured and your request could not be completed. Please Try again "
+"later."
+msgstr ""
+
 #: conf/templates/aldryn_newsblog/announcements/includes/pagination.html:8
+#: conf/templates/aldryn_newsblog/brochures/includes/pagination.html:8
 #: conf/templates/aldryn_newsblog/tenders/includes/pagination.html:8
 #: conf/templates/djangocms_bootstrap4/carousel/featured/carousel.html:33
 msgid "Previous"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/includes/pagination.html:42
+#: conf/templates/aldryn_newsblog/brochures/includes/pagination.html:42
 #: conf/templates/aldryn_newsblog/tenders/includes/pagination.html:42
 #: conf/templates/djangocms_bootstrap4/carousel/featured/carousel.html:37
 msgid "Next"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/includes/search_results.html:6
+#: conf/templates/aldryn_newsblog/brochures/includes/search_results.html:6
 #: conf/templates/aldryn_newsblog/includes/search_results.html:6
 #: conf/templates/aldryn_newsblog/news/includes/search_results.html:6
 #: conf/templates/aldryn_newsblog/tenders/includes/search_results.html:6
@@ -90,6 +111,7 @@ msgid "Most recent articles containing \"<strong>%(query)s</strong>\""
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/includes/search_results.html:21
+#: conf/templates/aldryn_newsblog/brochures/includes/search_results.html:21
 #: conf/templates/aldryn_newsblog/includes/search_results.html:21
 #: conf/templates/aldryn_newsblog/news/includes/search_results.html:21
 #: conf/templates/aldryn_newsblog/tenders/includes/search_results.html:21
@@ -97,6 +119,7 @@ msgid "No articles found"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/includes/search_results.html:23
+#: conf/templates/aldryn_newsblog/brochures/includes/search_results.html:23
 #: conf/templates/aldryn_newsblog/includes/search_results.html:23
 #: conf/templates/aldryn_newsblog/news/includes/search_results.html:23
 #: conf/templates/aldryn_newsblog/tenders/includes/search_results.html:23
@@ -108,6 +131,11 @@ msgstr ""
 #: conf/templates/aldryn_newsblog/announcements/plugins/featured_articles.html:6
 #: conf/templates/aldryn_newsblog/announcements/plugins/related_articles.html:11
 #: conf/templates/aldryn_newsblog/article_list.html:9
+#: conf/templates/aldryn_newsblog/brochures/article_list.html:12
+#: conf/templates/aldryn_newsblog/brochures/plugins/archive.html:22
+#: conf/templates/aldryn_newsblog/brochures/plugins/authors.html:9
+#: conf/templates/aldryn_newsblog/brochures/plugins/featured_articles.html:6
+#: conf/templates/aldryn_newsblog/brochures/plugins/related_articles.html:11
 #: conf/templates/aldryn_newsblog/news/plugins/archive.html:22
 #: conf/templates/aldryn_newsblog/news/plugins/authors.html:9
 #: conf/templates/aldryn_newsblog/news/plugins/featured_articles.html:6
@@ -125,6 +153,7 @@ msgid "No items available"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/plugins/article_search.html:6
+#: conf/templates/aldryn_newsblog/brochures/plugins/article_search.html:6
 #: conf/templates/aldryn_newsblog/news/plugins/article_search.html:6
 #: conf/templates/aldryn_newsblog/plugins/article_search.html:6
 #: conf/templates/aldryn_newsblog/tenders/plugins/article_search.html:6
@@ -132,6 +161,7 @@ msgid "Keyword search"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/plugins/article_search.html:7
+#: conf/templates/aldryn_newsblog/brochures/plugins/article_search.html:7
 #: conf/templates/aldryn_newsblog/news/plugins/article_search.html:7
 #: conf/templates/aldryn_newsblog/plugins/article_search.html:7
 #: conf/templates/aldryn_newsblog/tenders/plugins/article_search.html:7
@@ -139,6 +169,7 @@ msgid "Keyword"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/plugins/article_search.html:10
+#: conf/templates/aldryn_newsblog/brochures/plugins/article_search.html:10
 #: conf/templates/aldryn_newsblog/news/plugins/article_search.html:10
 #: conf/templates/aldryn_newsblog/plugins/article_search.html:10
 #: conf/templates/aldryn_newsblog/tenders/plugins/article_search.html:10
@@ -147,6 +178,8 @@ msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/plugins/categories.html:5
 #: conf/templates/aldryn_newsblog/announcements/plugins/tags.html:5
+#: conf/templates/aldryn_newsblog/brochures/plugins/categories.html:7
+#: conf/templates/aldryn_newsblog/brochures/plugins/tags.html:5
 #: conf/templates/aldryn_newsblog/news/plugins/categories.html:5
 #: conf/templates/aldryn_newsblog/news/plugins/tags.html:5
 #: conf/templates/aldryn_newsblog/plugins/categories.html:5
@@ -161,6 +194,7 @@ msgid "Latest Announcements"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/announcements/plugins/related_articles.html:8
+#: conf/templates/aldryn_newsblog/brochures/plugins/related_articles.html:8
 #: conf/templates/aldryn_newsblog/news/plugins/related_articles.html:8
 #: conf/templates/aldryn_newsblog/plugins/related_articles.html:8
 #: conf/templates/aldryn_newsblog/tenders/plugins/related_articles.html:8
@@ -168,15 +202,27 @@ msgid "by"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/article_detail.html:28
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:54
 msgid "Previous Article"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/article_detail.html:30
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:56
 msgid "Back to Overview"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/article_detail.html:32
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:58
 msgid "Next Article"
+msgstr ""
+
+#: conf/templates/aldryn_newsblog/brochures/plugins/categories.html:4
+msgid "Categories"
+msgstr ""
+
+#: conf/templates/aldryn_newsblog/brochures/plugins/latest_articles.html:4
+#: conf/templates/aldryn_newsblog/tenders/plugins/latest_articles.html:4
+msgid "Tenders"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/news/plugins/latest_articles.html:4
@@ -187,39 +233,31 @@ msgstr ""
 msgid "More"
 msgstr ""
 
-#: conf/templates/aldryn_newsblog/tenders/plugins/latest_articles.html:4
-msgid "Tenders"
-msgstr ""
-
 #: conf/templates/base.html:21
 msgid "An-Najah National Hospital"
 msgstr ""
 
-#: conf/templates/base.html:45
+#: conf/templates/base.html:27
 msgid "Coronavirus (COVID-19) Safety Measures"
 msgstr ""
 
-#: conf/templates/base.html:62 nnuh_search/forms.py:17
+#: conf/templates/base.html:38 nnuh_search/forms.py:17
 msgid "Doctors"
 msgstr ""
 
-#: conf/templates/base.html:63
+#: conf/templates/base.html:39
 msgid "Jobs"
 msgstr ""
 
-#: conf/templates/base.html:64
+#: conf/templates/base.html:40
 msgid "Sitemap"
 msgstr ""
 
-#: conf/templates/base.html:65
-msgid "Patient Feedback"
-msgstr ""
-
-#: conf/templates/base.html:67
+#: conf/templates/base.html:43
 msgid "Contact Us"
 msgstr ""
 
-#: conf/templates/base.html:134
+#: conf/templates/base.html:106
 msgid "You are here"
 msgstr ""
 

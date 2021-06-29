@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+{% block page_title %}{% page_attribute "page_title" %}{% endblock page_title %}
+
+{% block featured %}
+    {% placeholder "featured" %}
+{% endblock featured %}
+{% block content %}
+	{% placeholder "content" %}
+    <div class="text-center">
+        <h1>{%  trans "500 - Internal Server Error" %}</h1>
+        <p>{%  trans "An error occured and your request could not be completed. Please Try again later." %}</p>
+    </div>
+{% endblock content %}
+
