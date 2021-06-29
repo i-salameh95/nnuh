@@ -40,12 +40,12 @@
         color: $nnuh1;
         padding: 0 10px;
       }
-      a {
-        &:last-child {
-          direction: rtl;
-          font-size: 1.1875rem;
-          unicode-bidi: isolate;
-        }
+      .phone-link {
+        display: inline-block;
+        /*!rtl:ignore*/
+        direction: ltr; 
+        font-size: 1.1875rem;
+        unicode-bidi: isolate;
       }
     }
     .top-header-menu {
