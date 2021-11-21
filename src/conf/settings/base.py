@@ -214,6 +214,7 @@ INSTALLED_APPS = [
     'nnuh_contact',
     'nnuh_doctors',
     'djangocms_htmlsitemap',
+    'djangocms_unitegallery',
 ]
 
 LANGUAGES = (

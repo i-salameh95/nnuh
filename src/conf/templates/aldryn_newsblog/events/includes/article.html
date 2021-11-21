@@ -1,0 +1,21 @@
+{% load i18n staticfiles thumbnail cms_tags apphooks_config_tags %}
+<div class="card card-article rounded my-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{% thumbnail article.featured_image 877x514 crop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}" class="card-img">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body px-1">
+          <h5 class="card-title">
+            {% if not detail_view %}
+                <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">{% render_model article "title" %}</a>
+            {% else %}
+                {% render_model article "title" %}
+            {% endif %}
+          </h5>
+          <p class="card-text"><small class="text-muted">{{ article.publishing_date|date }}</small></p>
+          <p class="card-text"><small class="text-muted"> </small></p>
+        </div>
+      </div>
+    </div>
+</div>
