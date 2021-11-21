@@ -1,0 +1,33 @@
+{% extends "aldryn_newsblog/base.html" %}
+{% load i18n sekizai_tags cms_tags thumbnail apphooks_config_tags %}
+
+{% block newsblog_content %}
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="article-detail-top">
+                <div class="title-block">
+                    <h2>{% render_model article "title" %}</h2>
+                </div> 
+                <small class="d-block text-muted mb-3"><i class="fas fa-calendar"></i> {{ article.publishing_date|date }}</small>   
+            </div>
+            
+            {% render_placeholder article.content language placeholder_language %}
+            {% static_placeholder "social" %}
+            <ul class="list-unstyled d-flex justify-content-center mt-5">
+                {% if prev_article %}
+                    <li><a href="{{ prev_article.get_absolute_url }}" class="btn btn-outline-primary rounded mx-3">{% trans "Previous Article" %}</a></li>
+                {% endif %}
+                    <li><a href="{% namespace_url "article-list" %}" class="btn btn-outline-primary rounded mx-3">{% trans "Back to Overview" %}</a></li>
+                {% if next_article %}
+                    <li><a href="{{ next_article.get_absolute_url }}" class="btn btn-outline-primary rounded mx-3">{% trans "Next Article" %}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-lg-3">
+            {% static_placeholder "newsblog_sidebar" %}
+            {% with holder="newsblog_sidebar_"|add:article.app_config.namespace %}
+                {% static_placeholder holder %}
+            {% endwith %}
+        </div>
+    </div>
+{% endblock %}
