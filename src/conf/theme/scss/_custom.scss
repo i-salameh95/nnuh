@@ -88,9 +88,11 @@
       height: 40px;
     }
     .nnu,
-    .accr {
+    .accr,
+    .pal {
       width: 40px;
       height: 40px;
+      margin-right: 20px;
     }
     .menu-wrapper {
       @include media-breakpoint-up(lg) {
@@ -126,7 +128,7 @@
       height: 80px;
       margin-left: 40px;
     }
-    background-image: url("../img/jcha.png");
+    background-image: url("../img/jcha1.png");
     background-size: contain;
     //transition: all 0.3s linear;
   }
@@ -139,8 +141,22 @@
       width: 80px;
       height: 80px;
     }
-    background-image: url("../img/nnu.svg");
+    background-image: url("../img/ISO9001.png");
     background-size: contain;
+  }
+  .pal {
+    transition: all 500ms ease;
+    text-indent: -1000rem;
+    width: 40px;
+    height: 40px;
+    @include media-breakpoint-up(lg) {
+      width: 80px;
+      height: 80px;
+    }
+    background-image: url("../img/ISO151189.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   @include media-breakpoint-up(lg) {
     .menu-wrapper {
