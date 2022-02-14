@@ -1,0 +1,9 @@
+{% load bootstrap_pagination %}
+
+<div class="mt-4 d-flex justify-content-end">
+    {% if LANGUAGE_BIDI %}
+        {% bootstrap_paginate page_obj range=3 previous_label="&rarr;" next_label="&larr;" show_first_last=True %}
+    {% else %}
+        {% bootstrap_paginate page_obj range=3 previous_label="&larr;" next_label="&rarr;" show_first_last=True %}
+    {% endif %}
+</div>

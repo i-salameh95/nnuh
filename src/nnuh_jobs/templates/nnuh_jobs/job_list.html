@@ -1,0 +1,20 @@
+{% extends "nnuh_jobs/base.html" %}
+{% load cms_tags i18n %}
+
+{% block job_content %}
+<div class="row">
+    <div class="col-sm-8">
+        <div class="row">
+            {% for job in job_list %}
+                {% include "nnuh_jobs/includes/job.html" %}
+            {% endfor %}
+        </div>
+        <div>
+            {% include "nnuh_jobs/includes/pagination.html" %}
+        </div>
+    </div>
+    <div class="col-sm-4">
+        {% static_placeholder "job_sidebar" %}
+    </div>
+</div>
+{% endblock %}

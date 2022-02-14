@@ -1,0 +1,21 @@
+{% extends "nnuh_jobs/base.html" %}
+{% load i18n %}
+
+{% block job_content %}
+    <form method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <fieldset>
+            <legend>{% trans "Apply for this job" %}</legend>
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <button type="submit">{% trans "Submit" %}</button>
+        </fieldset>
+    </form>
+{% endblock %}

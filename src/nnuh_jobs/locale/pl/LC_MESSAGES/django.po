@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-06 08:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: nnuh_jobs/admin.py:34
+msgid "Meta Options"
+msgstr ""
+
+#: nnuh_jobs/admin.py:40
+msgid "Advanced Settings"
+msgstr ""
+
+#: nnuh_jobs/admin.py:90
+msgid "Personal Info"
+msgstr ""
+
+#: nnuh_jobs/admin.py:101
+msgid "Contact Info"
+msgstr ""
+
+#: nnuh_jobs/admin.py:109
+msgid "Relations"
+msgstr ""
+
+#: nnuh_jobs/admin.py:116
+msgid "Educational"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:18
+msgid "name"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:22
+msgid "Paginate size"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:25
+msgid "When paginating list views, how many articles per page?"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:28
+msgid "Pagination pages start"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:31
+msgid ""
+"When paginating list views, after how many pages should we start grouping "
+"the page numbers."
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:35
+msgid "Pagination pages visible"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:38
+msgid ""
+"When grouping page numbers, this determines how many pages are visible on "
+"each side of the active page."
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:43
+msgid "Auto-create authors?"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:45
+msgid "Automatically create authors from logged-in user?"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:52
+msgid "Prefix for template dirs"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:56
+msgid "untitled"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:59
+msgid "NNUH Jobs configuration"
+msgstr ""
+
+#: nnuh_jobs/cms_appconfig.py:60
+msgid "NNUH Jobs configurations"
+msgstr ""
+
+#: nnuh_jobs/cms_apps.py:13 nnuh_jobs/models.py:85
+msgid "Jobs"
+msgstr ""
+
+#: nnuh_jobs/cms_toolbars.py:86
+msgid "Configure addon"
+msgstr ""
+
+#: nnuh_jobs/cms_toolbars.py:97
+msgid "Job list"
+msgstr ""
+
+#: nnuh_jobs/cms_toolbars.py:104
+msgid "Add new job"
+msgstr ""
+
+#: nnuh_jobs/cms_toolbars.py:112
+msgid "Edit this job"
+msgstr ""
+
+#: nnuh_jobs/cms_toolbars.py:120
+msgid "Delete this job"
+msgstr ""
+
+#: nnuh_jobs/menu.py:20
+msgid "Job Menu"
+msgstr ""
+
+#: nnuh_jobs/models.py:31
+msgid "title"
+msgstr ""
+
+#: nnuh_jobs/models.py:32
+msgid "Provide this job's title."
+msgstr ""
+
+#: nnuh_jobs/models.py:34
+msgid "slug"
+msgstr ""
+
+#: nnuh_jobs/models.py:39
+msgid ""
+"Used in the URL. If changed, the URL will change. Clear it to have it re-"
+"created automatically."
+msgstr ""
+
+#: nnuh_jobs/models.py:44
+msgid "publishing date"
+msgstr ""
+
+#: nnuh_jobs/models.py:46
+msgid "is published"
+msgstr ""
+
+#: nnuh_jobs/models.py:48
+msgid "deadline date"
+msgstr ""
+
+#: nnuh_jobs/models.py:51
+msgid "valid"
+msgstr ""
+
+#: nnuh_jobs/models.py:54
+msgid "featured image"
+msgstr ""
+
+#: nnuh_jobs/models.py:64
+msgid "author"
+msgstr ""
+
+#: nnuh_jobs/models.py:69
+msgid "owner"
+msgstr ""
+
+#: nnuh_jobs/models.py:77
+msgid "NNUH Jobs Configuration"
+msgstr ""
+
+#: nnuh_jobs/models.py:84
+msgid "Job"
+msgstr ""
+
+#: nnuh_jobs/models.py:123
+msgid "Male"
+msgstr ""
+
+#: nnuh_jobs/models.py:124
+msgid "Female"
+msgstr ""
+
+#: nnuh_jobs/models.py:131
+msgid "Bachelor"
+msgstr ""
+
+#: nnuh_jobs/models.py:132
+msgid "Master"
+msgstr ""
+
+#: nnuh_jobs/models.py:133
+msgid "Doctoral"
+msgstr ""
+
+#: nnuh_jobs/models.py:147
+msgid "Scientific"
+msgstr ""
+
+#: nnuh_jobs/models.py:148
+msgid "Literature"
+msgstr ""
+
+#: nnuh_jobs/models.py:149
+msgid "Industrial"
+msgstr ""
+
+#: nnuh_jobs/models.py:150
+msgid "Commercial"
+msgstr ""
+
+#: nnuh_jobs/models.py:155
+msgid "first name"
+msgstr ""
+
+#: nnuh_jobs/models.py:156
+msgid "second name"
+msgstr ""
+
+#: nnuh_jobs/models.py:157
+msgid "third_name"
+msgstr ""
+
+#: nnuh_jobs/models.py:158
+msgid "last name"
+msgstr ""
+
+#: nnuh_jobs/models.py:159
+msgid "address"
+msgstr ""
+
+#: nnuh_jobs/models.py:161
+msgid "relative name"
+msgstr ""
+
+#: nnuh_jobs/models.py:162
+msgid "relation type"
+msgstr ""
+
+#: nnuh_jobs/models.py:163
+msgid "University Study"
+msgstr ""
+
+#: nnuh_jobs/models.py:164
+msgid "University Name"
+msgstr ""
+
+#: nnuh_jobs/models.py:165
+msgid "specialization"
+msgstr ""
+
+#: nnuh_jobs/models.py:168
+msgid "Telephone No."
+msgstr ""
+
+#: nnuh_jobs/models.py:169
+msgid "Mobile No."
+msgstr ""
+
+#: nnuh_jobs/models.py:170
+msgid "Email"
+msgstr ""
+
+#: nnuh_jobs/models.py:171
+msgid "Verify Email"
+msgstr ""
+
+#: nnuh_jobs/models.py:172
+msgid "ID Number"
+msgstr ""
+
+#: nnuh_jobs/models.py:173
+msgid "Gender"
+msgstr ""
+
+#: nnuh_jobs/models.py:174
+msgid "Birthday"
+msgstr ""
+
+#: nnuh_jobs/models.py:175
+msgid "Country Graduation"
+msgstr ""
+
+#: nnuh_jobs/models.py:176
+msgid "Graduation Year"
+msgstr ""
+
+#: nnuh_jobs/models.py:177
+msgid "Graduation Average"
+msgstr ""
+
+#: nnuh_jobs/models.py:178
+msgid "Experience Years"
+msgstr ""
+
+#: nnuh_jobs/models.py:179
+msgid "Experience Details"
+msgstr ""
+
+#: nnuh_jobs/models.py:180
+msgid "Tawjihi Branch"
+msgstr ""
+
+#: nnuh_jobs/models.py:181
+msgid "Tawjihi Average"
+msgstr ""
+
+#: nnuh_jobs/models.py:182
+msgid "Tawjihi Country"
+msgstr ""
+
+#: nnuh_jobs/templates/nnuh_jobs/includes/job.html:17
+msgid "publishing_date"
+msgstr ""
+
+#: nnuh_jobs/templates/nnuh_jobs/includes/job.html:21
+msgid "Details"
+msgstr ""
+
+#: nnuh_jobs/templates/nnuh_jobs/includes/job.html:25
+msgid "deadline_date"
+msgstr ""
+
+#: nnuh_jobs/templates/nnuh_jobs/job_detail.html:14
+msgid "Previous Job"
+msgstr ""
+
+#: nnuh_jobs/templates/nnuh_jobs/job_detail.html:16
+msgid "Back to Overview"
+msgstr ""
+
+#: nnuh_jobs/templates/nnuh_jobs/job_detail.html:18
+msgid "Next Job"
+msgstr ""

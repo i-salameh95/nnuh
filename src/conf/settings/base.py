@@ -200,7 +200,6 @@ INSTALLED_APPS = [
     'sortedm2m',
     'taggit',
     'bootstrap_pagination',
-
     'django_select2',
     'haystack',
     'aldryn_search',
@@ -215,6 +214,7 @@ INSTALLED_APPS = [
     'nnuh_doctors',
     'djangocms_htmlsitemap',
     'djangocms_unitegallery',
+    'nnuh_jobs',
 ]
 
 LANGUAGES = (
@@ -362,3 +362,7 @@ WEBPACK_LOADER = {
 DJANGOCMS_FILE_TEMPLATES = [
     ('featured', 'Featured'),
 ]
+
+# ALDRYN_FORMS_TEMPLATES = (
+#     ('nnuh_jobs/plugins/apply_job_form.html', 'Job'),
+# )
