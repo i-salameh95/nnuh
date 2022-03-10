@@ -32,11 +32,12 @@ class DoctorAdmin(PlaceholderAdminMixin,
                 'section',
                 ('speciality', 'sub_speciality', ),
                 'function',
+                ('clinic_phone', 'clinic_time',)
             ),
         }),
         (_('Contact (untranslated)'), {
             'fields': (
-                'phone', 'mobile', 'email', 'website',
+                'phone', 'mobile', 'email', 'website', 
             ),
         }),
         (_('Social Media (untranslated)'), {

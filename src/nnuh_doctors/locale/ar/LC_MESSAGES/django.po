@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-23 10:19+0200\n"
+"POT-Creation-Date: 2022-03-10 13:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: nnuh_doctors/admin.py:37
+#: nnuh_doctors/admin.py:38
 msgid "Contact (untranslated)"
 msgstr ""
 
-#: nnuh_doctors/admin.py:42
+#: nnuh_doctors/admin.py:43
 msgid "Social Media (untranslated)"
 msgstr ""
 
-#: nnuh_doctors/admin.py:70
+#: nnuh_doctors/admin.py:71
 msgid "Link (untranslated)"
 msgstr ""
 
-#: nnuh_doctors/admin.py:84
+#: nnuh_doctors/admin.py:85
 msgid "# Doctor"
 msgstr ""
 
@@ -81,6 +81,7 @@ msgstr "العنوان:"
 
 #: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/person.html:31
 #: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/includes/people_item.html:12
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:55
 msgid "Mobile:"
 msgstr "الهاتف المحمول:"
 
@@ -98,7 +99,7 @@ msgid "E-Mail:"
 msgstr "البريد الإلكتروني:"
 
 #: nnuh_doctors/cms_apps.py:14 nnuh_doctors/cms_plugins.py:37
-#: nnuh_doctors/models.py:106
+#: nnuh_doctors/models.py:108
 msgid "Doctors"
 msgstr "الأطباء"
 
@@ -124,13 +125,13 @@ msgstr "الخيارات"
 #, fuzzy
 #| msgid "Make an Appointment"
 msgid "General Appointment Form"
-msgstr "إحجز موعد"
+msgstr "للاستفسار"
 
 #: nnuh_doctors/cms_plugins.py:86
 #, fuzzy
 #| msgid "Appointment has been received successfully."
 msgid "Message has been received successfully."
-msgstr "تم إستقبال حجز الموعد بنجاح"
+msgstr "سيتم الرد على استفساركم في أقرب وقت ممكن"
 
 #: nnuh_doctors/cms_toolbars.py:104
 msgid "Section list"
@@ -172,29 +173,29 @@ msgstr "قسم جديد"
 msgid "Create a new section."
 msgstr ""
 
-#: nnuh_doctors/forms.py:27 nnuh_doctors/forms.py:49 nnuh_doctors/models.py:142
+#: nnuh_doctors/forms.py:27 nnuh_doctors/forms.py:49 nnuh_doctors/models.py:144
 msgid "Full Name"
 msgstr "الإسم الكامل"
 
-#: nnuh_doctors/forms.py:28 nnuh_doctors/forms.py:50 nnuh_doctors/models.py:144
+#: nnuh_doctors/forms.py:28 nnuh_doctors/forms.py:50 nnuh_doctors/models.py:146
 msgid "Phone/Mobile"
 msgstr "الهاتف الأرضي/المحمول"
 
-#: nnuh_doctors/forms.py:29 nnuh_doctors/forms.py:51 nnuh_doctors/models.py:146
+#: nnuh_doctors/forms.py:29 nnuh_doctors/forms.py:51 nnuh_doctors/models.py:148
 msgid "Email Address"
 msgstr "البريد الإلكتروني"
 
-#: nnuh_doctors/forms.py:30 nnuh_doctors/forms.py:52 nnuh_doctors/models.py:148
+#: nnuh_doctors/forms.py:30 nnuh_doctors/forms.py:52 nnuh_doctors/models.py:150
 msgid "Birth Date"
 msgstr "تاريخ الميلاد"
 
-#: nnuh_doctors/forms.py:31 nnuh_doctors/forms.py:53 nnuh_doctors/models.py:150
+#: nnuh_doctors/forms.py:31 nnuh_doctors/forms.py:53 nnuh_doctors/models.py:152
 msgid "Message"
 msgstr "الرسالة"
 
-#: nnuh_doctors/forms.py:48 nnuh_doctors/models.py:48 nnuh_doctors/models.py:87
-#: nnuh_doctors/models.py:138
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:35
+#: nnuh_doctors/forms.py:48 nnuh_doctors/models.py:48 nnuh_doctors/models.py:88
+#: nnuh_doctors/models.py:140
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:30
 msgid "Section"
 msgstr "القسم"
 
@@ -273,88 +274,110 @@ msgstr ""
 msgid "role"
 msgstr ""
 
-#: nnuh_doctors/models.py:79
+#: nnuh_doctors/models.py:76
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:78
+msgid "clinic_time"
+msgstr "أوقات العيادة"
+
+#: nnuh_doctors/models.py:80
 msgid "phone"
-msgstr ""
+msgstr "الهاتف"
 
-#: nnuh_doctors/models.py:81
+#: nnuh_doctors/models.py:82
 msgid "mobile"
-msgstr ""
+msgstr "الهاتف المحمول"
 
-#: nnuh_doctors/models.py:83
+#: nnuh_doctors/models.py:84
 msgid "email"
-msgstr ""
+msgstr "البريد الإلكتروني"
 
-#: nnuh_doctors/models.py:85
+#: nnuh_doctors/models.py:86
 msgid "website"
 msgstr ""
 
-#: nnuh_doctors/models.py:92
+#: nnuh_doctors/models.py:91
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:73
+msgid "clinic_phone"
+msgstr "رقم العيادة"
+
+#: nnuh_doctors/models.py:93
 msgid "Facebook"
 msgstr ""
 
-#: nnuh_doctors/models.py:94
+#: nnuh_doctors/models.py:95
 msgid "Twitter"
 msgstr ""
 
-#: nnuh_doctors/models.py:96
+#: nnuh_doctors/models.py:97
 msgid "LinkedIn"
 msgstr ""
 
-#: nnuh_doctors/models.py:105 nnuh_doctors/models.py:140
+#: nnuh_doctors/models.py:107 nnuh_doctors/models.py:142
 msgid "Doctor"
 msgstr "الطبيب"
 
-#: nnuh_doctors/models.py:155
+#: nnuh_doctors/models.py:157
 msgid "Appointment"
 msgstr ""
 
-#: nnuh_doctors/models.py:156
+#: nnuh_doctors/models.py:158
 msgid "Appointments"
 msgstr ""
 
-#: nnuh_doctors/models.py:166
+#: nnuh_doctors/models.py:168
 msgid "Standard"
 msgstr ""
 
-#: nnuh_doctors/models.py:168
+#: nnuh_doctors/models.py:170
 msgid "Carousel"
 msgstr ""
 
-#: nnuh_doctors/models.py:172
+#: nnuh_doctors/models.py:174
 msgid "Style"
 msgstr ""
 
-#: nnuh_doctors/models.py:177
+#: nnuh_doctors/models.py:179
 msgid "Select and arrange specific doctors, or, leave blank to select all."
 msgstr ""
 
-#: nnuh_doctors/models.py:208
+#: nnuh_doctors/models.py:210
 msgid "Show links to Detail Page"
 msgstr ""
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:40
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:35
 msgid "Role"
 msgstr "المنصب"
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:45
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:40
 msgid "Speciality"
 msgstr "التخصص"
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:50
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:45
 msgid "Sub-Speciality"
 msgstr "التخصص الدقيق"
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:55
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:50
 msgid "Phone"
 msgstr "الهاتف"
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:64
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:60
+#, fuzzy
+#| msgid "Email:"
+msgid "Email"
+msgstr "البريد الإلكتروني:"
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:66
+#, fuzzy
+#| msgid "Website:"
+msgid "Website"
+msgstr "الموقع الإلكتروني:"
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:90
 #: nnuh_doctors/templates/nnuh_doctors/plugins/general_appointment_form.html:4
 msgid "Make an Appointment"
-msgstr "إحجز موعد"
+msgstr "للاستفسار"
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:70
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:96
 #: nnuh_doctors/templates/nnuh_doctors/plugins/general_appointment_form.html:13
 msgid "Send"
 msgstr "أرسل"
@@ -366,7 +389,7 @@ msgstr "الأطباء"
 
 #: nnuh_doctors/templates/nnuh_doctors/plugins/carousel/doctors_list.html:6
 msgid "More"
-msgstr ""
+msgstr "المزيد"
 
 #: nnuh_doctors/views.py:96
 msgid "Appointment has been received successfully."

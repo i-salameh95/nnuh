@@ -1,5 +1,5 @@
 {% extends "nnuh_doctors/sidebar.html" %}
-{% load i18n cms_tags thumbnail crispy_forms_tags %}
+{% load i18n cms_tags thumbnail crispy_forms_tags aldryn_people_tags%}
 
 {% block title %}{{ person.name }} - {{ block.super }}{% endblock %}
 
@@ -9,7 +9,7 @@
             {% if doctor.visual %}
                 <img class="img-fluid" src="{% thumbnail doctor.visual 250x250 crop upscale subject_location=doctor.visual.subject_location %}" alt="{{ doctor.name }}">
             {% endif %}
-            {% if doctor.facebook or doctor.twitter or doctor.linkedin%}
+            {% if doctor.facebook or doctor.twitter or doctor.linkedin %}
                 <div class="mt-3">
                     {% if doctor.facebook %}
                         <a class="btn btn-lg btn-outline-primary btn-nnuh mr-2" href="{{ doctor.facebook }}" target="_blank"><span><i class="fab fa-facebook-f fa-fw"></i></span></a>
@@ -23,38 +23,64 @@
                 </div>
             {% endif %}
         </div>
-        <div class="">
-            <h1 class="page-title">
-                {% render_model doctor 'name' %}
-            </h1>
+        <div class="col-lg-7">
+            <h1 class="page-title">{% render_model doctor 'name' %}</h1>
+            {% if doctor.section %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans 'Section' %}:</span> {{ doctor.section }}
+                </div>
+            {% endif %}
+            {% if doctor.role %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans 'Role' %}:</span> {{ doctor.role }}
+                </div>
+            {% endif %}
+            {% if doctor.speciality %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans 'Speciality' %}:</span> {{ doctor.speciality }}
+                </div>
+            {% endif %}
+            {% if doctor.sub_speciality %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans 'Sub-Speciality' %}:</span> {{ doctor.sub_speciality }}
+                </div>
+            {% endif %}
+            {% if doctor.phone %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans 'Phone' %}:</span> {{ doctor.phone }}
+                </div>
+            {% endif %}
+            {% if doctor.mobile %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans 'Mobile:' %}</span>  {{ doctor.mobile|phoneformat }}
+                </div>
+            {% endif %}
+            {% if doctor.email %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans 'Email' %}:</span>
+                    <span class="fa fa-fw fa-envelope" aria-hidden="true"></span><a href="mailto:{{ doctor.email }}">{{ doctor.email }}</a>
+                </div>
+            {% endif %}
+            {% if doctor.website %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans "Website" %}</span>
+                    <span class="fa fa-fw fa-globe" aria-hidden="true"></span>
+                    <a href="{{ doctor.website }}" target="_blank">{{ doctor.website }}</a>
+                </div>
+            {% endif %}
+            {% if doctor.clinic_phone %}
+                <div class="py-2 border-top">
+                    <span class="font-weight-bold">{% trans "clinic_phone" %}:</span>  {{ doctor.clinic_phone|phoneformat }}
+                </div>
+            {% endif %}
+            {% if doctor.clinic_time %}
+            <div class="py-2 border-top">
+                <span class="font-weight-bold">{% trans "clinic_time" %}:</span>{{ doctor.clinic_time }}
+            </div>
+            {% endif %}
             {% render_placeholder doctor.content %}
         </div>
     </div>
-    {% if doctor.section %}
-        <div class="py-2 border-top">
-            <span class="font-weight-bold">{% trans 'Section' %}:</span> {{ doctor.section }}
-        </div>
-    {% endif %}
-    {% if doctor.role %}
-    <div class="py-2 border-top">
-        <span class="font-weight-bold">{% trans 'Role' %}:</span> {{ doctor.role }}
-    </div>
-    {% endif %}
-    {% if doctor.speciality %}
-    <div class="py-2 border-top">
-        <span class="font-weight-bold">{% trans 'Speciality' %}:</span> {{ doctor.speciality }}
-    </div>
-    {% endif %}
-    {% if doctor.sub_speciality %}
-        <div class="py-2 border-top">
-            <span class="font-weight-bold">{% trans 'Sub-Speciality' %}:</span> {{ doctor.sub_speciality }}
-        </div>
-    {% endif %}
-    {% if doctor.phone %}
-        <div class="py-2 border-top">
-            <span class="font-weight-bold">{% trans 'Phone' %}:</span> {{ doctor.phone }}
-        </div>
-    {% endif %}
     {% render_placeholder doctor.content_bottom %}
 {% endblock %}
 {% block doctors_sidebar %}
