@@ -73,6 +73,7 @@ class Doctor(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
         speciality=models.CharField(_('speciality'), max_length=255),
         sub_speciality=models.CharField(_('sub speciality'), max_length=255, blank=True),
         function=models.CharField(_('role'), max_length=255, blank=True, default=''),
+        clinic_time = models.CharField(_('clinic_time'), null=True, blank=True, max_length=255)
     )
 
     phone = models.CharField(
@@ -87,13 +88,14 @@ class Doctor(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
         Section, verbose_name=_('Section'), related_name='doctors', null=True, blank=True, on_delete=models.SET_NULL)
     visual = FilerImageField(
         null=True, blank=True, default=None, on_delete=models.SET_NULL)
-
+    clinic_phone = models.CharField(_('clinic_phone'), null=True, blank=True, max_length=100)
     facebook = models.URLField(
         verbose_name=_('Facebook'), blank=True)
     twitter = models.URLField(
         verbose_name=_('Twitter'), blank=True)
     linkedin = models.URLField(
         verbose_name=_('LinkedIn'), blank=True)
+
 
     content = PlaceholderField('doctor_content', related_name='doctor_content')
     content_bottom = PlaceholderField('doctor_content_bottom', related_name='doctor_content_bottom')
