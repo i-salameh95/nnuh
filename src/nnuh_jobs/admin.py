@@ -9,7 +9,7 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from parler.admin import TranslatableAdmin
 from nnuh_jobs.cms_appconfig import JobsConfig
-from .models import Applier, Job
+from .models import  Job
 
 
 
@@ -19,7 +19,16 @@ class JobAdmin( AllTranslationsMixin,
     ModelAppHookConfig,
     TranslatableAdmin):
 
-    list_display = ['__str__','publishing_date', 'deadline_date','is_active','can_apply','author']
+    list_display = ['__str__','publishing_date', 'deadline_date','is_active','can_apply','author',   'cv_option','tawjihi_option','certificate_option',
+                'ID_option',
+                'personal_photo_option',
+                'work_cert_option',
+                'org_cert_option',
+                'recommendation_letters_option',
+                'personal_statment_option',
+                'marks_list_option',
+                'insurance_doc_option'
+            ]
     list_filter = ['deadline_date' , 'publishing_date' ]
     fieldsets = (
         (None, {
@@ -45,6 +54,22 @@ class JobAdmin( AllTranslationsMixin,
                 'owner',
                 'featured_image',
                 'app_config',
+            )
+        }),
+        (_('Option Files to be added to Job Form'), {
+            'classes': ('collapse',),
+            'fields': (
+                'cv_option',
+                'tawjihi_option',
+                'certificate_option',
+                'ID_option',
+                'personal_photo_option',
+                'work_cert_option',
+                'org_cert_option',
+                'recommendation_letters_option',
+                'personal_statment_option',
+                'marks_list_option',
+                'insurance_doc_option',
             )
         }),
     )
@@ -80,57 +105,39 @@ class JobConfigAdmin(
 
 admin.site.register(JobsConfig, JobConfigAdmin)
 
-class ApplierAdmin(AllTranslationsMixin,
-    PlaceholderAdminMixin,
-    FrontendEditableAdminMixin,
-    ModelAppHookConfig,
-    TranslatableAdmin):
+# class ApplierAdmin(admin.ModelAdmin):
 
-    list_display = ['__str__','sex','card_id','date_of_birth','email1','address','relations','relative_name',
-    'relation_type','univ_study','univ_name','specialization','tel_no','mob_no']
+#     list_display = ['__str__','sex','card_id_number','date_of_birth','email1','address','relations','relative_name',
+#     'relation_type','tel_no','mob_no']
 
-    fieldsets = (
-        (_('Personal Info'), {
-            'fields': (
-                'first_name',
-                'second_name',
-                'third_name',
-                'family',
-                'sex',
-                'date_of_birth',
-                'card_id',
-            )
-        }),
-        (_('Contact Info'), {
-            'fields': (
-                'address',
-                'tel_no',
-                'mob_no',
-                'email',
-            )
-        }),
-        (_('Relations'), {
-            'fields': (
-                'relations',
-                'relative_name',
-                'relation_type',
-            )
-        }),
-        (_('Educational'), {
-            'fields': (
-                'univ_study',
-                'univ_name',
-                'specialization',
-                'country_grad',
-                'year_grad',
-                'grad_avg',
-                'experience_years',
-                'exp_sum',
-                'tawjihi_branch',
-                'tawjihi_country',
-                'tawjihi_avg',
-            )
-        }),
-    )
+#     fieldsets = (
+#         (_('Personal Info'), {
+#             'fields': (
+#                 'first_name',
+#                 'second_name',
+#                 'third_name',
+#                 'family',
+#                 'sex',
+#                 'card_id_number',
+#                 'date_of_birth',
+#             )
+#         }),
+#         (_('Contact Info'), {
+#             'fields': (
+#                 'address',
+#                 'tel_no',
+#                 'mob_no',
+#                 'email',
+#                 'verify_email',
+#             )
+#         }),
+#         (_('Relations'), {
+#             'fields': (
+#                 'relations',
+#                 'relative_name',
+#                 'relation_type',
+#             )
+#         })
+#     )
     
-admin.site.register(Applier, ApplierAdmin)
+# admin.site.register(Applier, ApplierAdmin)

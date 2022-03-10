@@ -2,7 +2,6 @@
 {% load i18n cms_tags thumbnail apphooks_config_tags %}
 
 {% block job_content %}
-{#    {% include "nnuh_jobs/includes/job.html" with detail_view="true" %}#}
     <div class="row">
         <div class="col-lg-9">
             <h3>{% render_model job 'title' %}</h3>
@@ -10,12 +9,10 @@
                 {% render_placeholder job.content language placeholder_language %} 
                
                 {% if job.get_active and job.can_apply %}
-                    <a href="{% url 'jobs:apply-job' job.id %}">{% trans "Apply To Job:" %}{% render_model job 'title' %}</a>
+                    <a href="{% namespace_url 'apply-job-form' slug=job.slug jobId=job.id %}">{% trans "Apply To Job:" %}{% render_model job 'title' %}</a>
                 {% else %}
                     {% trans "you cannot apply to this Job" %}
                 {% endif %}
-            
-            
             <ul class="list-unstyled d-flex justify-content-center mt-5">
                 {% if prev_job %}
                     <li><a href="{{ prev_job.get_absolute_url }}" class="btn btn-outline-primary rounded mx-3">{% trans "Previous Job" %}</a></li>

@@ -1,24 +1,67 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from cms.models import CMSPlugin
+
 from aldryn_apphooks_config.fields import AppHookConfigField
 from aldryn_people.models import Person
 from aldryn_translation_tools.models import (TranslatedAutoSlugifyMixin,
                                              TranslationHelperMixin)
 from cms.models.fields import PlaceholderField
+from cms.models.pluginmodel import CMSPlugin
 from cms.utils.i18n import get_current_language
+from django import forms
 from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.template.defaultfilters import slugify  # new
-from django.urls import reverse
+from django.template.defaultfilters import filesizeformat
+from django.urls import NoReverseMatch, reverse
 from django.utils.timezone import now
 from django.utils.translation import override
 from django.utils.translation import ugettext_lazy as _
 from filer.fields.image import FilerImageField
+# from forms_builder.forms.models import Form
 from parler.models import TranslatableModel, TranslatedFields
-from .managers import RelatedManager
-from .cms_appconfig import JobsConfig
 
+from .cms_appconfig import JobsConfig
+from .managers import RelatedManager
+
+
+class RestrictedFileField(forms.FileField):
+    """
+    Same as FileField, but you can specify:
+    * content_types - list containing allowed content_types. Example: ['application/pdf', 'image/jpeg']
+    * max_upload_size - a number indicating the maximum file size allowed for upload.
+        2.5MB - 2621440
+        5MB - 5242880
+        10MB - 10485760
+        20MB - 20971520
+        50MB - 5242880
+        100MB - 104857600
+        250MB - 214958080
+        500MB - 429916160
+"""
+
+    def __init__(self, *args, **kwargs):
+        self.content_types = kwargs.pop("content_types")
+        self.max_upload_size = kwargs.pop("max_upload_size")
+
+        super(RestrictedFileField, self).__init__(*args, **kwargs)
+
+    def clean(self, data, initial=None):
+        file = super(RestrictedFileField, self).clean(data, initial)
+
+        try:
+            content_type = file.content_type
+            if content_type in self.content_types:
+                if file._size > self.max_upload_size:
+                    raise ValidationError(_('Please keep filesize under %s. Current filesize %s') % (
+                        filesizeformat(self.max_upload_size), filesizeformat(file._size)))
+            else:
+                raise ValidationError(_('Filetype not supported.'))
+        except AttributeError:
+            pass
+
+        return data
 
 # Create your models here.
 class Job(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
@@ -68,7 +111,21 @@ class Job(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
         on_delete=models.CASCADE,
     )
 
+    ##boolean fields for files
+    cv_option = models.BooleanField(_('CV file'), default=True )
+    tawjihi_option = models.BooleanField(_('Tawjihi Certificate file'), default=True)
+    certificate_option = models.BooleanField(_('BA University Certificate'), default=False)
+    ID_option = models.BooleanField(_('Card ID option '), default=True)
+    personal_photo_option = models.BooleanField(_('Personal Photo File'), default=False)
+    work_cert_option = models.BooleanField(_('Work Certificate File'), default=True)
+    org_cert_option = models.BooleanField(_('Org Certificate File'), default=True)
+    recommendation_letters_option = models.BooleanField(_('Recommendation Letters File'), default=False)
+    personal_statment_option = models.BooleanField(_('Personal Statement File'), default=False)
+    marks_list_option = models.BooleanField(_('Marks_List'),default=False)
+    insurance_doc_option = models.BooleanField(_('Insurance Doc'), default= False)
+
     content = PlaceholderField('Job_Description', related_name='job_content')
+    apply_form = PlaceholderField('Job_Form', related_name='apply_form')
 
     app_config = AppHookConfigField(
         JobsConfig,
@@ -83,14 +140,6 @@ class Job(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
         verbose_name_plural = _('Jobs')
         ordering = ['-publishing_date']
     
-    # @property
-    # def published(self):
-    #     """
-    #     Returns True only if the article (is_published == True) AND has a
-    #     published_date that has passed.
-    #     """
-    #     return self.is_published and self.publishing_date <= now() 
-    
     def __str__(self):
         return self.safe_translation_getter('title', any_language=True)
 
@@ -104,6 +153,10 @@ class Job(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
         else:
             kwargs = {'pk': self.pk}
         with override(language):
+            try:
+                url = reverse('nnuh_jobs:job-detail', kwargs=kwargs)
+            except NoReverseMatch:
+                url = ''
             url = reverse('nnuh_jobs:job-detail', kwargs=kwargs)
         return url
 
@@ -120,105 +173,77 @@ class Job(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
         super().save(*args, **kwargs)
 
 
-class Applier(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
-            TranslatableModel):
+# class Applier(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
+#             TranslatableModel):
     
-    MALE = 'male'
-    FEMALE = 'female'
-    SALUTATION_CHOICES = (
-        (MALE, _('Male')),
-        (FEMALE, _('Female')),
-    )
+#     MALE = 'male'
+#     FEMALE = 'female'
+#     SALUTATION_CHOICES = (
+#         (MALE, _('Male')),
+#         (FEMALE, _('Female')),
+#     )
+#     BOOL_CHOICES = ((True, _('Yes')), (False, _('No')))
+#     #################################################### Personal Information #######################################
+#     first_name = models.CharField(_('first name'), null=False,max_length=20)
+#     second_name = models.CharField(_('second name'), null=False,max_length=20)
+#     third_name = models.CharField(_('third_name'),null=True,max_length=20)
+#     family = models.CharField(_('last name'),null=False,max_length=20)
+#     sex = models.CharField( verbose_name=_('Gender'), null=False, choices= SALUTATION_CHOICES, default= MALE, max_length= 10)
+#     card_id_number = models.CharField(_('ID Number'), max_length=10, null=False)
+#     date_of_birth = models.DateField(_('Birthday'), null=False)
 
-    BACHELOR = 'Bachelor' 
-    MASTER = 'Master' 
-    DOCTOR = 'Doctoral'
-    STUDY_CATEGORY_CHOISES = (
-        (BACHELOR, _('Bachelor')),
-        (MASTER, _('Master')),
-        (DOCTOR, _('Doctoral')),
-    )
+#     #################################################### Contact Info ##################################################
+#     tel_no = models.CharField(_('Telephone No.'),max_length=20, null=False)
+#     mob_no = models.CharField(_('Mobile No.'),max_length=20, null=False)
+#     email1 = models.EmailField(_('Email'), max_length=255, null=False)
+#     verify_email = models.EmailField(_('Verify Email'), max_length=255, null=False)
+#     address = models.TextField(_('address'), null=False)
 
-    LESS_THAN_YEAR = 'less than year'
-    MORE_THAN_10_YEARS= 'more than 10 years'
-    EXP_YEARS = (
-        (LESS_THAN_YEAR, 'LESS_THAN_YEAR'),(1,'1'), (2,'2'), (3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'),(8,'8'),(9,'9'),(10,'10'),(MORE_THAN_10_YEARS,'10+')
-    )
+#     #################################################### Relations ####################################################
+#     relations = models.BooleanField(_('realtion'),choices=BOOL_CHOICES, default= False)
+#     relative_name = models.CharField(_('relative name'), null=True, max_length=40, blank= True)
+#     relation_type = models.CharField(_('relation type'), null=True, max_length=20, blank=True)
 
-    SCIENTIFIC = 'Scientific'
-    INDUSTRIAL = 'Industrial'
-    COMMERCIAL = 'Commercial'
-    LITERATURE = 'Literature'
-    TAWJIHI_BRANCH = (
-        (SCIENTIFIC, _('Scientific')),
-        (LITERATURE, _('Literature')),
-        (INDUSTRIAL, _('Industrial')),
-        (COMMERCIAL, _('Commercial'))
-    )
-
-    translations = TranslatedFields(
-        first_name = models.CharField(_('first name'), null=False,max_length=20),
-        second_name = models.CharField(_('second name'), null=False,max_length=20),
-        third_name = models.CharField(_('third_name'),null=True,max_length=20),
-        family = models.CharField(_('last name'),null=False,max_length=20),
-        address = models.TextField(_('address'),null=False),
-        relations = models.BooleanField(_('realtion'),default = False),
-        relative_name = models.CharField(_('relative name'), null=True, max_length=40),
-        relation_type = models.CharField(_('relation type'), null=True, max_length=20),
-        univ_study = models.CharField(_('University Study'), choices= STUDY_CATEGORY_CHOISES, max_length=20, null=False),
-        univ_name = models.CharField(_('University Name'), max_length= 50, null=False),
-        specialization= models.CharField(_('specialization'), max_length=50, null=False),
-    )
-
-    tel_no = models.CharField(_('Telephone No.'),max_length=20, null=False)
-    mob_no = models.CharField(_('Mobile No.'),max_length=20, null=False)
-    email1 = models.EmailField(_('Email'), max_length=255, null=False)
-    verify_email = models.EmailField(_('Verify Email'), max_length=255, null=False)
-    card_id = models.CharField(_('ID Number'), max_length=10, null=False)
-    sex = models.CharField( verbose_name=_('Gender'), null=False, choices= SALUTATION_CHOICES, default= MALE, max_length= 10)
-    date_of_birth = models.DateField(_('Birthday'), null=False)
-    country_grad = models.CharField(_('Country Graduation'), null=False, max_length= 20)
-    year_grad = models.CharField(_('Graduation Year'), max_length=4, null=False)
-    grad_avg = models.CharField(_('Graduation Average'), max_length=5, null=False)
-    experience_years = models.CharField(_('Experience Years'), choices=EXP_YEARS , null=False, max_length= 20)
-    exp_sum = models.TextField(_('Experience Details'))
-    tawjihi_branch = models.CharField(_('Tawjihi Branch'), choices=TAWJIHI_BRANCH, null=False, max_length= 20)
-    tawjihi_avg = models.CharField(_('Tawjihi Average'),max_length=5, null=False)
-    tawjihi_country = models.CharField(_('Tawjihi Country'),max_length=20, null=False)
-    cv = PlaceholderField('Job_CV', related_name='Job_CV')
-    tawjihi = PlaceholderField('Job_Tawjihi', related_name='Job_Tawjihi')
-    certificate = PlaceholderField('Job_Certificate', related_name='Job_Certificate')
-    master_cert= PlaceholderField('Job_Master', related_name='Job_Master')
-    experience= PlaceholderField('Job_Expeience', related_name='Job_Expeience')
-
-
-    def __str__(self):
-        return self.get_full_name()
-
-    def get_full_name(self):
-        full_name = ' '.join([self.first_name, self.family])
-        return full_name.strip()
+#     ##############################################################################files#################################
     
-    def save(self, *args, **kwargs):
-        if not self.pk:
-            #
-            # If using something like Celery, then this should be scheduled, not
-            # executed in the request/response cycle.
-            #
-            try:
-                self.send_notification_email()
-            except:
-                #
-                # This is just a precaution, should there be an issue with the
-                # emailing, we do not want this to prevent the new Contact
-                # object from being saved.
-                #
-                pass
-        super(Applier, self).save(*args, **kwargs)
-    
-class JobApplication(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
-             TranslatableModel):
+#     cv = models.FileField(
+#         verbose_name=_('CV'),
+#         null=True,
+#         default= None)
+#     tawjihi = models.FileField(
+#         verbose_name=_('Personal Photo'),
+#         null=True,
+#         default= None
+#     )
+#     certificate = models.FileField(_('BA University Certificate'),  null=True,default= None)
+#     card_ID_file = models.FileField(_('Card ID file'),   null=True,default= None)
+#     personal_photo = models.FileField(_('Personal Photo File'),   null=True,default= None)
+#     work_cert = models.FileField(_('Work Certificate File'),   null=True,default= None)
+#     org_cert = models.FileField(_('Org Certificate File'),   null=True,default= None)
+#     recommendation_letters = models.FileField(_('Recommendation Letters File'),   null=True,default= None)
+#     personal_statment = models.FileField(_('Personal Statement File'),   null=True,default= None)
+#     marks_list = models.FileField(_('Marks_List'),  null=True,default= None)
+#     insurance_doc = models.FileField(_('Insurance Doc'),   null=True,default= None)
 
-    jobpost = models.ForeignKey(Job, on_delete=models.CASCADE, editable=False, related_name='Job', blank=True, null=True)
-    applicant = models.ForeignKey(Applier, editable=False, on_delete=models.CASCADE, related_name='Applier')
-    date_applied = models.DateTimeField(auto_now=False, auto_now_add=True)
+
+
+#     def __str__(self):
+#         return self.get_full_name()
+
+#     def get_full_name(self):
+#         full_name = ' '.join([self.first_name, self.family])
+#         return full_name.strip()
+
+
+# class ApplierForm(CMSPlugin):
+#     form = models.ForeignKey(Form, on_delete=models.CASCADE)
+
+#     def __str__(self):
+#         return self.form.title
+   
+# class JobApplication(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
+#              TranslatableModel):
+
+#     jobpost = models.ForeignKey(Job, on_delete=models.CASCADE, related_name='Job')
+#     applicant = models.ForeignKey(ApplierForm, on_delete=models.CASCADE, related_name='ApplierForm')
+#     date_applied = models.DateTimeField(auto_now=False, auto_now_add=True)

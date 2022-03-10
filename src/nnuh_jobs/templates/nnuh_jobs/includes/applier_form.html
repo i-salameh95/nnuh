@@ -1,21 +1,12 @@
 {% extends "nnuh_jobs/base.html" %}
-{% load i18n %}
+{% load i18n cms_tags thumbnail apphooks_config_tags crispy_forms_tags %}
 
 {% block job_content %}
-    <form method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
-        {% if form.non_field_errors %}
-            {% for error in form.non_field_errors %}
-                <p>{{ error }}</p>
-            {% endfor %}
-        {% endif %}
-
-        <fieldset>
-            <legend>{% trans "Apply for this job" %}</legend>
-            {% csrf_token %}
-            <table>
-                {{ form.as_table }}
-            </table>
-            <button type="submit">{% trans "Submit" %}</button>
-        </fieldset>
-    </form>
+<div class="row">
+    <div class="col-lg-8">
+        <h3>Apply for Job: {% render_model job 'title' %}</h3>
+        <small class="d-block text-muted mb-3"><i class="fas fa-calendar"></i> {{ job.publishing_date|date }}</small>
+            {% render_placeholder job.apply_form language placeholder_language %} 
+    </div>
+</div>
 {% endblock %}

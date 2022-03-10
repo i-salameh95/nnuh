@@ -1,21 +1,16 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-
 from aldryn_apphooks_config.mixins import AppConfigMixin
 from aldryn_newsblog.compat import toolbar_edit_mode_active
 from aldryn_newsblog.utils.utilities import get_valid_languages_from_request
-from cms.models.pagemodel import Page
-from django.shortcuts import get_object_or_404
 from django.utils import translation
+from django.utils.translation import get_language_from_request
+from django.utils.translation import ugettext as _
 from django.views.generic import DetailView, ListView
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import FormView
 from menus.utils import set_language_changer
 from parler.views import TranslatableSlugMixin, ViewUrlMixin
-
-from .forms import ApplyJobForm
-from .models import Job,Applier
+from .models import Job
 
 
 class EditModeMixin(object):
@@ -84,7 +79,6 @@ class LanguageChangerMixin(object):
             self.object = self.get_object()
         set_language_changer(request, self.object.get_absolute_url)
         return super(LanguageChangerMixin, self).get(request, *args, **kwargs)
-
 
 class AllowPKsTooMixin(object):
     def get_object(self, queryset=None):
@@ -240,33 +234,11 @@ class JobList(JobListBase):
         return qs.translated(*self.valid_languages)
 
 
-class ApplyJobFormView(AppConfigMixin, AppHookCheckMixin, PreviewModeMixin,
-                    TranslatableSlugMixin,FormView):
-    form_class = ApplyJobForm
-    model = Applier
+class ApplyJob(LanguageChangerMixin, AllowPKsTooMixin,
+                       TranslatableSlugMixin, DetailView):
+    model = Job
     template_name = 'nnuh_jobs/includes/applier_form.html'
 
-    def get_initial(self):
-        """
-        We wish to record where the visitor was BEFORE arriving at the contact
-        page. We'll ultimately record this in the 'referer' field in our
-        model. But for now, we'll initialize our form object to include this
-        here, but only when creating the original form object. This way, no
-        matter how many times the visitor has validation errors, etc., we'll
-        still preserve this original HTTP_REFERER.
-        """
-        initial = super(ApplyJobFormView, self).get_initial()
-        initial['referer'] = self.request.META.get('HTTP_REFERER', ''),
-        return initial
-        
-    def get_success_url(self):
-        page = get_object_or_404(
-            Page,
-            reverse_id='job_form_submission',
-            publisher_is_draft=False
-        )
-        return page.get_absolute_url()
-
-    def form_valid(self, form):
-        self.object = form.save()
-        return super(ApplyJobFormView, self).form_valid(form)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context

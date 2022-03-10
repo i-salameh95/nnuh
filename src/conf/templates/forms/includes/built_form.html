@@ -1,0 +1,24 @@
+<!-- {% load i18n cms_tags thumbnail apphooks_config_tags crispy_forms_tags sekizai_tags %}
+<h1>{{ form.title }}</h1>
+    {% if form.intro %}
+    <p>{{ form.intro }}</p>
+    {% endif %}
+{{ form_for_form.media }}
+<form  id="form_builder_{{ form.pk }}" action="{{ form.get_absolute_url }}" method="POST"
+    {% if form_for_form.is_multipart %}enctype="multipart/form-data"{% endif %} class="formsbuilder-form">
+    {# Include the hidden fields #}
+    {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+    {# Include the visible fields #}
+    {% for field in form.visible_fields %}
+        <div class="errors">
+            {{ field.errors}}
+            {{ field.label_tag }} {{ field }}
+        </div>
+    {% endfor %}
+    {% csrf_token %}
+    <div style="clear:left;">&nbsp;</div>
+    {{  form_for_form |crispy }}
+    <input type="submit" value="{{ form.button_text }}" class="btn btn-default btn-primary">
+</form> -->

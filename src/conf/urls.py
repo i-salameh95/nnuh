@@ -9,7 +9,6 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
-
 admin.autodiscover()
 
 urlpatterns = [
@@ -18,9 +17,13 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^admin/', admin.site.urls),  # NOQA
-    url(r'^select2/', include('django_select2.urls')),
+    url(r'^admin/', admin.site.urls), 
+    # url(r'^forms/', include(forms_builder.forms.urls)),
+    # NOQA
+    url(r'^select2/', include('django_select2.urls')), 
+    
     url(r'^', include('cms.urls')),
+
 )
 
 # This is only needed when using runserver.

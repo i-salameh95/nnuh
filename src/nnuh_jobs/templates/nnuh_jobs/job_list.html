@@ -7,11 +7,11 @@
         <div class="row">
             {% for job in job_list %}
                 {% include "nnuh_jobs/includes/job.html" %}
+            {% empty %}
+                <p>{% trans "No items available" %}</p>
             {% endfor %}
         </div>
-        <div>
-            {% include "nnuh_jobs/includes/pagination.html" %}
-        </div>
+        {% include "nnuh_jobs/includes/pagination.html" %}
     </div>
     <div class="col-sm-4">
         {% static_placeholder "job_sidebar" %}
