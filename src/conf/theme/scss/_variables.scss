@@ -68,10 +68,10 @@ $font-family-base:            $font-family-sans-serif !default;
 
 $navbar-padding-y:                  0;
 
-//$navbar-nav-link-padding-x:         1rem !default;
-//$navbar-light-color:                #333;
-//$navbar-light-hover-color:          #fff;
-//$navbar-light-active-color:         #fff;
+// $navbar-nav-link-padding-x:         1rem !default;
+$navbar-light-color:               $black;
+// $navbar-light-hover-color:          #fff;
+// $navbar-light-active-color:         #fff;
 
 $dropdown-min-width:                12rem !default;
 $dropdown-padding-y:                0; // .5rem !default;
