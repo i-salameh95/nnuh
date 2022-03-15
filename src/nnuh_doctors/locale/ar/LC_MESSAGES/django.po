@@ -298,7 +298,7 @@ msgstr ""
 #: nnuh_doctors/models.py:91
 #: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:73
 msgid "clinic_phone"
-msgstr "رقم العيادة"
+msgstr "الرقم الداخلي للعيادة"
 
 #: nnuh_doctors/models.py:93
 msgid "Facebook"
