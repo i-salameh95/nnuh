@@ -1,5 +1,5 @@
 {% extends "nnuh_doctors/sidebar.html" %}
-{% load i18n cms_tags thumbnail crispy_forms_tags aldryn_people_tags%}
+{% load i18n cms_tags thumbnail crispy_forms_tags aldryn_people_tags %}
 
 {% block title %}{{ person.name }} - {{ block.super }}{% endblock %}
 
@@ -24,15 +24,13 @@
             {% endif %}
         </div>
         <div class="col-lg-7">
-            <h1 class="page-title">{% render_model doctor 'name' %}</h1>
+            <div class="page-title">
+                <h3 class="font-weight-bold">{% render_model doctor 'name' %}</h3> 
+                {% if doctor.function %}<h6>{{ doctor.function }}</h6>{% endif %}
+            </div>
             {% if doctor.section %}
                 <div class="py-2 border-top">
                     <span class="font-weight-bold">{% trans 'Section' %}:</span> {{ doctor.section }}
-                </div>
-            {% endif %}
-            {% if doctor.role %}
-                <div class="py-2 border-top">
-                    <span class="font-weight-bold">{% trans 'Role' %}:</span> {{ doctor.role }}
                 </div>
             {% endif %}
             {% if doctor.speciality %}
