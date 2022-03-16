@@ -1,1 +1,59 @@
-{% extends "aldryn_people/plugins/standard/people_list.html" %}
+{% load i18n sekizai_tags %}
+<div class="section section-doctors-carousel">
+    <div class="d-flex justify-content-end align-items-center">
+        <div class="customNavigation">
+          <a class="btn btn-violet btn-sm btn-doctors-prev" href="#">
+              <i class="fas fa-angle-{% if LANGUAGE_BIDI %}right{% else %}left{% endif %} fa-fw"></i>
+          </a>
+          <a class="btn btn-violet btn-sm btn-doctors-next" href="#">
+              <i class="fas fa-angle-{% if LANGUAGE_BIDI %}left{% else %}right{% endif %} fa-fw"></i>
+          </a>
+        </div>
+    </div>
+    <div class="owl-carousel owl-carousel-doctors">
+        {% for doctor in doctors %}
+            {% include "nnuh_doctors/includes/doctor.html" with doctor=doctor %}
+        {% endfor %}
+    </div>
+</div>
+{% addtoblock "js" %}
+    <script>
+        $(function () {
+            var owl = $('.owl-carousel-doctors').owlCarousel({
+                margin: 30,
+                responsiveClass: true,
+                loop: false,
+                {% if LANGUAGE_BIDI %}rtl: true, {% endif %}
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 2,
+                    },
+                    1000: {
+                        items: 4,
+                        loop: false,
+                    }
+                }
+            });
+            
+            var count = $('.owl-carousel-doctors .owl-item').length;
+            if(count > 4){
+                $(".btn-doctors-next").show()
+                $(".btn-doctors-prev").show()
+            }else{
+                $(".btn-doctors-next").hide()
+                $(".btn-doctors-prev").hide()
+            }
+            $(".btn-doctors-next").click(function (e) {
+                e.preventDefault();
+                owl.trigger('next.owl.carousel');
+            });
+            $(".btn-doctors-prev").click(function (e) {
+                e.preventDefault();
+                owl.trigger('prev.owl.carousel');
+            });
+        });
+    </script>
+{% endaddtoblock %}
