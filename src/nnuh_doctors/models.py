@@ -166,7 +166,7 @@ class BaseDoctorsPlugin(CMSPlugin):
 
     STYLE_CHOICES = [
         ('standard', _('Standard')),
-        # ('feature', _('Feature')),
+        ('feature', _('Feature')),
         ('carousel', _('Carousel')),
     ] + get_additional_styles()
 

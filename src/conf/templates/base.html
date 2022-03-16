@@ -62,11 +62,6 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <a href="{% page_url 'homepage' %}" class="logo d-block"></a>
-                    <!-- <a href="/ar/jci/" class="accr d-block"></a>
-                    <a href="/ar/iso9001" class="nnu d-block"></a>
-                    <a href="/ar/iso151189" class="pal d-block"></a> -->
-                    {#<a href="{% page_url 'homepage' %}"><div class="logo"></div></a>#}
-                    {#<a href="https://www.najah.edu/" target="_blank" class="ml-3"><div class="nnu"></div></a>#}
                     <div class="menu-wrapper ml-auto">
                         <button class="btn btn-dark btn-sm navbar-offcanvas-toggler d-lg-none" type="button" data-toggle="offcanvas"
                             data-target="#navbarSupportedContent"
@@ -122,6 +117,7 @@
         <div class="featured">
             {% block featured %}{% endblock featured %}
         </div>
+        
         <div class="container content py-3">
             {% if messages %}
                 {% for message in messages %}
@@ -138,11 +134,9 @@
                 {% static_placeholder "footer" %}
             </div>
         </div>
-       
-
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-{#        <script src="{% static 'js/bundle.js' %}"></script>#}
+
         {% render_bundle 'bundle' 'js' %}
         {% block js %}{% endblock %}
         {% render_block "js" %}
@@ -158,13 +152,8 @@
             dom.i2svg();
             {#$(document).insertCss(css);#}
             {#dom.watch();#}
-
         });
         </script>
     {% endif %}
-    {% comment %}
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=razi"></script>
-	{% endcomment %}
     </body>
 </html>
