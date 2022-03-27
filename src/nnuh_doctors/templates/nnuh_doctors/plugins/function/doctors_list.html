@@ -1,0 +1,14 @@
+{% load i18n cms_tags thumbnail  aldryn_people_tags %}
+
+{% for doctor in doctors %}
+    <div class="nnuh nnuh-doctor">
+        <h1 class="card-header page-title">
+            {% if doctor.function %}{{ doctor.function }}{% endif %}
+        </h1>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                {% include "nnuh_doctors/includes/doctor.html" with doctor=doctor %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
