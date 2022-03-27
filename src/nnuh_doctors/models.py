@@ -168,6 +168,7 @@ class BaseDoctorsPlugin(CMSPlugin):
         ('standard', _('Standard')),
         ('feature', _('Feature')),
         ('carousel', _('Carousel')),
+        ('function', _('Function')),
     ] + get_additional_styles()
 
     style = models.CharField(

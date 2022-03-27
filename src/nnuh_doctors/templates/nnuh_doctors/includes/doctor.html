@@ -32,12 +32,11 @@
             {% else %}
                 {% render_model doctor 'name' %}
             {% endif %}
+            {% if doctor.speciality %}
+                <br /><small>{{ doctor.speciality }}</small>
+            {% endif %}
             {% if doctor.function %}
-                <br /><small>{{ doctor.function }}</small>
-            {% else %}
-                {% if doctor.speciality %}
-                    <br /><small>{{ doctor.speciality }}{% if doctor.sub_speciality %} - {{ doctor.sub_speciality }}{% endif %}</small>
-                {% endif %}
+                <br /><small>{{ doctor.function }}</small>  
             {% endif %}
         </h3>
     </div>
