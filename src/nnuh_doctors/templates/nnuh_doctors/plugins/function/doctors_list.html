@@ -1,8 +1,9 @@
 {% load i18n cms_tags thumbnail  aldryn_people_tags %}
 
-{% for doctor in doctors %}
+{% if request.GET.page == '1' or 'page' not in request.GET %}
+    {% for doctor in doctors %}
     <div class="nnuh nnuh-doctor">
-        <h1 class="card-header page-title">
+        <h1 class="page-title">
             {% if doctor.function %}{{ doctor.function }}{% endif %}
         </h1>
         <div class="row">
@@ -11,4 +12,6 @@
             </div>
         </div>
     </div>
-{% endfor %}
+    {% endfor %}
+{% endif %}
+
