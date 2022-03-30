@@ -9,7 +9,7 @@
 {#    {% include "aldryn_newsblog/includes/article.html" with detail_view="true" %}#}
     <div class="row">
         <div class="col-lg-9">
-            <img class="img-fluid mb-3" src="{% thumbnail article.featured_image 1340x840 crop upscale subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}">
+            <img class="img-fluid mb-3" src="{% thumbnail article.featured_image 1337x493 autocrop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}">
             {% with categories=aritcle.categoreis.all %}
                 {% if categories|length %}
                     <div class="d-flex justify-content-start mb-3">

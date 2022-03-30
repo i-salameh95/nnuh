@@ -200,7 +200,7 @@ INSTALLED_APPS = [
     'sortedm2m',
     'taggit',
     'bootstrap_pagination',
-
+    'adminsortable2',
     'django_select2',
     'haystack',
     'aldryn_search',
@@ -215,6 +215,7 @@ INSTALLED_APPS = [
     'nnuh_doctors',
     'djangocms_htmlsitemap',
     'djangocms_unitegallery',
+    'cmsplugin_socialsharekit',
 ]
 
 LANGUAGES = (
