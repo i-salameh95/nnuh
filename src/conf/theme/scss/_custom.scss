@@ -207,7 +207,6 @@
   .dropdown.dropdown-megamenu {
     position: static;
     .dropdown-menu {
-      width: 100%;
       .row > div {
         @extend .d-flex;
         @extend .align-items-stretch;
@@ -222,7 +221,7 @@
   .dropdown {
     &:hover {
       >.dropdown-menu {
-        display: block;
+        display: block;        
       }
     }
   }
@@ -703,3 +702,7 @@
 
 }
 
+.mega-dropdown-column {
+  width: 100%;
+  max-width: 15rem;
+}
