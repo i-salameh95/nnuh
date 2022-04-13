@@ -32,7 +32,7 @@ class DoctorAdmin(PlaceholderAdminMixin,
                 'section',
                 ('speciality', 'sub_speciality', ),
                 'function',
-                ('clinic_phone', 'clinic_time',)
+                ('clinic_phone', 'clinic_time', 'clinic_hour')
             ),
         }),
         (_('Contact (untranslated)'), {

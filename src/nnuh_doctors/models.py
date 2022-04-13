@@ -73,7 +73,8 @@ class Doctor(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
         speciality=models.CharField(_('speciality'), max_length=255),
         sub_speciality=models.CharField(_('sub speciality'), max_length=255, blank=True),
         function=models.CharField(_('role'), max_length=255, blank=True, default=''),
-        clinic_time = models.CharField(_('clinic_time'), null=True, blank=True, max_length=255)
+        clinic_time = models.CharField(_('clinic_time'), null=True, blank=True, max_length=255),
+        clinic_hour = models.CharField(_('clinic_hour'),null=True, blank=True, max_length=255)
     )
 
     phone = models.CharField(

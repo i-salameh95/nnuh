@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-15 15:14+0200\n"
+"POT-Creation-Date: 2022-04-12 13:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,7 +97,7 @@ msgid "E-Mail:"
 msgstr ""
 
 #: nnuh_doctors/cms_apps.py:14 nnuh_doctors/cms_plugins.py:37
-#: nnuh_doctors/models.py:108
+#: nnuh_doctors/models.py:109
 msgid "Doctors"
 msgstr ""
 
@@ -167,28 +167,28 @@ msgstr ""
 msgid "Create a new section."
 msgstr ""
 
-#: nnuh_doctors/forms.py:27 nnuh_doctors/forms.py:49 nnuh_doctors/models.py:144
+#: nnuh_doctors/forms.py:27 nnuh_doctors/forms.py:49 nnuh_doctors/models.py:145
 msgid "Full Name"
 msgstr ""
 
-#: nnuh_doctors/forms.py:28 nnuh_doctors/forms.py:50 nnuh_doctors/models.py:146
+#: nnuh_doctors/forms.py:28 nnuh_doctors/forms.py:50 nnuh_doctors/models.py:147
 msgid "Phone/Mobile"
 msgstr ""
 
-#: nnuh_doctors/forms.py:29 nnuh_doctors/forms.py:51 nnuh_doctors/models.py:148
+#: nnuh_doctors/forms.py:29 nnuh_doctors/forms.py:51 nnuh_doctors/models.py:149
 msgid "Email Address"
 msgstr ""
 
-#: nnuh_doctors/forms.py:30 nnuh_doctors/forms.py:52 nnuh_doctors/models.py:150
+#: nnuh_doctors/forms.py:30 nnuh_doctors/forms.py:52 nnuh_doctors/models.py:151
 msgid "Birth Date"
 msgstr ""
 
-#: nnuh_doctors/forms.py:31 nnuh_doctors/forms.py:53 nnuh_doctors/models.py:152
+#: nnuh_doctors/forms.py:31 nnuh_doctors/forms.py:53 nnuh_doctors/models.py:153
 msgid "Message"
 msgstr ""
 
-#: nnuh_doctors/forms.py:48 nnuh_doctors/models.py:48 nnuh_doctors/models.py:88
-#: nnuh_doctors/models.py:140
+#: nnuh_doctors/forms.py:48 nnuh_doctors/models.py:48 nnuh_doctors/models.py:89
+#: nnuh_doctors/models.py:141
 #: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:33
 msgid "Section"
 msgstr ""
@@ -273,68 +273,81 @@ msgstr ""
 msgid "clinic_time"
 msgstr ""
 
-#: nnuh_doctors/models.py:80
+#: nnuh_doctors/models.py:77
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:76
+msgid "clinic_hour"
+msgstr ""
+
+#: nnuh_doctors/models.py:81
 msgid "phone"
 msgstr ""
 
-#: nnuh_doctors/models.py:82
+#: nnuh_doctors/models.py:83
 msgid "mobile"
 msgstr ""
 
-#: nnuh_doctors/models.py:84
+#: nnuh_doctors/models.py:85
 msgid "email"
 msgstr ""
 
-#: nnuh_doctors/models.py:86
+#: nnuh_doctors/models.py:87
 msgid "website"
 msgstr ""
 
-#: nnuh_doctors/models.py:91
+#: nnuh_doctors/models.py:92
 #: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:50
 msgid "clinic_phone"
 msgstr ""
 
-#: nnuh_doctors/models.py:93
+#: nnuh_doctors/models.py:94
 msgid "Facebook"
 msgstr ""
 
-#: nnuh_doctors/models.py:95
+#: nnuh_doctors/models.py:96
 msgid "Twitter"
 msgstr ""
 
-#: nnuh_doctors/models.py:97
+#: nnuh_doctors/models.py:98
 msgid "LinkedIn"
 msgstr ""
 
-#: nnuh_doctors/models.py:107 nnuh_doctors/models.py:142
+#: nnuh_doctors/models.py:108 nnuh_doctors/models.py:143
 msgid "Doctor"
 msgstr ""
 
-#: nnuh_doctors/models.py:157
+#: nnuh_doctors/models.py:158
 msgid "Appointment"
 msgstr ""
 
-#: nnuh_doctors/models.py:158
+#: nnuh_doctors/models.py:159
 msgid "Appointments"
 msgstr ""
 
-#: nnuh_doctors/models.py:168
+#: nnuh_doctors/models.py:169
 msgid "Standard"
 msgstr ""
 
 #: nnuh_doctors/models.py:170
+msgid "Feature"
+msgstr ""
+
+#: nnuh_doctors/models.py:171
 msgid "Carousel"
 msgstr ""
 
-#: nnuh_doctors/models.py:174
+#: nnuh_doctors/models.py:172
+msgid "Function"
+msgstr ""
+
+#: nnuh_doctors/models.py:176
 msgid "Style"
 msgstr ""
 
-#: nnuh_doctors/models.py:179
+#: nnuh_doctors/models.py:181
 msgid "Select and arrange specific doctors, or, leave blank to select all."
 msgstr ""
 
-#: nnuh_doctors/models.py:210
+#: nnuh_doctors/models.py:212
 msgid "Show links to Detail Page"
 msgstr ""
 
@@ -358,12 +371,12 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:86
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:89
 #: nnuh_doctors/templates/nnuh_doctors/plugins/general_appointment_form.html:4
 msgid "Make an Appointment"
 msgstr ""
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:92
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:95
 #: nnuh_doctors/templates/nnuh_doctors/plugins/general_appointment_form.html:13
 msgid "Send"
 msgstr ""

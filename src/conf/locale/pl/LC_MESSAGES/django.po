@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-15 15:14+0200\n"
+"POT-Creation-Date: 2022-04-12 13:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,55 +17,204 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: conf/settings/base.py:222 conf/settings/base.py:231
+#: cmsplugin_socialsharekit/cms_plugins.py:22
+msgid "Social Share Kit Plugin"
+msgstr ""
+
+#: cmsplugin_socialsharekit/cms_plugins.py:23
+msgid "Social Share Kit"
+msgstr ""
+
+#: cmsplugin_socialsharekit/cms_plugins.py:35
+msgid "Position"
+msgstr ""
+
+#: cmsplugin_socialsharekit/cms_plugins.py:41
+msgid "Extra options"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:14
+msgid "button"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:22
+msgid "icon only"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:26
+msgid "button label"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:56
+msgid "size"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:62
+msgid "style"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:68
+msgid "count"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:72
+msgid "greyscale"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:78
+msgid "block width"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:83
+msgid "Need used in conjunction with button *label*. Ex: 120px or 100%."
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:87
+msgid "forceInit"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:89
+msgid ""
+"In case if you want to initialize right away without waiting for DOM to load."
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:95
+msgid "sticky"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:99
+msgid "center"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:103
+msgid "buttons position"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:7
+msgid "Facebook"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:8
+msgid "Twitter"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:9
+msgid "Google +"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:10
+msgid "Pinterest"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:11
+msgid "Tumblr"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:12
+msgid "Linkedin"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:13
+msgid "VK"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:14
+msgid "Buffer"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:15
+msgid "Email"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:20
+msgid "Square"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:21
+msgid "Round"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:22
+msgid "Rounded"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:27
+msgid "Extra Small"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:28
+msgid "Small"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:29
+msgid "Regular"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:30
+msgid "Large"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:35
+msgid "Left side"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:36
+msgid "Right side"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:37
+msgid "Bottom"
+msgstr ""
+
+#: conf/settings/base.py:223 conf/settings/base.py:232
 msgid "en"
 msgstr ""
 
-#: conf/settings/base.py:223 conf/settings/base.py:238
+#: conf/settings/base.py:224 conf/settings/base.py:239
 msgid "ar"
 msgstr ""
 
-#: conf/settings/base.py:323
+#: conf/settings/base.py:324
 msgid "Primary - Terequaz"
 msgstr ""
 
-#: conf/settings/base.py:324
+#: conf/settings/base.py:325
 msgid "Secondary - Light Terequaz"
 msgstr ""
 
-#: conf/settings/base.py:325
+#: conf/settings/base.py:326
 msgid "Violet"
 msgstr ""
 
-#: conf/settings/base.py:326
+#: conf/settings/base.py:327
 msgid "Success"
 msgstr ""
 
-#: conf/settings/base.py:327
+#: conf/settings/base.py:328
 msgid "Danger"
 msgstr ""
 
-#: conf/settings/base.py:328
+#: conf/settings/base.py:329
 msgid "Warning"
 msgstr ""
 
-#: conf/settings/base.py:329
+#: conf/settings/base.py:330
 msgid "Info"
 msgstr ""
 
-#: conf/settings/base.py:330
+#: conf/settings/base.py:331
 msgid "Light"
 msgstr ""
 
-#: conf/settings/base.py:331
+#: conf/settings/base.py:332
 msgid "Dark"
 msgstr ""
 
-#: conf/settings/base.py:335
+#: conf/settings/base.py:336
 msgid "Default"
 msgstr ""
 
-#: conf/settings/base.py:336
+#: conf/settings/base.py:337
 msgid "Featured"
 msgstr ""
 
@@ -218,19 +367,19 @@ msgid "by"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/article_detail.html:28
-#: conf/templates/aldryn_newsblog/brochures/article_detail.html:54
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:21
 #: conf/templates/aldryn_newsblog/events/article_detail.html:18
 msgid "Previous Article"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/article_detail.html:30
-#: conf/templates/aldryn_newsblog/brochures/article_detail.html:56
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:23
 #: conf/templates/aldryn_newsblog/events/article_detail.html:20
 msgid "Back to Overview"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/article_detail.html:32
-#: conf/templates/aldryn_newsblog/brochures/article_detail.html:58
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:25
 #: conf/templates/aldryn_newsblog/events/article_detail.html:22
 msgid "Next Article"
 msgstr ""
@@ -255,6 +404,34 @@ msgstr ""
 
 #: conf/templates/aldryn_newsblog/plugins/latest_articles.html:6
 msgid "More"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:31
+msgid "Phone:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:35
+msgid "Mobile:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:39
+msgid "Fax:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:43
+msgid "Email:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:47
+msgid "Website:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:57
+msgid "Download vCard"
+msgstr ""
+
+#: conf/templates/aldryn_people/plugins/standard/people_list.html:21
+msgid "Ungrouped"
 msgstr ""
 
 #: conf/templates/base.html:21
@@ -285,7 +462,7 @@ msgstr ""
 msgid "Contact Us"
 msgstr ""
 
-#: conf/templates/base.html:109
+#: conf/templates/base.html:104
 msgid "You are here"
 msgstr ""
 

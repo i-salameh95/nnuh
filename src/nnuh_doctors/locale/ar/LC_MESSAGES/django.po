@@ -300,6 +300,11 @@ msgstr ""
 msgid "clinic_phone"
 msgstr "الرقم الداخلي للعيادة"
 
+#: nnuh_doctors/models.py:91
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:73
+msgid "clinic_hour"
+msgstr "مواعيد العيادة"
+
 #: nnuh_doctors/models.py:93
 msgid "Facebook"
 msgstr ""
