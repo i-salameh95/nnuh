@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
+
 from aldryn_apphooks_config.mixins import AppConfigMixin
 from aldryn_newsblog.compat import toolbar_edit_mode_active
 from aldryn_newsblog.utils.utilities import get_valid_languages_from_request
@@ -10,6 +11,7 @@ from django.utils.translation import ugettext as _
 from django.views.generic import DetailView, ListView
 from menus.utils import set_language_changer
 from parler.views import TranslatableSlugMixin, ViewUrlMixin
+
 from .models import Job
 
 
@@ -100,7 +102,7 @@ class AllowPKsTooMixin(object):
         return super(AllowPKsTooMixin, self).get_object(queryset)
 
 
-class JobDetail(AppConfigMixin, AppHookCheckMixin, PreviewModeMixin,
+class JobDetail(AppConfigMixin, AppHookCheckMixin,
                     TranslatableSlugMixin, DetailView):
     model = Job
     slug_field = 'slug'

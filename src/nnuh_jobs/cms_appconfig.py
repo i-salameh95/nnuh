@@ -3,14 +3,10 @@
 from __future__ import unicode_literals
 
 from aldryn_apphooks_config.models import AppHookConfig
-from cms.models.fields import PlaceholderField
 from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext as _
 from parler.models import TranslatableModel, TranslatedFields
-
-TEMPLATE_PREFIX_CHOICES = getattr(
-    settings, 'ALDRYN_NEWSBLOG_TEMPLATE_PREFIXES', [])
 
 class JobsConfig(TranslatableModel, AppHookConfig):
 
@@ -43,13 +39,6 @@ class JobsConfig(TranslatableModel, AppHookConfig):
         _('Auto-create authors?'),
         default=True,
         help_text=_('Automatically create authors from logged-in user?'),
-    )
-
-    template_prefix = models.CharField(
-        max_length=20,
-        null=True, blank=True,
-        choices=TEMPLATE_PREFIX_CHOICES,
-        verbose_name=_("Prefix for template dirs")
     )
 
     def get_app_title(self):
