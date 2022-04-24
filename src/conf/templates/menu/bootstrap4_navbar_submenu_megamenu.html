@@ -17,6 +17,15 @@
                     </li>
                 {% endfor %}
             </ul>
+        {% else %}
+        <ul class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3 list-unstyled">
+            <h5>
+            <!-- <span class="d-none d-lg-block text-center"><i class="fas fa-plus"></i></span> -->
+            <a class="dropdown-item" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }} </a>  
+            </h5>
+            <i class=""></i>
+            <div class="dropdown-divider"></div>
+        </ul>
         {% endif %}          
     {% endfor %}
 </div>
