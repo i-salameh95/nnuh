@@ -305,8 +305,8 @@ msgstr "الرقم الداخلي للعيادة"
 msgid "clinic_hour"
 msgstr "مواعيد العيادة"
 
-#~ msgid "clinic_doctors"
-#~ msgstr "أطباء العيادة"
+msgid "clinic_doctors"
+msgstr "أطباء العيادة"
 
 #: nnuh_doctors/models.py:93
 msgid "Facebook"
