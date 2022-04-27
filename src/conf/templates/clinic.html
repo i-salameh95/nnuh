@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n cms_tags  %}
+
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+{% block page_title %}{% page_attribute "page_title" %}{% endblock page_title %}
+
+{% block content %}
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <h2>{% trans "clinic_time" %}</h2>   
+            </div>
+            <div class="card-body">
+                {% static_placeholder "clinic_time" %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <h2>{% trans "clinic_hour" %}</h2>   
+            </div>
+            <div class="card-body">
+                {% static_placeholder "clinic_hour" %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <h2>{% trans "clinic_doctors" %}</h2>   
+            </div>
+            <div class="card-body">
+                {% static_placeholder "clinic_doctors" %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

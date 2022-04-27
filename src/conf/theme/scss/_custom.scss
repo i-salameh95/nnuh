@@ -24,12 +24,9 @@
   }
   .topbar {
     background-color: #213540;
-    height: 55px;
     position: relative;
-    @extend .py-1;
     @include media-breakpoint-between(xs,md){
-      height: auto;
-      padding: 10px 0;
+      padding: 0;
     }
     .social-info {
       @include media-breakpoint-between(xs,md){
@@ -38,7 +35,6 @@
       .divider-line {
         position: relative;
         color: $nnuh1;
-        padding: 0 10px;
       }
       .phone-link {
         display: inline-block;
@@ -56,6 +52,7 @@
           flex-wrap: wrap;
           margin: 5px;
           padding: 0;
+          inline-size: max-content;
           li  {
             list-style: none;
             a {
@@ -84,8 +81,8 @@
     box-shadow: 0 0px 6px #000;
     @extend .fixed-top;
     .logo {
-      width: 105px;
-      height: 40px;
+      width: 102px;
+      height: 39px;
     }
     .nnu,
     .accr,
@@ -107,15 +104,15 @@
   .logo {
     transition: all 500ms ease;
     text-indent: -1000rem;
-    width: 105px;
-    height: 40px;
+    width: 192px;
+    height: 73px;
     @include media-breakpoint-up(lg) {
-      width: 210px;
-      height: 80px;
+      width: 314px;
+      height: 120px;
     }
     background-image: url("../img/nnuh_logo.png");
     background-size: contain;
-    //transition: all 0.3s linear;
+    margin-top: 10px;
   }
   .accr {
     transition: all 500ms ease;

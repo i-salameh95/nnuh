@@ -276,6 +276,9 @@ CMS_TEMPLATES = (
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
     ('homepage.html', 'Homepage'),
+    ('clinic.html','Clinic'),
+    ('500.html', 'Server Error Page'),
+    ('404.html', 'Page not found'),
 )
 
 CMS_PERMISSION = True
