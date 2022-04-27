@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-12 13:29+0300\n"
+"POT-Creation-Date: 2022-04-25 10:44+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -174,47 +174,47 @@ msgstr ""
 msgid "ar"
 msgstr ""
 
-#: conf/settings/base.py:324
+#: conf/settings/base.py:327
 msgid "Primary - Terequaz"
 msgstr ""
 
-#: conf/settings/base.py:325
+#: conf/settings/base.py:328
 msgid "Secondary - Light Terequaz"
 msgstr ""
 
-#: conf/settings/base.py:326
+#: conf/settings/base.py:329
 msgid "Violet"
 msgstr ""
 
-#: conf/settings/base.py:327
+#: conf/settings/base.py:330
 msgid "Success"
 msgstr ""
 
-#: conf/settings/base.py:328
+#: conf/settings/base.py:331
 msgid "Danger"
 msgstr ""
 
-#: conf/settings/base.py:329
+#: conf/settings/base.py:332
 msgid "Warning"
 msgstr ""
 
-#: conf/settings/base.py:330
+#: conf/settings/base.py:333
 msgid "Info"
 msgstr ""
 
-#: conf/settings/base.py:331
+#: conf/settings/base.py:334
 msgid "Light"
 msgstr ""
 
-#: conf/settings/base.py:332
+#: conf/settings/base.py:335
 msgid "Dark"
 msgstr ""
 
-#: conf/settings/base.py:336
+#: conf/settings/base.py:339
 msgid "Default"
 msgstr ""
 
-#: conf/settings/base.py:337
+#: conf/settings/base.py:340
 msgid "Featured"
 msgstr ""
 
@@ -438,32 +438,24 @@ msgstr ""
 msgid "An-Najah National Hospital"
 msgstr ""
 
-#: conf/templates/base.html:27
-msgid "COVID-19 Safety Measures"
-msgstr ""
-
-#: conf/templates/base.html:38 nnuh_search/forms.py:17
-msgid "Doctors"
-msgstr ""
-
-#: conf/templates/base.html:39
-msgid "Jobs"
-msgstr ""
-
-#: conf/templates/base.html:40
-msgid "Sitemap"
-msgstr ""
-
-#: conf/templates/base.html:41
-msgid "Dialysis  Center"
-msgstr ""
-
-#: conf/templates/base.html:44
+#: conf/templates/base.html:42
 msgid "Contact Us"
 msgstr ""
 
-#: conf/templates/base.html:104
+#: conf/templates/base.html:100
 msgid "You are here"
+msgstr ""
+
+#: conf/templates/clinic.html:12
+msgid "clinic_time"
+msgstr ""
+
+#: conf/templates/clinic.html:22
+msgid "clinic_hour"
+msgstr ""
+
+#: conf/templates/clinic.html:32
+msgid "clinic_doctors"
 msgstr ""
 
 #: conf/templates/djangocms_video/default/video_player.html:18
@@ -489,6 +481,10 @@ msgstr ""
 
 #: nnuh_search/forms.py:16
 msgid "Search for all Data"
+msgstr ""
+
+#: nnuh_search/forms.py:17
+msgid "Doctors"
 msgstr ""
 
 #: nnuh_search/forms.py:18

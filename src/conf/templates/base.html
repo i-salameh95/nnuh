@@ -30,19 +30,21 @@
                 </div>
             {% endcomment %}
             <div class="topbar">
-                <div class="container h-100">
-                    <div class="row h-100">
-                        <div class="col-12 h-100">
-                            <div class="h-100 d-md-flex justify-content-between align-items-center">
-                                <div class="top-header-menu d-none d-md-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <div class="top-header-menu d-md-block">
                                     <nav class="top-menu">
                                         <ul class="social-info">
                                             <li>{% language_chooser %}</li>
-                                            <li><a href="/ar/tsl-bn2">{%  trans "Contact Us" %}</a></li>
+                                            <span class="divider-line">|</span>
                                             <li><a href="https://www.youtube.com/channel/UCS-R6z-qCIfIx_6onvnqF_A"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a></li>
                                             <li><a href="https://www.facebook.com/najahnnuh/" target="_blank"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
                                             <li><a href="https://twitter.com/an_hospital"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
                                             <li><a href="https://www.instagram.com/nnuh_najah/"><i class="fab fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+                                            <span class="divider-line">|</span>
+                                            <li><a href="/ar/tsl-bn2">{%  trans "Contact Us" %}</a></li>
                                             <li><span class="divider-line">|</span>
                                             <div class="phone-link"> <a href="tel:0097092331471"> +970 9 233 1471 </a></div></li>
                                         </ul>
@@ -56,7 +58,7 @@
             
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="{% page_url 'homepage' %}" class="logo d-block"></a>
+                    <a href="{% page_url 'homepage' %}" class="navbar-brand d-flex align-items-center z-index-1 logo"></a>
                     <div class="menu-wrapper ml-auto">
                         <button class="btn btn-dark btn-sm navbar-offcanvas-toggler d-lg-none" type="button" data-toggle="offcanvas"
                             data-target="#navbarSupportedContent"
