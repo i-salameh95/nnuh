@@ -291,6 +291,10 @@ msgstr "اتصل بنا"
 msgid "You are here"
 msgstr "أنت هنا"
 
+#: conf/templates/clinic.html:32
+msgid "clinic_doctors"
+msgstr "أطباء العيادة"
+
 #: conf/templates/djangocms_video/default/video_player.html:18
 msgid "Your browser doesn't support this video format."
 msgstr ""
