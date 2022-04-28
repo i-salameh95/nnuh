@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-10 13:59+0200\n"
+"POT-Creation-Date: 2022-04-28 09:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,55 +19,204 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: conf/settings/base.py:222 conf/settings/base.py:231
+#: cmsplugin_socialsharekit/cms_plugins.py:22
+msgid "Social Share Kit Plugin"
+msgstr ""
+
+#: cmsplugin_socialsharekit/cms_plugins.py:23
+msgid "Social Share Kit"
+msgstr ""
+
+#: cmsplugin_socialsharekit/cms_plugins.py:35
+msgid "Position"
+msgstr ""
+
+#: cmsplugin_socialsharekit/cms_plugins.py:41
+msgid "Extra options"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:14
+msgid "button"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:22
+msgid "icon only"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:26
+msgid "button label"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:56
+msgid "size"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:62
+msgid "style"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:68
+msgid "count"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:72
+msgid "greyscale"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:78
+msgid "block width"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:83
+msgid "Need used in conjunction with button *label*. Ex: 120px or 100%."
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:87
+msgid "forceInit"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:89
+msgid ""
+"In case if you want to initialize right away without waiting for DOM to load."
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:95
+msgid "sticky"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:99
+msgid "center"
+msgstr ""
+
+#: cmsplugin_socialsharekit/models.py:103
+msgid "buttons position"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:7
+msgid "Facebook"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:8
+msgid "Twitter"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:9
+msgid "Google +"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:10
+msgid "Pinterest"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:11
+msgid "Tumblr"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:12
+msgid "Linkedin"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:13
+msgid "VK"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:14
+msgid "Buffer"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:15
+msgid "Email"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:20
+msgid "Square"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:21
+msgid "Round"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:22
+msgid "Rounded"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:27
+msgid "Extra Small"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:28
+msgid "Small"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:29
+msgid "Regular"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:30
+msgid "Large"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:35
+msgid "Left side"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:36
+msgid "Right side"
+msgstr ""
+
+#: cmsplugin_socialsharekit/settings.py:37
+msgid "Bottom"
+msgstr ""
+
+#: conf/settings/base.py:223 conf/settings/base.py:232
 msgid "en"
 msgstr ""
 
-#: conf/settings/base.py:223 conf/settings/base.py:238
+#: conf/settings/base.py:224 conf/settings/base.py:239
 msgid "ar"
 msgstr ""
 
-#: conf/settings/base.py:323
+#: conf/settings/base.py:327
 msgid "Primary - Terequaz"
 msgstr ""
 
-#: conf/settings/base.py:324
+#: conf/settings/base.py:328
 msgid "Secondary - Light Terequaz"
 msgstr ""
 
-#: conf/settings/base.py:325
+#: conf/settings/base.py:329
 msgid "Violet"
 msgstr ""
 
-#: conf/settings/base.py:326
+#: conf/settings/base.py:330
 msgid "Success"
 msgstr ""
 
-#: conf/settings/base.py:327
+#: conf/settings/base.py:331
 msgid "Danger"
 msgstr ""
 
-#: conf/settings/base.py:328
+#: conf/settings/base.py:332
 msgid "Warning"
 msgstr ""
 
-#: conf/settings/base.py:329
+#: conf/settings/base.py:333
 msgid "Info"
 msgstr ""
 
-#: conf/settings/base.py:330
+#: conf/settings/base.py:334
 msgid "Light"
 msgstr ""
 
-#: conf/settings/base.py:331
+#: conf/settings/base.py:335
 msgid "Dark"
 msgstr ""
 
-#: conf/settings/base.py:335
+#: conf/settings/base.py:339
 msgid "Default"
 msgstr "الإفتراضي"
 
-#: conf/settings/base.py:336
+#: conf/settings/base.py:340
 msgid "Featured"
 msgstr ""
 
@@ -220,19 +369,19 @@ msgid "by"
 msgstr ""
 
 #: conf/templates/aldryn_newsblog/article_detail.html:28
-#: conf/templates/aldryn_newsblog/brochures/article_detail.html:54
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:21
 #: conf/templates/aldryn_newsblog/events/article_detail.html:18
 msgid "Previous Article"
 msgstr "المقال السابق"
 
 #: conf/templates/aldryn_newsblog/article_detail.html:30
-#: conf/templates/aldryn_newsblog/brochures/article_detail.html:56
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:23
 #: conf/templates/aldryn_newsblog/events/article_detail.html:20
 msgid "Back to Overview"
 msgstr "الرجوع الى قائمة المقالات"
 
 #: conf/templates/aldryn_newsblog/article_detail.html:32
-#: conf/templates/aldryn_newsblog/brochures/article_detail.html:58
+#: conf/templates/aldryn_newsblog/brochures/article_detail.html:25
 #: conf/templates/aldryn_newsblog/events/article_detail.html:22
 msgid "Next Article"
 msgstr "المقال التالي"
@@ -259,37 +408,57 @@ msgstr "اخر الأخبار"
 msgid "More"
 msgstr "المزيد"
 
+#: conf/templates/aldryn_people/includes/person.html:31
+msgid "Phone:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:35
+msgid "Mobile:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:39
+msgid "Fax:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:43
+msgid "Email:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:47
+msgid "Website:"
+msgstr ""
+
+#: conf/templates/aldryn_people/includes/person.html:57
+msgid "Download vCard"
+msgstr ""
+
+#: conf/templates/aldryn_people/plugins/standard/people_list.html:21
+msgid "Ungrouped"
+msgstr ""
+
 #: conf/templates/base.html:21
 msgid "An-Najah National Hospital"
 msgstr "مستشفى النجاح الوطني الجامعي"
 
-#: conf/templates/base.html:27
-msgid "COVID-19 Safety Measures"
-msgstr "كوفيد-19 إجراءات السلامة"
-
-#: conf/templates/base.html:38 nnuh_search/forms.py:17
-msgid "Doctors"
-msgstr "الأطباء"
-
-#: conf/templates/base.html:39
-msgid "Jobs"
-msgstr "وظائف شاغرة"
-
-#: conf/templates/base.html:40
-msgid "Sitemap"
-msgstr "خريطة الموقع"
-
-#: conf/templates/base.html:41
-msgid "Dialysis  Center"
-msgstr "مركز علاج أمراض الكلى"
-
-#: conf/templates/base.html:44
+#: conf/templates/base.html:48
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: conf/templates/base.html:109
+#: conf/templates/base.html:102
 msgid "You are here"
 msgstr "أنت هنا"
+
+#: conf/templates/clinic.html:12
+msgid "clinic_time"
+msgstr ""
+
+#: conf/templates/clinic.html:22
+msgid "clinic_hour"
+msgstr ""
+
+#: conf/templates/clinic.html:32
+msgid "clinic_drs"
+msgstr "أطباء العيادة"
 
 #: conf/templates/djangocms_video/default/video_player.html:18
 msgid "Your browser doesn't support this video format."
@@ -300,7 +469,7 @@ msgid "Change to language: English"
 msgstr ""
 
 #: conf/templates/menu/language_chooser.html:8
-#: conf/templates/menu/language_chooser.html:18
+#: conf/templates/menu/language_chooser.html:17
 msgid "Change to language:"
 msgstr ""
 
@@ -315,6 +484,10 @@ msgstr ""
 #: nnuh_search/forms.py:16
 msgid "Search for all Data"
 msgstr ""
+
+#: nnuh_search/forms.py:17
+msgid "Doctors"
+msgstr "الأطباء"
 
 #: nnuh_search/forms.py:18
 #, fuzzy
@@ -339,6 +512,18 @@ msgstr ""
 #| msgid "No articles found"
 msgid "No results found."
 msgstr "لم يتم العثور على مقالات"
+
+#~ msgid "COVID-19 Safety Measures"
+#~ msgstr "كوفيد-19 إجراءات السلامة"
+
+#~ msgid "Jobs"
+#~ msgstr "وظائف شاغرة"
+
+#~ msgid "Sitemap"
+#~ msgstr "خريطة الموقع"
+
+#~ msgid "Dialysis  Center"
+#~ msgstr "مركز علاج أمراض الكلى"
 
 #~ msgid "Patient Feedback"
 #~ msgstr "آراء وملاحظات المرضى"

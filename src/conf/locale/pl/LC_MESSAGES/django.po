@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-25 10:44+0300\n"
+"POT-Creation-Date: 2022-04-28 09:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -438,11 +438,11 @@ msgstr ""
 msgid "An-Najah National Hospital"
 msgstr ""
 
-#: conf/templates/base.html:42
+#: conf/templates/base.html:48
 msgid "Contact Us"
 msgstr ""
 
-#: conf/templates/base.html:100
+#: conf/templates/base.html:102
 msgid "You are here"
 msgstr ""
 
@@ -455,7 +455,7 @@ msgid "clinic_hour"
 msgstr ""
 
 #: conf/templates/clinic.html:32
-msgid "clinic_doctors"
+msgid "clinic_drs"
 msgstr ""
 
 #: conf/templates/djangocms_video/default/video_player.html:18
@@ -467,7 +467,7 @@ msgid "Change to language: English"
 msgstr ""
 
 #: conf/templates/menu/language_chooser.html:8
-#: conf/templates/menu/language_chooser.html:18
+#: conf/templates/menu/language_chooser.html:17
 msgid "Change to language:"
 msgstr ""
 
