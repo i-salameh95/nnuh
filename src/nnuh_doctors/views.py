@@ -1,25 +1,22 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-
+from aldryn_people.utils import get_valid_languages
 from django.contrib import messages
 from django.contrib.sites.shortcuts import get_current_site
-from django.http import Http404, HttpResponse
 from django.shortcuts import redirect
-from django.urls import reverse
-from django.utils.translation import get_language_from_request, ugettext_lazy as _
-from django.views.generic import DetailView, ListView, FormView
+from django.utils.translation import get_language_from_request
+from django.utils.translation import ugettext_lazy as _
+from django.views.generic import DetailView, FormView, ListView
 from django.views.generic.base import View
 from django.views.generic.detail import SingleObjectMixin
-
 from menus.utils import set_language_changer
 from parler.views import TranslatableSlugMixin
 
-from aldryn_people.utils import get_valid_languages
+from nnuh_doctors.forms import AppointmentForm, NnuhDoctorSectionSearchForm
 
-from nnuh_doctors.forms import AppointmentForm
 from . import DEFAULT_APP_NAMESPACE
-from .models import Section, Doctor
+from .models import Doctor, Section
 
 
 def get_language(request):
@@ -61,7 +58,7 @@ class AllowPKsTooMixin(object):
 
 
 class DoctorDetail(LanguageChangerMixin, AllowPKsTooMixin,
-                       TranslatableSlugMixin, DetailView):
+                        TranslatableSlugMixin, DetailView):
     model = Doctor
     template_name = 'nnuh_doctors/doctor_detail.html'
 
@@ -102,7 +99,6 @@ class MakeAppointment(LanguageChangerMixin, AllowPKsTooMixin, TranslatableSlugMi
         return super().form_invalid(form)
 
 
-
 class DoctorDetailView(View):
 
     def get(self, request, *args, **kwargs):
@@ -122,6 +118,7 @@ class SectionDetailView(LanguageChangerMixin, AllowPKsTooMixin,
 class DoctorListView(ListView):
     model = Doctor
     paginate_by = 12
+    form_class = NnuhDoctorSectionSearchForm
 
     def dispatch(self, request, *args, **kwargs):
         self.request_language = get_language(request)
@@ -134,11 +131,19 @@ class DoctorListView(ListView):
     def get_queryset(self):
         qs = super(DoctorListView, self).get_queryset()
         # prepare language properties for filtering
-        return qs.translated(*self.valid_languages)
-
-    # def get_context_data(self, **kwargs):
-    #     context = super(DoctorListView, self).get_context_data(**kwargs)
-    #     qs_ungrouped = Doctor.objects.filter(groups__isnull=True)
-    #     context['ungrouped_people'] = qs_ungrouped.translated(
-    #         *self.valid_languages)
-    #     return context
+        doctor_type = self.request.GET.get('doctor_type')
+        section_type = self.request.GET.get('section_type')
+        
+        doctor_list = Doctor.objects.all()
+        if doctor_type:
+            qs = doctor_list.filter(pk = doctor_type)
+        if section_type:
+            qs = doctor_list.filter(section_id= section_type)
+        if doctor_type and section_type:
+            qs = doctor_list
+        return qs
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = NnuhDoctorSectionSearchForm(self.request.GET)
+        return context

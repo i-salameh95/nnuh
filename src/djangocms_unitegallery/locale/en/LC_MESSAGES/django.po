@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-18 12:05+0100\n"
+"POT-Creation-Date: 2022-05-17 10:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: djangocms_unitegallery/cms_plugins.py:19
-#: djangocms_unitegallery/models.py:96
+#: djangocms_unitegallery/cms_plugins.py:19 djangocms_unitegallery/models.py:97
 msgid "Gallery"
 msgstr ""
 
@@ -26,41 +25,41 @@ msgstr ""
 msgid "Unite gallery"
 msgstr ""
 
-#: djangocms_unitegallery/models.py:38
+#: djangocms_unitegallery/models.py:39
 msgid "Theme"
 msgstr ""
 
-#: djangocms_unitegallery/models.py:44
+#: djangocms_unitegallery/models.py:45
 msgid "Theme options"
 msgstr ""
 
-#: djangocms_unitegallery/models.py:47
+#: djangocms_unitegallery/models.py:48
 msgid ""
 "This field allow you to pass a JSON object if you want to customize the "
 "gallery. Please consult the Unite gallery docs for a list of options."
 msgstr ""
 
-#: djangocms_unitegallery/models.py:77
+#: djangocms_unitegallery/models.py:78
 msgid "Photo"
 msgstr ""
 
-#: djangocms_unitegallery/models.py:79
+#: djangocms_unitegallery/models.py:80
 msgid "Title"
 msgstr ""
 
-#: djangocms_unitegallery/models.py:83
+#: djangocms_unitegallery/models.py:84
 msgid "Leave this blank if you don't want to display a title."
 msgstr ""
 
-#: djangocms_unitegallery/models.py:87
+#: djangocms_unitegallery/models.py:88
 msgid "Description"
 msgstr ""
 
-#: djangocms_unitegallery/models.py:91
+#: djangocms_unitegallery/models.py:92
 msgid "Leave this blank if you don't want to display a description."
 msgstr ""
 
-#: djangocms_unitegallery/models.py:103
+#: djangocms_unitegallery/models.py:105
 #, python-format
 msgid "Photo %s"
 msgstr ""
