@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-23 16:27-0400\n"
+"POT-Creation-Date: 2022-05-17 10:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,295 +17,408 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:56 admin.py:94
+#: nnuh_doctors/admin.py:38
 msgid "Contact (untranslated)"
 msgstr ""
 
-#: admin.py:76
-msgid "# Groups"
+#: nnuh_doctors/admin.py:43
+msgid "Social Media (untranslated)"
 msgstr ""
 
-#: admin.py:109
-msgid "# People"
+#: nnuh_doctors/admin.py:71
+msgid "Link (untranslated)"
 msgstr ""
 
-#: boilerplates/bootstrap3/templates/aldryn_people/group_list.html:13
-#: boilerplates/bootstrap3/templates/aldryn_people/plugins/standard/people_list.html:26
-#: boilerplates/legacy/templates/aldryn_people/group_list.html:17
-#: boilerplates/legacy/templates/aldryn_people/plugins/standard/people_list.html:24
-#: templates/aldryn_people/group_list.html:12
-#: templates/aldryn_people/plugins/standard/people_list.html:25
+#: nnuh_doctors/admin.py:85
+msgid "# Doctor"
+msgstr ""
+
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/group_list.html:13
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/plugins/standard/people_list.html:26
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/group_list.html:17
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/plugins/standard/people_list.html:24
+#: nnuh_doctors/templates/nnuh_doctors/plugins/standard/doctors_list.html:26
 msgid "Ungrouped"
 msgstr ""
 
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/group.html:13
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/person.html:27
-#: boilerplates/legacy/templates/aldryn_people/includes/people_item.html:11
-#: boilerplates/legacy/templates/aldryn_people/plugins/feature/people_list.html:13
-#: boilerplates/legacy/templates/aldryn_people/plugins/people_list.html:13
-#: boilerplates/legacy/templates/aldryn_people/plugins/standard/people_list.html:15
-#: templates/aldryn_people/includes/group.html:9
-#: templates/aldryn_people/includes/person.html:31
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/group.html:13
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/person.html:27
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/includes/people_item.html:11
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/plugins/feature/people_list.html:13
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/plugins/people_list.html:13
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/plugins/standard/people_list.html:15
+#: nnuh_doctors/templates/nnuh_doctors/includes/section.html:13
 msgid "Phone:"
 msgstr ""
 
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/group.html:17
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/person.html:35
-#: templates/aldryn_people/includes/group.html:13
-#: templates/aldryn_people/includes/person.html:39
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/group.html:17
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/person.html:35
+#: nnuh_doctors/templates/nnuh_doctors/includes/section.html:17
 msgid "Fax:"
 msgstr ""
 
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/group.html:21
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/person.html:39
-#: templates/aldryn_people/includes/group.html:17
-#: templates/aldryn_people/includes/person.html:43
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/group.html:21
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/person.html:39
+#: nnuh_doctors/templates/nnuh_doctors/includes/section.html:21
 msgid "Email:"
 msgstr ""
 
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/group.html:26
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/person.html:44
-#: templates/aldryn_people/includes/group.html:21
-#: templates/aldryn_people/includes/person.html:47
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/group.html:26
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/person.html:44
+#: nnuh_doctors/templates/nnuh_doctors/includes/section.html:26
 msgid "Website:"
 msgstr ""
 
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/group.html:34
-#: boilerplates/legacy/templates/aldryn_people/plugins/feature/people_list.html:14
-#: boilerplates/legacy/templates/aldryn_people/plugins/people_list.html:14
-#: boilerplates/legacy/templates/aldryn_people/plugins/standard/people_list.html:16
-#: templates/aldryn_people/includes/group.html:27
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/group.html:34
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/plugins/feature/people_list.html:14
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/plugins/people_list.html:14
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/plugins/standard/people_list.html:16
+#: nnuh_doctors/templates/nnuh_doctors/includes/section.html:34
 msgid "Address:"
 msgstr ""
 
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/person.html:31
-#: boilerplates/legacy/templates/aldryn_people/includes/people_item.html:12
-#: templates/aldryn_people/includes/person.html:35
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/person.html:31
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/includes/people_item.html:12
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:56
 msgid "Mobile:"
 msgstr ""
 
-#: boilerplates/bootstrap3/templates/aldryn_people/includes/person.html:57
-#: boilerplates/legacy/templates/aldryn_people/includes/people_item.html:15
-#: templates/aldryn_people/includes/person.html:57
+#: nnuh_doctors/boilerplates/bootstrap3/templates/nnuh_doctors/includes/person.html:57
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/includes/people_item.html:15
 msgid "Download vCard"
 msgstr ""
 
-#: boilerplates/legacy/templates/aldryn_people/group_list.html:7 models.py:163
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/group_list.html:7
 msgid "Groups"
 msgstr ""
 
-#: boilerplates/legacy/templates/aldryn_people/includes/people_item.html:13
+#: nnuh_doctors/boilerplates/legacy/templates/aldryn_people/includes/people_item.html:13
 msgid "E-Mail:"
 msgstr ""
 
-#: cms_apps.py:14 cms_plugins.py:36 models.py:223
-msgid "People"
+#: nnuh_doctors/cms_apps.py:14 nnuh_doctors/cms_plugins.py:37
+#: nnuh_doctors/models.py:109
+msgid "Doctors"
 msgstr ""
 
-#: cms_plugins.py:17
+#: nnuh_doctors/cms_plugins.py:18
 msgid ""
-"Seems that there is no valid application hook for aldryn-people.Links can't "
+"Seems that there is no valid application hook for nnuh-doctors.Links can't "
 "be rendered without an app hook."
 msgstr ""
 
-#: cms_plugins.py:27
-msgid "People list"
+#: nnuh_doctors/cms_plugins.py:28
+msgid "Doctors list"
 msgstr ""
 
-#: cms_plugins.py:37
+#: nnuh_doctors/cms_plugins.py:38
 msgid "Select and arrange specific people, or leave blank to use all."
 msgstr ""
 
-#: cms_plugins.py:43
+#: nnuh_doctors/cms_plugins.py:44
 msgid "Options"
 msgstr ""
 
-#: cms_toolbars.py:104
-msgid "Group list"
+#: nnuh_doctors/cms_plugins.py:73
+msgid "General Appointment Form"
 msgstr ""
 
-#: cms_toolbars.py:111
-msgid "Add new group"
+#: nnuh_doctors/cms_plugins.py:86
+msgid "Message has been received successfully."
 msgstr ""
 
-#: cms_toolbars.py:115
-msgid "Edit group"
+#: nnuh_doctors/cms_toolbars.py:104
+msgid "Section list"
 msgstr ""
 
-#: cms_toolbars.py:122
-msgid "Person list"
+#: nnuh_doctors/cms_toolbars.py:111
+msgid "Add new section"
 msgstr ""
 
-#: cms_toolbars.py:131
-msgid "Add new person"
+#: nnuh_doctors/cms_toolbars.py:115
+msgid "Edit section"
 msgstr ""
 
-#: cms_toolbars.py:136
-msgid "Edit person"
+#: nnuh_doctors/cms_toolbars.py:122
+msgid "Doctor list"
 msgstr ""
 
-#: cms_wizards.py:95 cms_wizards.py:123
+#: nnuh_doctors/cms_toolbars.py:131
+msgid "Add new doctor"
+msgstr ""
+
+#: nnuh_doctors/cms_toolbars.py:136
+msgid "Edit doctor"
+msgstr ""
+
+#: nnuh_doctors/cms_wizards.py:82
+msgid "New doctor"
+msgstr ""
+
+#: nnuh_doctors/cms_wizards.py:85
+msgid "Create a new doctor."
+msgstr ""
+
+#: nnuh_doctors/cms_wizards.py:92
+msgid "New section"
+msgstr ""
+
+#: nnuh_doctors/cms_wizards.py:95
+msgid "Create a new section."
+msgstr ""
+
+#: nnuh_doctors/forms.py:27 nnuh_doctors/forms.py:49 nnuh_doctors/models.py:145
+msgid "Full Name"
+msgstr ""
+
+#: nnuh_doctors/forms.py:28 nnuh_doctors/forms.py:50 nnuh_doctors/models.py:147
+msgid "Phone/Mobile"
+msgstr ""
+
+#: nnuh_doctors/forms.py:29 nnuh_doctors/forms.py:51 nnuh_doctors/models.py:149
+msgid "Email Address"
+msgstr ""
+
+#: nnuh_doctors/forms.py:30 nnuh_doctors/forms.py:52 nnuh_doctors/models.py:151
+msgid "Birth Date"
+msgstr ""
+
+#: nnuh_doctors/forms.py:31 nnuh_doctors/forms.py:53 nnuh_doctors/models.py:153
+msgid "Message"
+msgstr ""
+
+#: nnuh_doctors/forms.py:48 nnuh_doctors/models.py:48 nnuh_doctors/models.py:89
+#: nnuh_doctors/models.py:141
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:33
+msgid "Section"
+msgstr ""
+
+#: nnuh_doctors/forms.py:59 nnuh_doctors/forms.py:79
+msgid "Search"
+msgstr ""
+
+#: nnuh_doctors/forms.py:60
+msgid "Choose"
+msgstr ""
+
+#: nnuh_doctors/forms.py:64
+msgid "search by name"
+msgstr ""
+
+#: nnuh_doctors/forms.py:65
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:38
+msgid "Speciality"
+msgstr ""
+
+#: nnuh_doctors/forms.py:93
+msgid "please use one filter for search"
+msgstr ""
+
+#: nnuh_doctors/menu.py:20
+msgid "NNUH Doctors: Doctor Menu"
+msgstr ""
+
+#: nnuh_doctors/menu.py:36
 #, python-brace-format
-msgid "Initial version of {object_repr}. {trans_info}"
+msgid "doctor: {0}"
 msgstr ""
 
-#: cms_wizards.py:131
-msgid "New person"
+#: nnuh_doctors/menu.py:52
+msgid "NNUH Doctors: Section Menu"
 msgstr ""
 
-#: cms_wizards.py:134
-msgid "Create a new person."
-msgstr ""
-
-#: cms_wizards.py:141
-msgid "New group"
-msgstr ""
-
-#: cms_wizards.py:144
-msgid "Create a new group."
-msgstr ""
-
-#: menu.py:19
-msgid "Aldryn People: Person Menu"
-msgstr ""
-
-#: menu.py:35
+#: nnuh_doctors/menu.py:68
 #, python-brace-format
-msgid "person: {0}"
+msgid "section: {0}"
 msgstr ""
 
-#: menu.py:50
-msgid "Aldryn People: Group Menu"
+#: nnuh_doctors/models.py:31
+msgid "title"
 msgstr ""
 
-#: menu.py:66
-#, python-brace-format
-msgid "group: {0}"
+#: nnuh_doctors/models.py:32
+msgid "Provide this section's title."
 msgstr ""
 
-#: models.py:122 models.py:189
-msgid "name"
-msgstr ""
-
-#: models.py:123
-msgid "Provide this group's name."
-msgstr ""
-
-#: models.py:124 models.py:196
-msgid "description"
-msgstr ""
-
-#: models.py:125
+#: nnuh_doctors/models.py:34
 msgid "slug"
 msgstr ""
 
-#: models.py:127 models.py:193
+#: nnuh_doctors/models.py:36 nnuh_doctors/models.py:72
 msgid "Leave blank to auto-generate a unique slug."
 msgstr ""
 
-#: models.py:130
-msgid "address"
+#: nnuh_doctors/models.py:40
+msgid "Internal link"
 msgstr ""
 
-#: models.py:132
-msgid "postal code"
+#: nnuh_doctors/models.py:44
+msgid "If provided, overrides the external link."
 msgstr ""
 
-#: models.py:134
-msgid "city"
+#: nnuh_doctors/models.py:49
+msgid "Sections"
 msgstr ""
 
-#: models.py:136 models.py:200
-msgid "phone"
-msgstr ""
-
-#: models.py:138 models.py:204
-msgid "fax"
-msgstr ""
-
-#: models.py:140 models.py:206
-msgid "email"
-msgstr ""
-
-#: models.py:142 models.py:208
-msgid "website"
-msgstr ""
-
-#: models.py:162
-msgid "Group"
-msgstr ""
-
-#: models.py:167
+#: nnuh_doctors/models.py:53
 #, python-brace-format
-msgid "Group: {0}"
+msgid "Section: {0}"
 msgstr ""
 
-#: models.py:190
+#: nnuh_doctors/models.py:67
+msgid "name"
+msgstr ""
+
+#: nnuh_doctors/models.py:68
 msgid "Provide this person's name."
 msgstr ""
 
-#: models.py:191
+#: nnuh_doctors/models.py:70
 msgid "unique slug"
 msgstr ""
 
-#: models.py:194
+#: nnuh_doctors/models.py:73
+msgid "speciality"
+msgstr ""
+
+#: nnuh_doctors/models.py:74
+msgid "sub speciality"
+msgstr ""
+
+#: nnuh_doctors/models.py:75
 msgid "role"
 msgstr ""
 
-#: models.py:202
+#: nnuh_doctors/models.py:76
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:74
+msgid "clinic_time"
+msgstr ""
+
+#: nnuh_doctors/models.py:77
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:76
+msgid "clinic_hour"
+msgstr ""
+
+#: nnuh_doctors/models.py:81
+msgid "phone"
+msgstr ""
+
+#: nnuh_doctors/models.py:83
 msgid "mobile"
 msgstr ""
 
-#: models.py:211
-msgid ""
-"Choose and order the groups for this person, the first will be the \"primary "
-"group\"."
+#: nnuh_doctors/models.py:85
+msgid "email"
 msgstr ""
 
-#: models.py:216
-msgid "enable vCard download"
+#: nnuh_doctors/models.py:87
+msgid "website"
 msgstr ""
 
-#: models.py:222
-msgid "Person"
+#: nnuh_doctors/models.py:92
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:50
+msgid "clinic_phone"
 msgstr ""
 
-#: models.py:343
+#: nnuh_doctors/models.py:94
+msgid "Facebook"
+msgstr ""
+
+#: nnuh_doctors/models.py:96
+msgid "Twitter"
+msgstr ""
+
+#: nnuh_doctors/models.py:98
+msgid "LinkedIn"
+msgstr ""
+
+#: nnuh_doctors/models.py:108 nnuh_doctors/models.py:143
+msgid "Doctor"
+msgstr ""
+
+#: nnuh_doctors/models.py:158
+msgid "Appointment"
+msgstr ""
+
+#: nnuh_doctors/models.py:159
+msgid "Appointments"
+msgstr ""
+
+#: nnuh_doctors/models.py:169
 msgid "Standard"
 msgstr ""
 
-#: models.py:344
+#: nnuh_doctors/models.py:170
 msgid "Feature"
 msgstr ""
 
-#: models.py:348
+#: nnuh_doctors/models.py:171
+msgid "Carousel"
+msgstr ""
+
+#: nnuh_doctors/models.py:172
+msgid "Function"
+msgstr ""
+
+#: nnuh_doctors/models.py:176
 msgid "Style"
 msgstr ""
 
-#: models.py:353
-msgid "Select and arrange specific people, or, leave blank to select all."
+#: nnuh_doctors/models.py:181
+msgid "Select and arrange specific doctors, or, leave blank to select all."
 msgstr ""
 
-#: models.py:391
-msgid "group by group"
-msgstr ""
-
-#: models.py:393
-msgid "Group people by their group."
-msgstr ""
-
-#: models.py:396
-msgid "show ungrouped"
-msgstr ""
-
-#: models.py:398
-msgid "When using \"group by group\", show ungrouped people too."
-msgstr ""
-
-#: models.py:401
+#: nnuh_doctors/models.py:212
 msgid "Show links to Detail Page"
 msgstr ""
 
-#: models.py:403
-msgid "Show links to download vCard"
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:43
+msgid "Sub-Speciality"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:48
+msgid "Phone"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:61
+msgid "Email"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:67
+msgid "Website"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:89
+#: nnuh_doctors/templates/nnuh_doctors/plugins/general_appointment_form.html:4
+msgid "Make an Appointment"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:95
+#: nnuh_doctors/templates/nnuh_doctors/plugins/general_appointment_form.html:13
+msgid "Send"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_list.html:8
+msgid "Search for a Doctor"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_list.html:20
+#: nnuh_doctors/templates/nnuh_doctors/plugins/carousel/doctors_list.html:3
+msgid "Our Doctors"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_list.html:30
+msgid "No results found, use one filter only"
+msgstr ""
+
+#: nnuh_doctors/templates/nnuh_doctors/plugins/carousel/doctors_list.html:6
+msgid "More"
+msgstr ""
+
+#: nnuh_doctors/views.py:101
+msgid "Appointment has been received successfully."
+msgstr ""
+
+#: nnuh_doctors/views.py:106
+msgid "Please correct errors."
 msgstr ""

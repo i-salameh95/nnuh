@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Div, Submit, Field
 
-from nnuh_doctors.models import Appointment
+from nnuh_doctors.models import Appointment, Doctor, Section
 
 
 class AppointmentForm(forms.ModelForm):
@@ -53,3 +53,42 @@ class GeneralAppointmentForm(forms.ModelForm):
             Field('message', placeholder=_('Message'))
         )
 
+class NnuhDoctorSectionSearchForm(forms.Form):
+
+    doctor_type = forms.ModelChoiceField(queryset= Doctor.objects.all(),empty_label=_('Search'), widget=forms.Select(attrs={'class':'dropdown'}))
+    section_type = forms.ModelChoiceField(queryset= Section.objects.all(),empty_label=_('Choose'), widget=forms.Select(attrs={'class':'dropdown'}))
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['doctor_type'].label = _('search by name')
+        self.fields['section_type'].label = _('Speciality')
+        
+        self.fields['doctor_type'].required = False
+        self.fields['section_type'].required = False
+        
+        self.helper = FormHelper()
+        self.helper.form_tag = False
+        self.helper.disable_csrf = True
+        self.helper.include_media = False
+        self.helper.layout = Layout(
+            Div(
+                Div(css_class="px-5 my-3 display-4"),
+                Div(
+                    Div('doctor_type', css_class='form-group col-md-6'),
+                    Div('section_type', css_class='form-group col-md-3'),
+                    Div(Submit('search',_('Search'),css_class='btn-primary')),
+                    css_class='row flex-grow-1 align-items-center'
+                ),
+                css_class='d-flex justify-content-between align-items-center'
+            )
+        )
+
+    def clean(self):
+        cleaned_data = super().clean()
+        doctor_type = cleaned_data.get('doctor_type')
+        section_type = cleaned_data.get('section_type')
+
+        if doctor_type and section_type:
+            raise forms.ValidationError(
+                _("please use one filter for search")
+            )
