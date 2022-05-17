@@ -76,7 +76,10 @@
                     <span class="font-weight-bold">{% trans "clinic_hour" %}:</span>  {{ doctor.clinic_hour }}
                 {% endif %}
             </div>
-            {% endif %}
+            {% endif %}   
+            <div class="page-title my-4 ">
+                <h3 class="font-weight-bold">{% trans 'Experience' %}</h3> 
+            </div>
             {% render_placeholder doctor.content %}
         </div>
     </div>
