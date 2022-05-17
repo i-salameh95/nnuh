@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-17 10:13+0300\n"
+"POT-Creation-Date: 2022-05-17 11:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -199,19 +199,19 @@ msgstr "الرسالة"
 msgid "Section"
 msgstr "القسم"
 
-#: nnuh_doctors/forms.py:59 nnuh_doctors/forms.py:79
+#: nnuh_doctors/forms.py:58 nnuh_doctors/forms.py:79
 msgid "Search"
 msgstr "ابحث"
 
-#: nnuh_doctors/forms.py:60
+#: nnuh_doctors/forms.py:59
 msgid "Choose"
 msgstr "اختر"
 
-#: nnuh_doctors/forms.py:64
+#: nnuh_doctors/forms.py:63
 msgid "search by name"
 msgstr "البحث حسب الاسم"
 
-#: nnuh_doctors/forms.py:65
+#: nnuh_doctors/forms.py:64
 #: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:38
 msgid "Speciality"
 msgstr "التخصص"
@@ -400,12 +400,16 @@ msgstr "البريد الإلكتروني:"
 msgid "Website"
 msgstr "الموقع الإلكتروني:"
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:89
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:81
+msgid "Experience"
+msgstr "الخبرات العملية"
+
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:92
 #: nnuh_doctors/templates/nnuh_doctors/plugins/general_appointment_form.html:4
 msgid "Make an Appointment"
 msgstr "للاستفسار"
 
-#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:95
+#: nnuh_doctors/templates/nnuh_doctors/doctor_detail.html:98
 #: nnuh_doctors/templates/nnuh_doctors/plugins/general_appointment_form.html:13
 msgid "Send"
 msgstr "أرسل"
@@ -427,11 +431,11 @@ msgstr ""
 msgid "More"
 msgstr "المزيد"
 
-#: nnuh_doctors/views.py:101
+#: nnuh_doctors/views.py:93
 msgid "Appointment has been received successfully."
 msgstr "تم إستقبال حجز الموعد بنجاح"
 
-#: nnuh_doctors/views.py:106
+#: nnuh_doctors/views.py:98
 msgid "Please correct errors."
 msgstr "الرجاء تصحيح الأخطاء."
 
