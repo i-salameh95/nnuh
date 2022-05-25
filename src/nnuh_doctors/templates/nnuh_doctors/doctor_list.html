@@ -1,5 +1,9 @@
 {% extends "nnuh_doctors/fullwidth.html" %}
-{% load i18n crispy_forms_tags cms_tags bootstrap_pagination %}
+{% load sekizai_tags i18n crispy_forms_tags cms_tags bootstrap_pagination %}
+
+{% block css %}
+    {{ form.media.css }}
+{% endblock %}
 
 {% block content %}
 {% placeholder "content" %}
@@ -39,3 +43,9 @@
         </div>
     {% endblock people_content %}
 {% endblock content %}
+
+
+
+{% block js %}
+    {{ form.media.js }}
+{% endblock %}

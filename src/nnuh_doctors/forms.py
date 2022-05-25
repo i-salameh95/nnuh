@@ -1,8 +1,9 @@
+from pickle import FALSE
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Div, Field, Layout, Submit
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Div, Submit, Field
+from django_select2.forms import Select2Widget
 
 from nnuh_doctors.models import Appointment, Doctor, Section
 
@@ -55,8 +56,8 @@ class GeneralAppointmentForm(forms.ModelForm):
 
 class NnuhDoctorSectionSearchForm(forms.Form):
 
-    doctor_type = forms.ModelChoiceField(queryset= Doctor.objects.all(),empty_label=_('Search'), widget=forms.Select(attrs={'class':'dropdown'}))
-    section_type = forms.ModelChoiceField(queryset= Section.objects.all(),empty_label=_('Choose'), widget=forms.Select(attrs={'class':'dropdown'}))
+    doctor_type = forms.ModelChoiceField(queryset= Doctor.objects.all(), empty_label=_('Search'), widget=Select2Widget(attrs={'width': '100%'})) 
+    section_type = forms.ModelChoiceField(queryset= Section.objects.all(),empty_label=_('Choose'), widget=Select2Widget(attrs={'width': '100%'}))
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -76,7 +77,7 @@ class NnuhDoctorSectionSearchForm(forms.Form):
                 Div(
                     Div('doctor_type', css_class='form-group col-md-6'),
                     Div('section_type', css_class='form-group col-md-3'),
-                    Div(Submit('search',_('Search'),css_class='btn-primary')),
+                    Div(Submit('search',_('Search'))),
                     css_class='row flex-grow-1 align-items-center'
                 ),
                 css_class='d-flex justify-content-between align-items-center'
