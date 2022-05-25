@@ -73,11 +73,10 @@ class NnuhDoctorSectionSearchForm(forms.Form):
         self.helper.include_media = False
         self.helper.layout = Layout(
             Div(
-                Div(css_class="px-5 my-3 display-4"),
                 Div(
                     Div('doctor_type', css_class='form-group col-md-6'),
                     Div('section_type', css_class='form-group col-md-3'),
-                    Div(Submit('search',_('Search'))),
+                    Div(Submit('search',_('Search')), css_class='col-md-3'),
                     css_class='row flex-grow-1 align-items-center'
                 ),
                 css_class='d-flex justify-content-between align-items-center'
