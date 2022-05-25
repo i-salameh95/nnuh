@@ -6,19 +6,15 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Bootstrap CSS -->
         {% if LANGUAGE_BIDI %}
             {% render_bundle 'bundle' 'rtl.css' %}
-{#            <link rel="stylesheet" href="{% static 'css/bundle.rtl.css' %}?v=1" />#}
         {% else %}
             {% render_bundle 'bundle' 'ltr.css' %}
-{#            <link rel="stylesheet" href="{% static 'css/bundle.css' %}?v=1" />#}
         {% endif %}
-{#        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">#}
-          {% render_block "css" %}
-
-          <title>{% block title %}{%  trans 'An-Najah National Hospital' %}{% endblock title %}</title>
+        {% block css %}{% endblock %}
+        {% render_block "css" %}
+        <title>{% block title %}{%  trans 'An-Najah National Hospital' %}{% endblock title %}</title>
     </head>
     <body>  
         {% cms_toolbar %}
@@ -132,25 +128,24 @@
             </div>
         </div>
         <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->  
         {% render_bundle 'bundle' 'js' %}
         {% block js %}{% endblock %}
         {% render_block "js" %}
-    {% if request.toolbar and request.toolbar.edit_mode_active %}
-        <script>
-        CMS.$(window).on('cms-content-refresh', function () {
-            library.add(far, fas, fab);
-            var css = dom.css();
-            {#console.log(css);#}
-            {#var insertCSS = dom.insertCss(css);#}
-            {#console.log(insertCSS);#}
-            $('head').append('<style>' + css + '</style>');
-            dom.i2svg();
-            {#$(document).insertCss(css);#}
-            {#dom.watch();#}
-        });
-        </script>
-    {% endif %}
+        {% if request.toolbar and request.toolbar.edit_mode_active %}
+            <script>
+            CMS.$(window).on('cms-content-refresh', function () {
+                library.add(far, fas, fab);
+                var css = dom.css();
+                {#console.log(css);#}
+                {#var insertCSS = dom.insertCss(css);#}
+                {#console.log(insertCSS);#}
+                $('head').append('<style>' + css + '</style>');
+                dom.i2svg();
+                {#$(document).insertCss(css);#}
+                {#dom.watch();#}
+            });
+            </script>
+        {% endif %}
     </body>
 </html>
