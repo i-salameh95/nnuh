@@ -1,7 +1,7 @@
 {% load i18n sekizai_tags %}
 <div class="section section-doctors-carousel">
     <div class="d-flex justify-content-end align-items-center">
-        <div class="owl-carousel owl-carousel-doctors">
+        <div class="owl-carousel owl-carousel-doctors owl-theme mb-4">
             {% for doctor in doctors %}
                 {% include "nnuh_doctors/includes/doctor.html" with doctor=doctor %}
             {% endfor %}
@@ -12,23 +12,27 @@
     <script>
         $(function () {
             var owl = $('.owl-carousel-doctors').owlCarousel({
-                margin: 30,
+                loop: true,
+                margin: 10,
                 responsiveClass: true,
-                loop: false,
                 {% if LANGUAGE_BIDI %}rtl: true, {% endif %}
                 responsive: {
                     0: {
                         items: 1,
+                        loop: false
                     },
                     600: {
                         items: 2,
+                        nav: false,
+                        loop: false
                     },
                     1000: {
                         items: 4,
                         loop: false,
+                        margin: 20
                     }
                 }
-            });
-        });
+            })
+        })
     </script>
 {% endaddtoblock %}
